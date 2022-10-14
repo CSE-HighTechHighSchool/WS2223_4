@@ -1,0 +1,111 @@
+/* CSS Reset (adapted from tutorial https://elad.medium.com/the-new-css-reset-53f41f13282e) */
+*,
+*::before,
+*::after {
+	all: unset;
+	display: revert;
+	box-sizing: border-box;
+}
+
+/* End CSS Reset */
+
+/* Nord Color Palette */
+* {
+	transition: all 0.1s ease-out;
+
+	/* Polar Night */
+	--gunmetal: #2e3440ff;
+	--charcoal: #3b4252ff;
+	--independence: #434c5eff;
+	--independence-2: #4c566aff;
+
+	/* Snow Storm */
+	--gainsboro: #d8dee9ff;
+	--alice-blue: #e5e9f0ff;
+	--alice-blue-2: #eceff4ff;
+
+	/* Aurora */
+	--fuzzy-wuzzy: #bf616aff;
+	--copper-crayola: #d08770ff;
+	--gold-crayola: #ebcb8bff;
+	--dark-sea-green: #a3be8cff;
+	--opera-mauve: #b48eadff;
+
+	/* Frost */
+	--opal: #8fbcbbff;
+	--dark-sky-blue: #88c0d0ff;
+	--air-superiority-blue: #81a1c1ff;
+	--glaucous: #5e81acff;
+}
+
+/* End Nord Color Palette */
+
+/* Theme Variables */
+:root {
+	--sun: revert;
+	--moon: none;
+
+	--body-bg: var(--gunmetal);
+	--nav-bg: var(--charcoal);
+	--li-color: var(--gainsboro);
+
+	--switch-bg: var(--air-superiority-blue);
+	--switch-hover-bg: var(--glaucous);
+}
+
+[theme="light"] {
+	--sun: none;
+	--moon: revert;
+
+	--body-bg: var(--alice-blue);
+	--nav-bg: var(--alice-blue-2);
+	--li-color: black;
+
+	--switch-bg: var(--air-superiority-blue);
+	--switch-hover-bg: var(--glaucous);
+}
+
+/* End Theme Variables */
+
+body {
+	background-color: var(--body-bg);
+}
+
+nav {
+	background-color: var(--nav-bg);
+}
+
+.light-text {
+	color: var(--li-color) !important;
+}
+
+.light-text.active {
+	font-weight: bold;
+}
+
+.light-text.disabled {
+	opacity: 0.5;
+}
+
+.switch {
+	border: none;
+	background-color: var(--switch-bg);
+}
+
+.switch:hover {
+	background-color: var(--switch-hover-bg) !important;
+}
+
+.hide-sun {
+	display: var(--sun);
+}
+
+.hide-moon {
+	display: var(--moon);
+}
+
+@media screen and (min-width: 768px) {
+	nav {
+		border-radius: 1rem;
+	}
+}
