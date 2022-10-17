@@ -31,77 +31,143 @@
 		<link href="css/styles.css" rel="stylesheet" />
 		<script src="js/script.js" defer></script>
 
+		<!-- Custom Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Michroma&family=Montserrat&family=Fira+Mono:wght@300;400;500;600;700&family=Viga&display=swap"
+			rel="stylesheet"
+		/>
+
 		<title>Document</title>
 	</head>
 
 	<body>
-		<!-- Navbar -->
-		<nav class="navbar navbar-expand-md shadow m-md-4 sticky-md-top">
-			<div class="container-fluid">
-				<a class="navbar-brand light-text" href="#">Home</a>
-				<div>
-					<!-- light/dark mode switch for screens smaller than medium -->
+		<header class="cover pt-2 overflow-hidden">
+			<!-- Navbar -->
+			<nav
+				class="navbar navbar-expand-md shadow m-md-4 mt-0 sticky-md-top"
+			>
+				<div class="container-fluid">
+					<a class="navbar-brand light-text" href="#">
+						<img class="block my-auto" style="height:40px" src="https://www.svgrepo.com/show/94162/saturn.svg"/>
+					</a>
+					<p class="navbar-brand light-text my-auto">Jovian Tourism</p>
+
+					<div>
+						<!-- light/dark mode switch for screens smaller than medium -->
+						<button
+							class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+							aria-label="Switch theme"
+							type="button"
+						>
+							<i class="bi bi-sun-fill hide-sun"></i>
+							<i class="bi bi-moon-stars-fill hide-moon"></i>
+						</button>
+
+						<!-- burger icon for collapsible navigation menu-->
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#toggler"
+							aria-controls="toggler"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+
+					<div
+						class="collapse navbar-collapse justify-content-center"
+						id="toggler"
+					>
+						<!-- navigation links -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a
+									class="nav-link active light-text"
+									aria-current="page"
+									href="#"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Saturn</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>The Jovian System</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Information</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Tickets</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled light-text"
+									>Sign Up</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- light/dark mode switch for screens medium and above -->
 					<button
-						class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+						class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
 						aria-label="Switch theme"
 						type="button"
 					>
 						<i class="bi bi-sun-fill hide-sun"></i>
 						<i class="bi bi-moon-stars-fill hide-moon"></i>
 					</button>
-
-					<!-- burger icon for collapsible navigation menu-->
-					<button
-						class="navbar-toggler btn"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#toggler"
-						aria-controls="toggler"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<i class="bi bi-list light-text"></i>
-					</button>
 				</div>
+			</nav>
 
-				<div
-					class="collapse navbar-collapse justify-content-center"
-					id="toggler"
-				>
-					<!-- navigation links -->
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a
-								class="nav-link active light-text"
-								aria-current="page"
-								href="#"
-								>Home</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link light-text" href="#">Link</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled light-text">Disabled</a>
-						</li>
-					</ul>
+			<!-- Cover -->
+			<div class="container mt-5">
+				<div class="row ">
+
+					<div class="col-sm ">
+						<h1 class="fira text-light">
+							<p class="">Welcome to...</p>
+							<p class="">Saturn System</p>
+						</h1>
+						<h5 class="viga text-light font-weight-light">
+							Explore 20 different moons on your own timetable
+						</h5>
+						<div class="container my-5">
+							<button class="header-button mr-2 viga">Learn More</button>
+							<button class="header-button mx-2 viga">Buy Tickets</button>
+						</div>
+					</div>
+
+					<div class="col-sm">
+						<div id="ex1" class="container overflow-hidden">
+							<div id="ex1-layer" class="box justify-center align-center">						
+								<img class="h-100 w-100" src="https://assets.stickpng.com/images/580b585b2edbce24c47b270d.png"></img>
+							</div>
+						  </div>
+					</div>
 				</div>
-
-				<!-- light/dark mode switch for screens medium and above -->
-				<button
-					class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
-					aria-label="Switch theme"
-					type="button"
-				>
-					<i class="bi bi-sun-fill hide-sun"></i>
-					<i class="bi bi-moon-stars-fill hide-moon"></i>
-				</button>
 			</div>
-		</nav>
+		</header>
 
-		<header></header>
+		<main class="container">
+			<div class="fira">Saturns Moons are big</div>
+			<div class="viga">Saturns Moons are big</div>
 
-		<main></main>
+			<div class="comfortaa">The Jovian System is big</div>
+		</main>
 
 		<footer></footer>
 	</body>
