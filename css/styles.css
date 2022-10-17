@@ -87,6 +87,11 @@ nav {
 	opacity: 0.5;
 }
 
+.navbar-toggler{
+	border: 1px solid var(--li-color);
+	border-radius: 10px;
+}
+
 .switch {
 	border: none;
 	background-color: var(--switch-bg);
