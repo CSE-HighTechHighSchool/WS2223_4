@@ -1,0 +1,104 @@
+/* Header contents */
+
+.header-button {
+	border-radius: 10px;
+	border: 1px solid var(--li-color);
+	background-color: var(--nav-bg);
+	color: var(--li-color);
+	padding: 10px 20px;
+}
+
+.quote {
+	color: white;
+}
+
+.features {
+	/* color:#f5cf89; */
+	color: white;
+}
+
+.saturn {
+	height: 200%;
+	width: 150%;
+	z-index: 20;
+}
+
+.text-yellow {
+	color: #eeaa2e;
+}
+
+.font-massive {
+	font-size: 70px;
+}
+
+#carousel {
+	background-color: #eeaa2e;
+	padding-bottom: 2rem;
+}
+
+/*Body*/
+#latest {
+	background-color: var(--body-bg);
+	padding-bottom: 2rem;
+	overflow: hidden;
+}
+
+/* Saturn Animation */
+
+#saturn-image {
+	position: relative;
+	left: -200px;
+	-webkit-animation: slide 1.5s forwards;
+	-webkit-animation-delay: 0.1s;
+	animation: slide 1.5s forwards;
+	animation-delay: 0.1s;
+}
+
+@-webkit-keyframes slide {
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes slide {
+	100% {
+		left: 0;
+	}
+}
+
+#slide {
+	transition: 1s;
+	left: 100px;
+}
+
+/* Cards */
+
+.card-image {
+	height: 18rem;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.latest-card {
+	border-radius: 10px;
+	z-index: 10;
+}
+
+.latest-card:hover {
+	scale: 101%;
+	animation-duration: 250ms;
+	transition-timing-function: ease-in-out;
+}
+
+#satellite {
+	position: absolute;
+	margin-top: -400px;
+	height: 0px;
+}
+
+#moon {
+	position: absolute;
+	margin-top: -400px;
+	margin-left: 90%;
+	height: 400px;
+	z-index: 1;
+}

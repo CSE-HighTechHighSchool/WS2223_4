@@ -20,6 +20,7 @@
 #stars {
 	width: 1px;
 	height: 1px;
+	z-index: 5;
 	background: transparent;
 	box-shadow: 117px 1613px #c49952, 1488px 635px #c49952, 944px 914px #c49952,
 		647px 277px #c49952, 1792px 1205px #c49952, 656px 1517px #c49952,

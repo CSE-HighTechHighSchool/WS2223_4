@@ -12,8 +12,8 @@ document.querySelectorAll(".switch").forEach((button) => {
 });
 
 let constrain = 20;
-let mouseOverContainer = document.getElementById("ex1");
-let ex1Layer = document.getElementById("ex1-layer");
+let mouseOverContainer = document.getElementById("saturn-parent");
+let ex1Layer = document.getElementById("saturn-layer");
 
 function transforms(x, y, el) {
 	let box = el.getBoundingClientRect();
