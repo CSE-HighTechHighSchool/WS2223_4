@@ -21,7 +21,7 @@ function transforms(x, y, el) {
 	let calcY = (x - box.x - box.width / 2) / constrain;
 
 	return (
-		"perspective(300px) " +
+		"perspective(1500px) " +
 		"   rotateX(" +
 		calcX +
 		"deg) " +

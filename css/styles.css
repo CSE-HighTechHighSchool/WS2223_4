@@ -82,6 +82,10 @@ nav {
 	font-family: "Fira Mono", sans-serif;
 }
 
+.prompt {
+	font-family: "Prompt", sans-serif;
+}
+
 .viga {
 	font-family: "Viga", sans-serif;
 }
@@ -129,10 +133,14 @@ nav {
 	}
 }
 
+/*Cover*/
 header {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
-	background-color: #1a1816;
+	z-index: 10;
+	background-color: black;
+	background-size: cover;
+	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
 }
 
 main {
@@ -152,3 +160,58 @@ main {
 	color: var(--li-color);
 	padding: 10px 20px;
 }
+
+.font-massive {
+	font-size: 70px;
+	color: #eeaa2e;
+}
+
+.saturn {
+	height: 200%;
+	width: 150%;
+	z-index: 20;
+}
+
+.quote {
+	color: white;
+}
+
+.features {
+	/* color:#f5cf89; */
+	color: white;
+}
+
+.curvedBorder {
+	z-index: 100;
+}
+
+.rounded-t-curvy {
+	border-radius: "50% 150px";
+}
+
+/* #slide {
+	position: absolute;
+	left: -100px;
+
+	-webkit-animation: slide 0.5s forwards;
+	-webkit-animation-delay: 2s;
+	animation: slide 0.5s forwards;
+	animation-delay: 2s;
+} */
+
+@-webkit-keyframes slide {
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes slide {
+	100% {
+		left: 0;
+	}
+}
+
+/* #slide {
+	transition: 1s;
+	left: 100px;
+} */
