@@ -43,11 +43,11 @@
 			rel="stylesheet"
 		/>
 
-		<title>Document</title>
+		<title>Saturn Tourism</title>
 	</head>
 
 	<body>
-		<header class=" pt-md-2 z-10 overflow-hidden">
+		<header class=" pt-md-2 overflow-hidden">
 			<!-- Navbar -->
 			<nav
 				class="navbar navbar-expand-md shadow m-md-4 mt-0 sticky-md-top"
@@ -137,21 +137,20 @@
 				</div>
 			</nav>
 
-				<!-- Star particles -->
-				<div class="star-animation">
-					<div id="stars"></div>
-					<div id="stars2"></div>
-					<div id="stars3"></div>
-					<div id="stars4"></div>
-				</div>
-			<!-- Header Body -->
-			<div class="overflow-hidden mt-5 ">
+			<!-- Star particles -->
+			<div class="star-animation"  style="z-index:5">
+				<div id="stars" ></div>
+				<div id="stars2"></div>
+				<div id="stars3"></div>
+				<div id="stars4"></div>
+			</div>
 
+			<!-- Header Body -->
+			<div class="overflow-hidden mt-5 " >
 				<!-- Cover -->
 				<div class="container">
 					<div class="row container">
-
-						<div class=" col-sm ">
+						<div class=" col-sm "  style="z-index:20">
 							<div class="text-light">
 								<h2 class="fira">Welcome to...</h2>
 								<h1 class="font-massive fira text-yellow"  style="text-shadow: 2px 2px #644c1a;">Saturn System</h1>
@@ -160,9 +159,9 @@
 							<div class=" text-light font-weight-light mt-4">
 								<h4 class="quote font-italic my-4 prompt">"The most beautiful place in the universe"</h4>
 								<ul class="features viga">
-									<li class="mt-2 "><h5>Explore 5+ incredible moons on your own timetable</h5></li>
-									<li class="mt-2 "><h5>Premier tourism and residential services</h5></li>
-									<li class="mt-2 "><h5>Reserve your spot near the Ringed Planet</h5></li>
+									<li class="mt-2 "><h5>Explore <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">5+</span> incredible moons on your own timetable</h5></li>
+									<li class="mt-2 "><h5>Premier <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">tourism</span> and <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">residential</span> services</h5></li>
+									<li class="mt-2 "><h5>Reserve <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">your spot</span> near the Ringed Planet!</h5></li>
 								</ul>
 							</div>
 							<div class="mx-auto my-5">
@@ -172,7 +171,7 @@
 						</div>
 
 						<!-- Interactive Saturn -->
-						<div class="col-sm">
+						<div class="col-sm" style="z-index:20">
 							<div id="saturn-parent" class="container flex justify-center align-center">
 								<div id="saturn-layer" class="box ">
 									<img id="saturn-image" class="saturn" alt="saturn" src="/img/saturn-transparent.png"></img>
@@ -188,7 +187,7 @@
 		<!-- Border Arc -->
 		<div class="border-curvy"></div>
 
-		<main class="">
+		<main class="" >
 
 			<!--Spotlight-->
 			<section id="latest" class="overflow-hidden">
@@ -269,27 +268,25 @@
 				</div>
 
 				</div>
-
-				<img src="/img/moon-transparent.png" alt="moon" id="moon" />
-
 			</section>
 
 			<!--Carousel-->
-			<section id="carousel">
+			<section id="carousel-component">
 				<div class="container">
-					<div class=" p-3">
-						<h1 class="noPadLeft viga ">The Latest from Saturn System</h1>
+					<div class=" pt-3">
+						<h1 class="noPadLeft viga "  style="text-shadow: 2px 2px #fad88d;">A New Frontier...for Life</h1>
 						<p class="lead fira" id="ovPadLeft">
-							Like what you're seeing?
+							Saturn and its moons have breathtaking sights, but the most stunning are microscopic. Take a look at some images from Enceladus, a moon with great potential for life.
 						</p>
 					</div>
 
-					<div class="container ">
+					<div class="row bg-light p-4" style="border-radius:12px">
 						<div
 							id="carouselExampleCaptions"
-							class="carousel slide text-dark  overflow-hidden border border-1  "
-							style="border-radius:12px"
+							class="carousel slide text-dark overflow-hidden border border-1  col-md-7"
+							style="border-radius:12px; z-index:20"
 							data-bs-ride="carousel"
+
 						>
 							<div class="carousel-indicators">
 							<button
@@ -315,12 +312,13 @@
 								class="btn btn-dark"
 							></button>
 							</div>
-							<div class="carousel-inner overflow-hidden">
+
+							<div class="carousel-inner "overflow-hidden"">
 							<div class="carousel-item active">
 								<img
 									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRigk99OTFyfjiD7NjDEE7uRdczeNrT78jvFZcRUL1OOzKX1OWWXi8jM0L0VrIZKV6BHsY&usqp=CAU"
 									class="d-block w-100 "
-									style="height:435px"
+									style="height:435px;"
 									alt="..."
 								/>
 								<div class="carousel-caption d-none d-md-block text-dark viga">
@@ -344,7 +342,7 @@
 								<img
 									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v07p52N6Vd2ioQnpJmFxNleg36_N7i5wUQ&usqp=CAU"
 									class="d-block w-100"
-									style="height:435px"
+									style="height:435px; width:100%"
 									alt="..."
 								/>
 								<div class="carousel-caption d-none d-md-block text-dark">
@@ -372,10 +370,19 @@
 							<span class="visually-hidden">Next</span>
 							</button>
 						</div>
+
+						<div class="col-md-5 mt-4 mt-md-0">
+							<div class="">
+								<h2 class="noPadLeft viga ">Meet LIRA:</h2>
+								<p class="lead fira" id="ovPadLeft">
+									She takes all the pictures!
+								</p>
+							</div>
+							<img src="/img/curiosity-rover.png" alt="rover" id="rover" />
+						</div>
+
 					</div>
 				</div>
-
-				<img src="/img/satellite.png" alt="satellite" id="satellite" />
 
 			</section>
 
