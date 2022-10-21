@@ -8,10 +8,10 @@ let counter = 0;
 titan.addEventListener("click", () => {
   if (counter % 2 === 0) {
     titan.style.setProperty(
-    "--move", "translate(-22vw) scale(0.7, 0.7)"
+    "--move", "translate(-22.5vw) scale(0.7, 0.7)"
   );
     cova.style.setProperty(
-    "--move", "translate(-22vw) scale(0.7, 0.7)"
+    "--move", "translate(-22.5vw) scale(0.7, 0.7)"
   );
     titan_text.style.setProperty("--opac", "1");
     titan_text.style.setProperty("--out", "translateX(40%)");
