@@ -33,12 +33,17 @@
 
 #carousel-component {
 	background-color: #eeaa2e;
-	background-image: url("/img/rock-landscape.png");
+	background-image: url("/img/moon-terrain.png");
+
 	background-size: cover;
 	padding-bottom: 2rem;
-	background-size: cover;
 	background-repeat: no-repeat;
 	/* background-image: url("/img/curiosity-rover.png"); */
+}
+
+.rover-container {
+	border: 10px;
+	border-color: red;
 }
 
 #carouselExampleCaptions {
@@ -46,15 +51,22 @@
 }
 
 #Frontier {
-	background-color: #eeaa2e;
-	background-image: url("/img/moon-terrain.png");
+	/* background-color: #eeaa2e;*/
+	background-image: url("/img/clouds.png");
+	background-size: cover;
+	background-color: var(--body-bg);
+}
+
+#Overview {
+	/* background-color: #eeaa2e; */
+	background-image: url("/img/moon-crater.png");
 	background-size: cover;
 }
 
 /*Body*/
 #latest {
 	background-color: var(--body-bg);
-	padding-bottom: 2rem;
+	padding-bottom: 100px;
 	overflow: hidden;
 	background-size: cover;
 	background-image: url("/img/space-shuttle.png");
@@ -110,4 +122,10 @@
 	display: inline;
 	width: 100%;
 	z-index: 5;
+}
+
+#roverhead {
+	border-radius: 100%;
+	background-color: #0e0d0b;
+	border: #eeaa2e 2px solid;
 }
