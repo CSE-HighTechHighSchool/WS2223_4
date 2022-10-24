@@ -130,3 +130,30 @@
 	background-color: #0e0d0b;
 	border: #eeaa2e 2px solid;
 }
+
+/* Timeline */
+
+.timeline {
+	border-left: 1px solid hsl(0, 31%, 57%);
+	position: relative;
+	list-style: none;
+}
+
+.timeline .timeline-item {
+	position: relative;
+}
+
+.timeline .timeline-item:after {
+	position: absolute;
+	display: block;
+	top: 0;
+}
+
+.timeline .timeline-item:after {
+	background-color: hsl(0, 38%, 48%);
+	left: -38px;
+	border-radius: 50%;
+	height: 11px;
+	width: 11px;
+	content: "";
+}
