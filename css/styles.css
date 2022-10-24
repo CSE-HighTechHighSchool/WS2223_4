@@ -100,6 +100,26 @@ body {
 	opacity: 0.5;
 }
 
+.btn{
+	height: 1.8rem;
+	width: auto;
+}
+
+.navbar-boggler {
+	border: 1px solid var(--li-color);
+	border-radius: 10px;
+	transition: transform 0.5s ease, box-shadow .5s ease;
+	margin-left: .35rem;
+}
+
+.navbar-boggler:hover{
+	transform: scale(.9, .9);
+	box-shadow: inset -.9px -.9px 3px var(--li-color),
+				inset .9px .9px 3px var(--li-color);
+	transition: transform 0.5s ease, box-shadow .5s ease;
+	border: 1px solid var(--li-color)
+}
+
 .switch {
 	border: none;
 	background-color: var(--switch-bg);
@@ -115,4 +135,10 @@ body {
 
 .hide-moon {
 	display: var(--moon);
+}
+
+@media screen and (min-width: 768px) {
+	nav {
+		border-radius: 1rem;
+	}
 }
