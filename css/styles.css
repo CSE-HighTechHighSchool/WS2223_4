@@ -1,11 +1,10 @@
-/* CSS Reset */
+/* CSS Reset (adapted from tutorial https://elad.medium.com/the-new-css-reset-53f41f13282e) */
 *,
 *::before,
 *::after {
 	all: unset;
 	display: revert;
 	box-sizing: border-box;
-
 	transition: all 0.1s ease-out;
 }
 
@@ -13,6 +12,8 @@
 
 /* Nord Color Palette */
 * {
+	transition: all 0.1s ease-out;
+
 	/* Polar Night */
 	--gunmetal: #2e3440ff;
 	--charcoal: #3b4252ff;
@@ -46,25 +47,23 @@
 	--moon: none;
 
 	--body-bg: var(--gunmetal);
+	--nav-bg: var(--charcoal);
 	--li-color: var(--gainsboro);
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
-
-	--indicator-bg: var(--alice-blue-2);
 }
 
-[data-theme="light"] {
+[theme="light"] {
 	--sun: none;
 	--moon: revert;
 
 	--body-bg: var(--alice-blue);
+	--nav-bg: var(--alice-blue-2);
 	--li-color: black;
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
-
-	--indicator-bg: var(--gunmetal);
 }
 
 /* End Theme Variables */
@@ -84,22 +83,6 @@ nav {
 	font-family: "Viga", sans-serif;
 }
 
-#timeline {
-	height: 50vh;
-}
-
-.carousel-inner {
-	width: 70%;
-}
-
-.indicator {
-	background-color: var(--indicator-bg) !important;
-}
-
-.arrow {
-	color: var(--indicator-bg) !important;
-}
-
 .light-text {
 	color: var(--li-color) !important;
 }
@@ -112,24 +95,19 @@ nav {
 	opacity: 0.5;
 }
 
-.btn {
-	height: 1.8rem;
-	width: auto;
-}
-
 .navbar-boggler {
 	border: 1px solid var(--li-color);
 	border-radius: 10px;
-	transition: transform 0.5s ease, box-shadow .5s ease;
-	margin-left: .35rem;
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+	margin-left: 0.35rem;
 }
 
 .navbar-boggler:hover {
-	transform: scale(.9, .9);
-	box-shadow: inset -.9px -.9px 3px var(--li-color),
-		inset .9px .9px 3px var(--li-color);
-	transition: transform 0.5s ease, box-shadow .5s ease;
-	border: 1px solid var(--li-color)
+	transform: scale(0.9, 0.9);
+	box-shadow: inset -0.9px -0.9px 3px var(--li-color),
+		inset 0.9px 0.9px 3px var(--li-color);
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+	border: 1px solid var(--li-color);
 }
 
 .switch {
@@ -167,11 +145,9 @@ nav {
 .viga {
 	font-family: "Viga", sans-serif;
 }
-
 .comfortaa {
 	font-family: "Comfortaa", sans-serif;
 }
-
 /*End Fonts*/
 
 main {
