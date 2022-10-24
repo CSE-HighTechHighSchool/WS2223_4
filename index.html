@@ -29,6 +29,7 @@
 
 		<!-- Custom CSS & JS -->
 		<link href="css/styles.css" rel="stylesheet" />
+
 		<script src="js/script.js" defer></script>
 
 		<title>Document</title>
@@ -36,8 +37,8 @@
 
 	<body>
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-md shadow m-md-4 sticky-md-top">
-			<div class="container-fluid">
+		<nav class="navbar navbar-expand-md sticky-md-top">
+			<div class="container">
 				<a class="navbar-brand light-text" href="#">Home</a>
 				<div>
 					<!-- light/dark mode switch for screens smaller than medium -->
@@ -60,7 +61,7 @@
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<span class="navbar-toggler-icon"></span>
+						<i class="bi bi-list light-text"></i>
 					</button>
 				</div>
 
@@ -101,7 +102,71 @@
 
 		<header></header>
 
-		<main></main>
+		<main>
+			<div id="timeline" class="carousel slide" data-bs-ride="true">
+				<!-- Carousel indicators -->
+				<div class="carousel-indicators">
+					<button
+						type="button"
+						data-bs-target="#timeline"
+						data-bs-slide-to="0"
+						class="indicator active"
+						aria-current="true"
+						aria-label="Slide 1"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#timeline"
+						data-bs-slide-to="1"
+						class="indicator"
+						aria-label="Slide 2"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#timeline"
+						data-bs-slide-to="2"
+						class="indicator"
+						aria-label="Slide 3"
+					></button>
+				</div>
+
+				<!-- Carousel elements -->
+				<div class="carousel-inner h-100">
+					<div class="carousel-item active">
+						<h1>
+							Yuri Gagarin: First Man in Space
+						</h1>
+					</div>
+					<div class="carousel-item">
+
+					</div>
+					<div class="carousel-item">
+
+					</div>
+				</div>
+
+				<!-- Carousel navigation -->
+				<button
+					class="carousel-control-prev"
+					type="button"
+					data-bs-target="#timeline"
+					data-bs-slide="prev"
+				>
+					<i class="bi bi-caret-left-fill fs-2 arrow" aria-hidden="true"></i>
+					<span class="visually-hidden">Previous</span>
+				</button>
+
+				<button
+					class="carousel-control-next"
+					type="button"
+					data-bs-target="#timeline"
+					data-bs-slide="next"
+				>
+					<i class="bi bi-caret-right-fill fs-2 arrow" aria-hidden="true"></i>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</main>
 
 		<footer></footer>
 	</body>

@@ -1,18 +1,18 @@
-/* CSS Reset (adapted from tutorial https://elad.medium.com/the-new-css-reset-53f41f13282e) */
+/* CSS Reset */
 *,
 *::before,
 *::after {
 	all: unset;
 	display: revert;
 	box-sizing: border-box;
+
+	transition: all 0.1s ease-out;
 }
 
 /* End CSS Reset */
 
 /* Nord Color Palette */
 * {
-	transition: all 0.1s ease-out;
-
 	/* Polar Night */
 	--gunmetal: #2e3440ff;
 	--charcoal: #3b4252ff;
@@ -46,33 +46,46 @@
 	--moon: none;
 
 	--body-bg: var(--gunmetal);
-	--nav-bg: var(--charcoal);
 	--li-color: var(--gainsboro);
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
+
+	--indicator-bg: var(--alice-blue-2);
 }
 
-[theme="light"] {
+[data-theme="light"] {
 	--sun: none;
 	--moon: revert;
 
 	--body-bg: var(--alice-blue);
-	--nav-bg: var(--alice-blue-2);
 	--li-color: black;
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
-}
 
+	--indicator-bg: var(--gunmetal);
+}
 /* End Theme Variables */
 
 body {
 	background-color: var(--body-bg);
 }
 
-nav {
-	background-color: var(--nav-bg);
+#timeline {
+	height: 50vh;
+}
+
+.carousel-inner {
+	width: 70%;
+}
+
+.indicator {
+	background-color: var(--indicator-bg) !important;
+}
+
+.arrow {
+	color: var(--indicator-bg) !important;
 }
 
 .light-text {
@@ -102,10 +115,4 @@ nav {
 
 .hide-moon {
 	display: var(--moon);
-}
-
-@media screen and (min-width: 768px) {
-	nav {
-		border-radius: 1rem;
-	}
 }
