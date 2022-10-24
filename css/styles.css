@@ -70,6 +70,17 @@
 
 body {
 	background-color: var(--body-bg);
+	font-family: "", sans-serif;
+}
+
+.background-mode {
+	background-color: var(--body-bg);
+	color: var(--li-color);
+}
+
+nav {
+	background-color: var(--nav-bg);
+	font-family: "Viga", sans-serif;
 }
 
 #timeline {
@@ -141,4 +152,50 @@ body {
 	nav {
 		border-radius: 1rem;
 	}
+}
+
+/*Fonts*/
+.fira {
+	font-family: "Fira Mono", sans-serif;
+}
+
+.prompt {
+	font-family: "Prompt", sans-serif;
+}
+
+.viga {
+	font-family: "Viga", sans-serif;
+}
+.comfortaa {
+	font-family: "Comfortaa", sans-serif;
+}
+/*End Fonts*/
+
+main {
+	height: 100px;
+}
+
+.box {
+	height: 100%;
+	width: auto;
+	position: relative;
+}
+
+/*Header Image*/
+header {
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	background-color: black;
+	background-size: cover;
+	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+}
+
+.border-curvy {
+	background-color: var(--body-bg);
+	border-radius: 150% 150% 0px 0px;
+	height: 50px;
+	margin-top: -50px;
+	z-index: 20;
 }
