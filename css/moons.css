@@ -250,7 +250,7 @@ nav {
   }
 
   .moons_top {
-    z-index: -10;
+  z-index: -10;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -261,15 +261,131 @@ nav {
   }
 
   .moon_title{
-    height: 25%;
-    width: 50%;
-    border: 1px solid white;
+    height: 15%;
+    width: calculate(19 * 4)vw;
     border-radius: 50px;
+    padding-left: 2%;
+    padding-right: 2%;
+    backdrop-filter: blur(10px);
   }
 
   .moon_title h1{
-    margin: auto;
     color: white;
+    font-size: 4vw;
+    font-weight: bold;
+  }
+
+  .saturn_para{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #saturn{
+    height: 60%;
+    rotate: -12deg;
+    width: auto;
+    z-index: -5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  #titan{
+    height: 20%;
+    width: auto;
+    position: absolute;
+    z-index: -1;
+    left: 5%;
+    top: 40%;
+    --orb: 75vw;
+    animation: 15s orbit linear infinite;
+  }
+
+  #enceladus{
+    height: 25%;
+    width: auto;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    top: 70%;
+    --orb: 130vw, -70vh;
+    animation: 7s orbit linear infinite;
+  }
+
+  #iapetus{
+    height: 30%;
+    width: auto;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    top: 35%;
+    --orb: 130vw, 70vh;
+    animation: 5s orbit linear infinite;
+  }
+
+  #rhea{
+    height: 30%;
+    width: auto;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    top: 35%;
+    --orb: 130vw;
+    animation: 5s orbit linear infinite;
+  }
+
+  #mimas{
+    height: 30%;
+    width: auto;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    top: 35%;
+    --orb: 130vw;
+    animation: 5s orbit linear infinite;
+  }
+
+  @keyframes orbit{
+    0%{
+      opacity: 1;
+      scale: 1 1;
+    }
+
+    25%{
+      opacity: 1;
+      scale: 1.5 1.5;
+    }
+
+    50%{
+      opacity: 1;
+      scale: 1 1;
+      translate: var(--orb);
+    }
+
+    75%{
+      scale: 0.05 0.05;
+      opacity: 0.5;
+    }
+
+    90%{
+      z-index: -9;
+    }
+
+    100%{
+      z-index: -9;
+      opacity: 1;
+      scale: 1 1;
+    }
+
   }
 
   @media screen and (max-width: 675px){
