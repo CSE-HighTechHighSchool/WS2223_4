@@ -66,6 +66,7 @@
 
 	--indicator-bg: var(--gunmetal);
 }
+
 /* End Theme Variables */
 
 body {
@@ -111,7 +112,7 @@ nav {
 	opacity: 0.5;
 }
 
-.btn{
+.btn {
 	height: 1.8rem;
 	width: auto;
 }
@@ -123,10 +124,10 @@ nav {
 	margin-left: .35rem;
 }
 
-.navbar-boggler:hover{
+.navbar-boggler:hover {
 	transform: scale(.9, .9);
 	box-shadow: inset -.9px -.9px 3px var(--li-color),
-				inset .9px .9px 3px var(--li-color);
+		inset .9px .9px 3px var(--li-color);
 	transition: transform 0.5s ease, box-shadow .5s ease;
 	border: 1px solid var(--li-color)
 }
@@ -166,9 +167,11 @@ nav {
 .viga {
 	font-family: "Viga", sans-serif;
 }
+
 .comfortaa {
 	font-family: "Comfortaa", sans-serif;
 }
+
 /*End Fonts*/
 
 main {
