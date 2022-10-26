@@ -21,6 +21,9 @@
 	height: 200%;
 	width: 150%;
 	z-index: 20;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 .text-yellow {
@@ -105,6 +108,9 @@
 .card-image {
 	height: 18rem;
 	border-radius: 10px 10px 0px 0px;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 .latest-card {
@@ -130,11 +136,11 @@
 	background-color: #0e0d0b;
 	border: #eeaa2e 2px solid;
 }
-
-/* Timeline */
+/*
+/* Timeline
 
 .timeline {
-	border-left: 1px solid hsl(0, 31%, 57%);
+	border-left: 1px solid #eeaa2e;
 	position: relative;
 	list-style: none;
 }
@@ -150,10 +156,10 @@
 }
 
 .timeline .timeline-item:after {
-	background-color: hsl(0, 38%, 48%);
+	background-color: #eeaa2e;
 	left: -38px;
 	border-radius: 50%;
 	height: 11px;
 	width: 11px;
 	content: "";
-}
+} */

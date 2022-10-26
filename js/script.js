@@ -11,6 +11,7 @@ document.querySelectorAll(".switch").forEach((button) => {
 	});
 });
 
+// Saturn movement
 let constrain = 20;
 let mouseOverContainer = document.getElementById("saturn-parent");
 let ex1Layer = document.getElementById("saturn-layer");
@@ -31,6 +32,7 @@ function transforms(x, y, el) {
 	);
 }
 
+// Stars
 function transformElement(el, xyEl) {
 	el.style.transform = transforms.apply(null, xyEl);
 }
