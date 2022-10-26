@@ -30,6 +30,7 @@
         
 		<!-- Custom CSS & JS -->
 		<link href="./css/moons.css" rel="stylesheet" />
+		<link href="./css/styles.css" rel="stylesheet"/>
 		<script src="./js/script.js" defer></script>
         
 
@@ -38,74 +39,101 @@
 
 	<body>
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-md shadow m-md-4 sticky-md-top">
-			<div class="container-fluid">
-				<a class="navbar-brand light-text" href="#">Home</a>
-				<div>
-					<!-- light/dark mode switch for screens smaller than medium -->
-					<button
-						class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
-						aria-label="Switch theme"
-						type="button"
-					>
-						<i class="bi bi-sun-fill hide-sun"></i>
-						<i class="bi bi-moon-stars-fill hide-moon"></i>
-					</button>
-					<!-- burger icon for collapsible navigation menu-->
-					<button
-						class="navbar-boggler d-md-none btn"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#toggler"
-						aria-controls="toggler"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<i class="bi bi-list light-text"></i>
-					</button>
-				</div>
+		<nav
+		class="navbar navbar-expand-md shadow m-md-4 mt-0 sticky-md-top"
+	>
+		<div class="container-fluid">
+			<a class="navbar-brand light-text" href="/">
+				<img class="block my-auto" style="height:40px;" src="https://www.svgrepo.com/show/94162/saturn.svg"/>
+			</a>
+			<p class="navbar-brand light-text my-auto prompt" >Saturn Tourism</p>
 
-				<div
-					class="collapse navbar-collapse justify-content-center"
-					id="toggler"
-				>
-					<!-- navigation links -->
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a
-								class="nav-link active light-text"
-								aria-current="page"
-								href="#"
-								>Home</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link light-text" href="#">Link</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled light-text">Disabled</a>
-						</li>
-					</ul>
-				</div>
-
-				<!-- light/dark mode switch for screens medium and above -->
+			<div>
+				<!-- light/dark mode switch for screens smaller than medium -->
 				<button
-					class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
+					class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
 					aria-label="Switch theme"
 					type="button"
 				>
 					<i class="bi bi-sun-fill hide-sun"></i>
 					<i class="bi bi-moon-stars-fill hide-moon"></i>
 				</button>
+
+				<!-- burger icon for collapsible navigation menu-->
+				<button
+					class="navbar-boggler d-md-none btn"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#toggler"
+					aria-controls="toggler"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<i class="bi bi-list light-text"></i>
+				</button>
 			</div>
-		</nav>
+
+			<div
+				class="collapse navbar-collapse justify-content-center"
+				id="toggler"
+			>
+				<!-- navigation links -->
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a
+							class="nav-link active light-text"
+							aria-current="page"
+							href="#"
+							>Home</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link light-text" href="#"
+							>Saturn</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link light-text" href="#"
+							>The Jovian System</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link light-text" href="#"
+							>Information</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link light-text" href="#"
+							>Tickets</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled light-text"
+							>Sign Up</a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- light/dark mode switch for screens medium and above -->
+			<button
+				class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
+				aria-label="Switch theme"
+				type="button"
+			>
+				<i class="bi bi-sun-fill hide-sun"></i>
+				<i class="bi bi-moon-stars-fill hide-moon"></i>
+			</button>
+		</div>
+	</nav>
 
 		<main>
 			<div class="moons_top d-flex align-items-center justify-content-center">
 				<div class="saturn_para d-none d-lg-block">
 					<img id="saturn" src="./img/saturn_moonspage.png" alt="saturn">
-					<img id="titan" src="./img/titan_moon.png" alt="saturn">
-					<!-- <img id="enceladus" src="./img/enceladus_moon.png" alt="saturn">
+					<div id="titan"></div>
+					<div id="enceladus"></div>
+					<!--
 					 <img id="iapetus" src="./img/iapetus_moon.png" alt="saturn">
 					<img id="rhea" src="./img/rhea_moon.png" alt="saturn">
 					<img id="mimas" src="./img/mimas_moon.png" alt="saturn"> -->
@@ -114,7 +142,8 @@
 					<h1>The Moons of Saturn</h1>
 				</div>
 			</div>
-            <div class="titan_whole container col-12 pt-5">  
+			<div class="spacer"></div>
+            <div class="titan_whole container col-12 mt-5">  
                 <div class='titan d-none d-lg-block'>
                 </div>
                 <div class='titan_alt d-lg-none d-flex align-items-center'>
@@ -124,11 +153,44 @@
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
-                <div class='cova d-none d-lg-block'></div>
+                <div class='cova_t d-none d-lg-block'></div>
                 <div class='titan_text d-none d-lg-flex align-items-center'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
+			</div>
+			<div class="enceladus_whole container col-12 mt-5">  
+                <div class='enceladus d-none d-lg-block'>
+                </div>
+                <div class='enceladus_alt d-lg-none d-flex align-items-center'>
+                    <div class="enceladus_alt_p d-flex align-items-center">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class='cova_e d-none d-lg-block'></div>
+                <div class='enceladus_text d-none d-lg-flex align-items-center'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+			</div>
+			<div class="iapetus_whole container col-12 mt-5">  
+                <div class='iapetus d-none d-lg-block'>
+                </div>
+                <div class='iapetus_alt d-lg-none d-flex align-items-center'>
+                    <div class="iapetus_alt_p d-flex align-items-center">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class='cova_i d-none d-lg-block'></div>
+                <div class='iapetus_text d-none d-lg-flex align-items-center'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+			</div>
         </main>
 
 		<footer></footer>

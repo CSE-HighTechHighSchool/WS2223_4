@@ -4,7 +4,8 @@
 *::after {
 	all: unset;
 	display: revert;
-	/* box-sizing: border-box;*/
+	box-sizing: border-box;
+	transition: all 0.1s ease-out;
 }
 
 /* End CSS Reset */
@@ -48,10 +49,10 @@
 	--body-bg: var(--gunmetal);
 	--nav-bg: var(--charcoal);
 	--li-color: var(--gainsboro);
-	--border-color: var(--glaucous);
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
+	--border-color: var(--glaucous);
 }
 
 [theme="light"] {
@@ -71,10 +72,17 @@
 
 body {
 	background-color: var(--body-bg);
+	font-family: "", sans-serif;
+}
+
+.background-mode {
+	background-color: var(--body-bg);
+	color: var(--li-color);
 }
 
 nav {
 	background-color: var(--nav-bg);
+	font-family: "Viga", sans-serif;
 }
 
 .light-text {
@@ -89,24 +97,19 @@ nav {
 	opacity: 0.5;
 }
 
-.btn{
-	height: 1.8rem;
-	width: auto;
-}
-
 .navbar-boggler {
 	border: 1px solid var(--li-color);
 	border-radius: 10px;
-	transition: transform 0.5s ease, box-shadow .5s ease;
-	margin-left: .35rem;
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+	margin-left: 0.35rem;
 }
 
-.navbar-boggler:hover{
-	transform: scale(.9, .9);
-	box-shadow: inset -.9px -.9px 3px var(--li-color), 
-				inset .9px .9px 3px var(--li-color);
-	transition: transform 0.5s ease, box-shadow .5s ease;
-	border: 1px solid var(--li-color)
+.navbar-boggler:hover {
+	transform: scale(0.9, 0.9);
+	box-shadow: inset -0.9px -0.9px 3px var(--li-color),
+		inset 0.9px 0.9px 3px var(--li-color);
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+	border: 1px solid var(--li-color);
 }
 
 .switch {
@@ -130,4 +133,50 @@ nav {
 	nav {
 		border-radius: 1rem;
 	}
+}
+
+/*Fonts*/
+.fira {
+	font-family: "Fira Mono", sans-serif;
+}
+
+.prompt {
+	font-family: "Prompt", sans-serif;
+}
+
+.viga {
+	font-family: "Viga", sans-serif;
+}
+.comfortaa {
+	font-family: "Comfortaa", sans-serif;
+}
+/*End Fonts*/
+
+main {
+	height: 100px;
+}
+
+.box {
+	height: 100%;
+	width: auto;
+	position: relative;
+}
+
+/*Header Image*/
+header {
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	background-color: black;
+	background-size: cover;
+	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+}
+
+.border-curvy {
+	background-color: var(--body-bg);
+	border-radius: 150% 150% 0px 0px;
+	height: 50px;
+	margin-top: -50px;
+	z-index: 20;
 }
