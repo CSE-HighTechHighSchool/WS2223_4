@@ -45,3 +45,38 @@ mouseOverContainer.onmousemove = function (e) {
 		transformElement(ex1Layer, position);
 	});
 };
+
+// Reveal element
+function reveal() {
+	var reveals = document.querySelectorAll(".reveal");
+
+	for (var i = 0; i < reveals.length; i++) {
+		var windowHeight = window.innerHeight;
+		var elementTop = reveals[i].getBoundingClientRect().top;
+		// var elementVisible = 10;
+
+		if (elementTop < windowHeight) {
+			reveals[i].classList.add("active");
+		} else {
+			reveals[i].classList.remove("active");
+		}
+	}
+}
+
+window.addEventListener("scroll", reveal);
+
+//Scrollbar
+window.onscroll = function () {
+	myFunction();
+};
+
+function myFunction() {
+	var winScroll =
+		document.body.scrollTop || document.documentElement.scrollTop;
+	var height =
+		document.documentElement.scrollHeight -
+		document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;
+	document.getElementById("ag-timeline_line-progress").style.height =
+		scrolled + "%";
+}
