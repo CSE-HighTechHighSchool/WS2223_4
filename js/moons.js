@@ -16,6 +16,12 @@ const cova_i = document.querySelector(".cova_i");
 const iap_alt = document.querySelector(".iapetus_alt");
 const iap_alt_p = document.querySelector(".iapetus_alt_p");
 
+const rhea = document.querySelector(".rhea");
+const rhea_text = document.querySelector(".rhea_text");
+const cova_r = document.querySelector(".cova_r");
+const rhea_alt = document.querySelector(".rhea_alt");
+const rhea_alt_p = document.querySelector(".rhea_alt_p");
+
 //click effect for Titan
 let counter_t = 0;
 titan.addEventListener("click", () => {
@@ -122,4 +128,40 @@ iap_alt.addEventListener("click", () => {
     iap_alt_p.style.backdropFilter = "none";
   }
   counter_i++;
+})
+
+//click effect for Rhea
+let counter_r = 0;
+rhea.addEventListener("click", () => {
+  if (counter_r % 2 === 0) {
+    rhea.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
+    cova_r.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
+    rhea_text.style.opacity = "1";
+    rhea_text.style.transform = "translateX(-40%)";
+  }
+  else {
+    rhea.style.transform = "";
+    cova_r.style.transform = "";
+    rhea_text.style.opacity = "0";
+    rhea_text.style.transform = "";
+  }
+  counter_r++;
+})
+
+rhea_alt.addEventListener("click", () => {
+  if (counter_r % 2 === 0) {
+    rhea_alt.style.borderRadius = "50px";
+    rhea_alt.style.boxShadow = "none";
+    rhea_alt_p.style.borderRadius = "50px";
+    rhea_alt_p.style.opacity = "1";
+    rhea_alt_p.style.backdropFilter = "blur(10px)";
+  }
+  else {
+    rhea_alt.style.borderRadius = "50%";
+    rhea_alt.style.boxShadow = "inset -10px -5px 10px black, inset 10px 5px 20px white";
+    rhea_alt_p.style.borderRadius = "50%";
+    rhea_alt_p.style.opacity = "0";
+    rhea_alt_p.style.backdropFilter = "none";
+  }
+  counter_r++;
 })

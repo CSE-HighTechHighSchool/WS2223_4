@@ -1,5 +1,7 @@
+/* import variable from styles.css */
 @import url("./styles.css");
 
+/* top background of the page */
 .spacer {
   height: 90vh;
   width: 100%;
@@ -12,7 +14,8 @@
   left: 0;
   right: 0;
   height: 100vh;
-  background-color: black;
+  background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+  background-size: cover;
   width: 100%;
 }
 
@@ -107,14 +110,20 @@
 }
 
 #rhea {
-  height: 30%;
-  width: auto;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  background-image: url("../img/rhea_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  animation: 10s rotate infinite linear, 17s orbit linear infinite;
   position: absolute;
   z-index: -1;
-  left: -20%;
-  top: 35%;
-  --orb: 130vw;
-  animation: 5s orbit linear infinite;
+  left: 20%;
+  top: 10%;
+  --orb: 50vw 30vw;
 }
 
 #mimas {
@@ -128,11 +137,49 @@
   animation: 5s orbit linear infinite;
 }
 
+/* titan rotating effect */
 .titan_whole {
   position: relative;
   right: 0;
   left: 0;
   height: 50vh;
+}
+
+.titan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30%;
+  height: 0;
+  padding-bottom: 30%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/titan_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 15s rotate infinite linear;
+}
+
+.cova_t {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 20%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40%;
+  height: 20%;
+  padding-bottom: 20%;
+  transform-box: initial;
+  transition: transform 1.5s ease-in-out;
+  background-color: var(--body-bg);
 }
 
 .titan_text {
@@ -156,43 +203,6 @@
   margin: auto;
   text-align: center;
   color: var(--li-color);
-}
-
-.cova_t {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: 20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 40%;
-  height: 20%;
-  padding-bottom: 20%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
-.titan {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 30%;
-  height: 0;
-  padding-bottom: 30%;
-  border-radius: 50%;
-  transition: transform 1.5s ease-in-out;
-  background-image: url("../img/titan_texture.jpg");
-  background-repeat: repeat-x;
-  background-size: cover;
-  background-position: 0 0;
-  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
-
-  animation: 15s rotate infinite linear;
 }
 
 .titan_alt {
@@ -230,11 +240,49 @@
   padding: 5%;
 }
 
+/* enceladus rotating effect */
 .enceladus_whole {
   position: relative;
   right: 0;
   left: 0;
   height: 50vh;
+}
+
+.enceladus {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30%;
+  height: 0;
+  padding-bottom: 30%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/enceladus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 15s rotate infinite linear;
+}
+
+.cova_e {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40%;
+  height: 20%;
+  padding-bottom: 20%;
+  transform-box: initial;
+  transition: transform 1.5s ease-in-out;
+  background-color: var(--body-bg);
 }
 
 .enceladus_text {
@@ -261,43 +309,6 @@
   margin: auto;
   text-align: center;
   color: var(--li-color);
-}
-
-.cova_e {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 40%;
-  height: 20%;
-  padding-bottom: 20%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
-.enceladus {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 30%;
-  height: 0;
-  padding-bottom: 30%;
-  border-radius: 50%;
-  transition: transform 1.5s ease-in-out;
-  background-image: url("../img/enceladus_texture.jpg");
-  background-repeat: repeat-x;
-  background-size: cover;
-  background-position: 0 0;
-  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
-
-  animation: 15s rotate infinite linear;
 }
 
 .enceladus_alt {
@@ -335,11 +346,49 @@
   padding: 5%;
 }
 
+/* iapetus rotating effect */
 .iapetus_whole {
   position: relative;
   right: 0;
   left: 0;
   height: 50vh;
+}
+
+.iapetus {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30%;
+  height: 0;
+  padding-bottom: 30%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/iapetus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 15s rotate infinite linear;
+}
+
+.cova_i {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 20%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40%;
+  height: 20%;
+  padding-bottom: 20%;
+  transform-box: initial;
+  transition: transform 1.5s ease-in-out;
+  background-color: var(--body-bg);
 }
 
 .iapetus_text {
@@ -363,43 +412,6 @@
   margin: auto;
   text-align: center;
   color: var(--li-color);
-}
-
-.cova_i {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: 20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 40%;
-  height: 20%;
-  padding-bottom: 20%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
-.iapetus {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 30%;
-  height: 0;
-  padding-bottom: 30%;
-  border-radius: 50%;
-  transition: transform 1.5s ease-in-out;
-  background-image: url("../img/iapetus_texture.jpg");
-  background-repeat: repeat-x;
-  background-size: cover;
-  background-position: 0 0;
-  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
-
-  animation: 15s rotate infinite linear;
 }
 
 .iapetus_alt {
@@ -437,6 +449,113 @@
   padding: 5%;
 }
 
+/* rhea rotating effect */
+.rhea_whole {
+  position: relative;
+  right: 0;
+  left: 0;
+  height: 50vh;
+}
+
+.rhea {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30%;
+  height: 0;
+  padding-bottom: 30%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/rhea_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 15s rotate infinite linear;
+}
+
+.cova_r {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40%;
+  height: 20%;
+  padding-bottom: 20%;
+  transform-box: initial;
+  transition: transform 1.5s ease-in-out;
+  background-color: var(--body-bg);
+}
+
+.rhea_text {
+  position: absolute;
+  left: 0;
+  right: -15%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -2;
+  height: 50%;
+  width: 40%;
+  --opac: 0;
+  opacity: var(--opac);
+  transform: var(--out);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  border: 5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 2%;
+  background-color: var(--bg-color);
+}
+
+.rhea_text p {
+  margin: auto;
+  text-align: center;
+  color: var(--li-color);
+}
+
+.rhea_alt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 35vw;
+  width: 35vw;
+  border-radius: 50%;
+  transition: border-radius 1s ease, box-shadow 1s ease;
+  background-image: url("../img/rhea_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 15s rotate infinite linear;
+}
+
+.rhea_alt_p {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
+  border-radius: 50%;
+  border: 5px solid var(--border-color);
+}
+
+.rhea_alt_p p {
+  text-align: center;
+  color: black;
+  padding: 5%;
+}
+
+/* keyframes for animations */
 @keyframes orbit {
   0% {
     opacity: 1;
@@ -477,6 +596,7 @@
   }
 }
 
+/* @media query for breakpoints */
 @media screen and (max-width: 675px) {
   .titan_alt {
     height: 50vw;
@@ -489,6 +609,11 @@
   }
 
   .iapetus_alt {
+    height: 50vw;
+    width: 50vw;
+  }
+
+  .rhea_alt {
     height: 50vw;
     width: 50vw;
   }
