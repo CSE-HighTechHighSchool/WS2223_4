@@ -1,22 +1,36 @@
 /* import variable from styles.css */
 @import url("./styles.css");
 
+html{
+  scroll-snap-type: y mandatory;
+}
+
+.space_bg{
+  background-image: url("../img/stars_bg.jpg");
+  background-repeat: repeat-y;
+  background-size: contain;
+  position: relative;
+  z-index: -10;
+  animation: 200s star_scroll linear infinite;
+}
+
 /* top background of the page */
 .spacer {
-  height: 90vh;
+  height: 79vh;
   width: 100%;
 }
 
 .moons_top {
-  z-index: -10;
+  z-index: -9;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 100vh;
-  background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+  background-image: url("../img/space_bg.jpg");
   background-size: cover;
   width: 100%;
+  scroll-snap-align: center;
 }
 
 .moon_title {
@@ -127,14 +141,25 @@
 }
 
 #mimas {
-  height: 30%;
-  width: auto;
+  height: 6vh;
+  width: 6vh;
+  border-radius: 50%;
+  background-image: url("../img/mimas_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  animation: 10s rotate infinite linear, 10s orbit linear infinite;
   position: absolute;
   z-index: -1;
-  left: -20%;
-  top: 35%;
-  --orb: 130vw;
-  animation: 5s orbit linear infinite;
+  left: 40%;
+  top: 20%;
+  --orb: 20vw 25vw;
+}
+
+h2{
+  color: var(--li-color);
+  font-size: 5em;
 }
 
 /* titan rotating effect */
@@ -142,7 +167,10 @@
   position: relative;
   right: 0;
   left: 0;
-  height: 50vh;
+  height: 100vh;
+  z-index: -3;
+  scroll-snap-align: start;
+  background-color: var(--body-bg);
 }
 
 .titan {
@@ -152,9 +180,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 30%;
+  width: 50%;
   height: 0;
-  padding-bottom: 30%;
+  padding-bottom: 50%;
   border-radius: 50%;
   transition: transform 1.5s ease-in-out;
   background-image: url("../img/titan_texture.jpg");
@@ -174,9 +202,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 40%;
+  width: 35%;
   height: 20%;
-  padding-bottom: 20%;
+  padding-bottom: 50%;
   transform-box: initial;
   transition: transform 1.5s ease-in-out;
   background-color: var(--body-bg);
@@ -245,7 +273,8 @@
   position: relative;
   right: 0;
   left: 0;
-  height: 50vh;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 .enceladus {
@@ -255,9 +284,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 30%;
+  width: 50%;
   height: 0;
-  padding-bottom: 30%;
+  padding-bottom: 50%;
   border-radius: 50%;
   transition: transform 1.5s ease-in-out;
   background-image: url("../img/enceladus_texture.jpg");
@@ -277,9 +306,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 40%;
+  width: 50%;
   height: 20%;
-  padding-bottom: 20%;
+  padding-bottom: 50%;
   transform-box: initial;
   transition: transform 1.5s ease-in-out;
   background-color: var(--body-bg);
@@ -295,9 +324,6 @@
   z-index: -2;
   height: 50%;
   width: 40%;
-  --opac: 0;
-  opacity: var(--opac);
-  transform: var(--out);
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
   border: 5px solid var(--border-color);
   border-radius: 30px;
@@ -321,12 +347,12 @@
   height: 35vw;
   width: 35vw;
   border-radius: 50%;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
   transition: border-radius 1s ease, box-shadow 1s ease;
   background-image: url("../img/enceladus_texture.jpg");
   background-repeat: repeat-x;
   background-size: cover;
   background-position: 0 0;
-  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
 
   animation: 15s rotate infinite linear;
 }
@@ -334,10 +360,10 @@
 .enceladus_alt_p {
   height: 100%;
   width: 100%;
-  opacity: 0;
   transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
-  border-radius: 50%;
   border: 5px solid var(--border-color);
+  opacity: 0;
+  border-radius: 50%;
 }
 
 .enceladus_alt_p p {
@@ -345,13 +371,13 @@
   color: black;
   padding: 5%;
 }
-
 /* iapetus rotating effect */
 .iapetus_whole {
   position: relative;
   right: 0;
   left: 0;
-  height: 50vh;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 .iapetus {
@@ -361,9 +387,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 30%;
+  width: 50%;
   height: 0;
-  padding-bottom: 30%;
+  padding-bottom: 50%;
   border-radius: 50%;
   transition: transform 1.5s ease-in-out;
   background-image: url("../img/iapetus_texture.jpg");
@@ -383,9 +409,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 40%;
+  width: 50%;
   height: 20%;
-  padding-bottom: 20%;
+  padding-bottom: 50%;
   transform-box: initial;
   transition: transform 1.5s ease-in-out;
   background-color: var(--body-bg);
@@ -454,7 +480,8 @@
   position: relative;
   right: 0;
   left: 0;
-  height: 50vh;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 .rhea {
@@ -464,9 +491,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 30%;
+  width: 50%;
   height: 0;
-  padding-bottom: 30%;
+  padding-bottom: 50%;
   border-radius: 50%;
   transition: transform 1.5s ease-in-out;
   background-image: url("../img/rhea_texture.jpg");
@@ -486,9 +513,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 40%;
+  width: 50%;
   height: 20%;
-  padding-bottom: 20%;
+  padding-bottom: 50%;
   transform-box: initial;
   transition: transform 1.5s ease-in-out;
   background-color: var(--body-bg);
@@ -555,6 +582,110 @@
   padding: 5%;
 }
 
+/* mimas rotating effect */
+.mimas_whole {
+  position: relative;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.mimas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/mimas_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 15s rotate infinite linear;
+}
+
+.cova_m {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 20%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 20%;
+  padding-bottom: 50%;
+  transform-box: initial;
+  transition: transform 1.5s ease-in-out;
+  background-color: var(--body-bg);
+}
+
+.mimas_text {
+  position: absolute;
+  left: 0;
+  right: 15%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -2;
+  height: 50%;
+  width: 40%;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  border: 5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 2%;
+  background-color: var(--bg-color);
+}
+
+.mimas_text p {
+  margin: auto;
+  text-align: center;
+  color: var(--li-color);
+}
+
+.mimas_alt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 35vw;
+  width: 35vw;
+  border-radius: 50%;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  transition: border-radius 1s ease, box-shadow 1s ease;
+  background-image: url("../img/mimas_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+
+  animation: 15s rotate infinite linear;
+}
+
+.mimas_alt_p {
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
+  border: 5px solid var(--border-color);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.mimas_alt_p p {
+  text-align: center;
+  color: black;
+  padding: 5%;
+}
+
 /* keyframes for animations */
 @keyframes orbit {
   0% {
@@ -596,8 +727,14 @@
   }
 }
 
+@keyframes star_scroll {
+  100% {
+    background-position: 0 200%;
+  }
+}
+
 /* @media query for breakpoints */
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 775px) {
   .titan_alt {
     height: 50vw;
     width: 50vw;
@@ -616,5 +753,18 @@
   .rhea_alt {
     height: 50vw;
     width: 50vw;
+  }
+
+  .mimas_alt {
+    height: 50vw;
+    width: 50vw;
+  }
+
+  .spacer {
+    height: 90vh;
+  }
+
+  h2 {
+    font-size: 4em;
   }
 }

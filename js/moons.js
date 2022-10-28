@@ -22,6 +22,12 @@ const cova_r = document.querySelector(".cova_r");
 const rhea_alt = document.querySelector(".rhea_alt");
 const rhea_alt_p = document.querySelector(".rhea_alt_p");
 
+const mimas = document.querySelector(".mimas");
+const mimas_text = document.querySelector(".mimas_text");
+const cova_m = document.querySelector(".cova_m");
+const mimas_alt = document.querySelector(".mimas_alt");
+const mimas_alt_p = document.querySelector(".mimas_alt_p");
+
 //click effect for Titan
 let counter_t = 0;
 titan.addEventListener("click", () => {
@@ -29,7 +35,7 @@ titan.addEventListener("click", () => {
     titan.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     cova.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     titan_text.style.opacity = "1";
-    titan_text.style.transform = "translateX(40%)";
+    titan_text.style.transform = "translateX(50%)";
   }
   else {
     titan.style.transform = "";
@@ -65,7 +71,7 @@ enc.addEventListener("click", () => {
     enc.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     cova_e.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     enc_text.style.opacity = "1";
-    enc_text.style.transform = "translateX(-40%)";
+    enc_text.style.transform = "translateX(-50%)";
   }
   else {
     enc.style.transform = "";
@@ -101,7 +107,7 @@ iap.addEventListener("click", () => {
     iap.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     cova_i.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     iap_text.style.opacity = "1";
-    iap_text.style.transform = "translateX(40%)";
+    iap_text.style.transform = "translateX(50%)";
   }
   else {
     iap.style.transform = "";
@@ -137,7 +143,7 @@ rhea.addEventListener("click", () => {
     rhea.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     cova_r.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     rhea_text.style.opacity = "1";
-    rhea_text.style.transform = "translateX(-40%)";
+    rhea_text.style.transform = "translateX(-50%)";
   }
   else {
     rhea.style.transform = "";
@@ -164,4 +170,40 @@ rhea_alt.addEventListener("click", () => {
     rhea_alt_p.style.backdropFilter = "none";
   }
   counter_r++;
+})
+
+//Mimas click effect
+let counter_m = 0;
+mimas.addEventListener("click", () => {
+  if (counter_m % 2 === 0) {
+    mimas.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
+    cova_m.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
+    mimas_text.style.opacity = "1";
+    mimas_text.style.transform = "translateX(50%)";
+  }
+  else {
+    mimas.style.transform = "";
+    cova_m.style.transform = "";
+    mimas_text.style.opacity = "0";
+    mimas_text.style.transform = "";
+  }
+  counter_m++;
+})
+
+mimas_alt.addEventListener("click", () => {
+  if (counter_m % 2 === 0) {
+    mimas_alt.style.borderRadius = "50px";
+    mimas_alt.style.boxShadow = "none";
+    mimas_alt_p.style.borderRadius = "50px";
+    mimas_alt_p.style.opacity = "1";
+    mimas_alt_p.style.backdropFilter = "blur(10px)";
+  }
+  else {
+    mimas_alt.style.borderRadius = "50%";
+    mimas_alt.style.boxShadow = "inset -10px -5px 10px black, inset 10px 5px 20px white";
+    mimas_alt_p.style.borderRadius = "50%";
+    mimas_alt_p.style.opacity = "0";
+    mimas_alt_p.style.backdropFilter = "none";
+  }
+  counter_m++;
 })
