@@ -207,3 +207,8 @@ mimas_alt.addEventListener("click", () => {
   }
   counter_m++;
 })
+
+function spaceScroll() {
+  document.querySelector(".space_bg").style.opacity = "0";
+}
+
