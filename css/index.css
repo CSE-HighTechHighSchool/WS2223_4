@@ -35,6 +35,48 @@
 	padding-bottom: 90px;
 }
 
+#spotlight {
+	background-color: #eeaa2e;
+	/* background-image: url("/img/clouds.png"); */
+
+	background-size: cover;
+	padding-bottom: 2rem;
+	background-repeat: no-repeat;
+	padding-bottom: 90px;
+}
+
+.spotlight-button {
+	border-radius: 10px;
+	border: 1.5px solid var(--li-color);
+	/* background-color: var(--nav-bg); */
+	background-color: transparent;
+	color: var(--li-color);
+	padding-top: 8px;
+
+	padding-bottom: 8px;
+}
+
+.left-border {
+	border-left: 1px solid #6e6e6e;
+}
+
+#agencies {
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+}
+
+.agency {
+	margin-top: auto;
+	margin-bottom: auto;
+	display: block;
+}
+
+.agency:hover {
+	scale: 105%;
+	animation-duration: 50ms;
+	transition-timing-function: ease-in-out;
+}
+
 .rover-container {
 	border: 10px;
 	border-color: red;
@@ -44,17 +86,18 @@
 	background-color: #eeaa2e;
 }
 
-#Frontier {
-	/* background-color: #eeaa2e;*/
+/* #Frontier {
 	background-image: url("/img/clouds.png");
 	background-size: cover;
 	background-color: var(--body-bg);
-}
+} */
 
 #Overview {
 	/* background-color: #eeaa2e; */
 	background-image: url("/img/moon-crater.png");
 	background-size: cover;
+	padding-bottom: 6rem;
+	padding-top: 6rem;
 }
 
 /*Body*/
@@ -68,13 +111,27 @@
 
 /* Saturn Animation */
 
+/*Bob up and down*/
+@-webkit-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
 #saturn-image {
 	position: relative;
 	left: -200px;
-	-webkit-animation: slide 1.5s forwards;
-	-webkit-animation-delay: 0.1s;
-	animation: slide 1.5s forwards;
-	animation-delay: 0.1s;
 
 	width: 100%;
 	height: auto;
@@ -82,16 +139,61 @@
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
+
+	animation: slide 1.5s forwards;
+	animation-delay: 0.1s;
+	-webkit-animation: slide 1.5s forwards;
+	-webkit-animation-delay: 0.1s;
 }
 
-/* #saturn-layer {
-	display: flex;
-	justify-content: center;
-} */
+#saturn-layer {
+	margin-top: auto;
+	margin-bottom: auto;
+}
 
 #saturn-parent {
 	display: flex;
 	justify-content: center;
+	-webkit-animation: mover 1s infinite alternate;
+	animation: mover 2s infinite alternate;
+}
+
+#astronaut {
+	display: flex;
+	justify-content: center;
+	-webkit-animation: mover 1s infinite alternate;
+	animation: mover 2.5s infinite alternate;
+
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg);
+	}
+	80% {
+		transform: rotate(0deg);
+	}
+	85% {
+		transform: rotate(5deg);
+	}
+	95% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.wiggle {
+	display: inline-block;
+	animation: wiggle 2.5s infinite;
+}
+
+.wiggle:hover {
+	animation: none;
 }
 
 @-webkit-keyframes slide {
@@ -138,12 +240,6 @@
 	z-index: 5;
 }
 
-#roverhead {
-	border-radius: 100%;
-	width: 100%;
-	background-color: #0e0d0b;
-	border: #eeaa2e 2px solid;
-}
 /*
 /* Timeline
 

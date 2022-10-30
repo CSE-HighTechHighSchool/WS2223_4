@@ -33,8 +33,11 @@
 		<link href="css/index.css" rel="stylesheet" />
 		<link href="css/timeline.css" rel="stylesheet" />
 
-
 		<script src="js/script.js" defer></script>
+
+		<!-- Bootstrap Font Icon CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 
 		<!-- Custom Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -150,34 +153,36 @@
 			</div>
 
 			<!-- Header Body -->
-			<div class="" style="margin-top:4rem; margin-bottom:4rem">
+			<div class="" style=" margin-bottom:4rem">
 				<!-- Cover -->
 				<div class="container ">
-					<div class="row  ">
-						<div class=" col-sm "  style="z-index:20">
-							<div class="text-light">
-								<h2 class="fira">Welcome to...</h2>
-								<h1 class="font-massive fira text-yellow"  style="text-shadow: 3px 3px #644c1a;">Saturn System</h1>
-							</div>
-							<!-- <hr class=""> -->
-							<div class=" text-light font-weight-light mt-4">
-								<h4 class="quote font-italic my-4 prompt">"The most beautiful place in the universe"</h4>
-								<ul class="features viga">
-									<li class="mt-2 "><h5>Explore <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">5+</span> incredible moons on your own timetable</h5></li>
-									<li class="mt-2 "><h5>Premier <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">tourism</span> and <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">residential</span> services</h5></li>
-									<li class="mt-2 "><h5>Reserve <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">your spot</span> near the Ringed Planet!</h5></li>
-								</ul>
-							</div>
-							<div class="mx-auto my-5 pb-5" >
-								<button class="header-button mr-2 viga btn btn-warning">Learn More</button>
-								<button class="header-button mx-2 viga btn btn-warning">Plan your Trip</button>
+					<div class="row  row-cols-1 row-cols-lg-2">
+						<div class=" col "  style="z-index:20">
+							<div style="margin-top: 4rem;margin-bottom: auto;">
+								<div class="text-light">
+									<h2 class="fira">Welcome to...</h2>
+									<h1 class="font-massive fira text-yellow"  style="font-size:60px;text-shadow: 3px 3px #644c1a;">Saturn System</h1>
+								</div>
+								<!-- <hr class=""> -->
+								<div class=" text-light font-weight-light mt-4">
+									<h4 class="quote font-italic my-4 prompt">"The most beautiful place in the universe"</h4>
+									<ul class="features viga my-4">
+										<li class="mt-2 "><h5>Explore <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">5+</span> incredible moons on your own timetable</h5></li>
+										<li class="mt-2 "><h5>Premier <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">tourism</span> and <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">residential</span> services</h5></li>
+										<li class="mt-2 "><h5>Reserve <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">your spot</span> near the Ringed Planet!</h5></li>
+									</ul>
+								</div>
+								<div class="mx-auto my-5 pb-5" >
+									<button class="header-button mr-2 viga btn btn-warning" style="border:none">Learn More</button>
+									<button class="header-button mx-2 viga btn btn-warning" style="border:none">Plan your Trip</button>
+								</div>
 							</div>
 						</div>
 
 						<!-- Interactive Saturn -->
-						<div id="saturn-parent" class="col-sm " style="z-index:20">
+						<div id="saturn-parent" class="col " style="z-index:20">
 								<div id="saturn-layer">
-									<img id="saturn-image"  alt="saturn" src="/img/saturn-transparent.png"></img>
+									<img id="saturn-image" alt="saturn" src="/img/saturn-transparent.png"/>
 								</div>
 						</div>
 					</div>
@@ -189,10 +194,11 @@
 		</div>
 		</header>
 
-		<!-- Border Arc -->
-		<div class="border-curvy" ></div>
 
-		<main class="" >
+		<!-- Border Arc -->
+		<div class="border-curvy position-relative" style="z-index:10"></div>
+
+		<main class="position-relative" style="z-index:10">
 
 			<!--Spotlight-->
 			<section id="latest" class="overflow-hidden">
@@ -279,6 +285,7 @@
 				</div>
 			</section>
 
+
 			<!-- Border Arc -->
 			<div class="border-curvy " style="background-color: #eeaa2e;"></div>
 
@@ -350,10 +357,10 @@
 										alt="..."
 									/>
 
-									<div class="carousel-caption d-none d-md-block text-light viga">
+									<div class="carousel-caption d-md-block text-light viga">
 
 										<h5 style="text-shadow: 2px 2px #000000;">Colony Enceladus</h5>
-										<p style="text-shadow: 2px 2px #000000;">Colony Enceladus offers research and leisure opportunities. Chilly, but an excellent view of Saturn's Rings and other moons.</p>
+										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">Colony Enceladus offers research and leisure opportunities. Chilly, but an excellent view of Saturn's Rings and other moons.</p>
 									</div>
 								</div>
 								<div class="carousel-item">
@@ -364,9 +371,9 @@
 										style="height:440px; object-fit: cover;										"
 										alt="..."
 									/>
-									<div class="carousel-caption d-none d-md-block text-light viga">
+									<div class="carousel-caption d-md-block text-light viga">
 										<h5 style="text-shadow: 2px 2px #000000;">Colony O'Neill-Titan</h5>
-										<p style="text-shadow: 2px 2px #000000;">The O'Neill Cylinder is our most spectacular colony. Designed by physicist Gerard K. O'Neill, it generates artificial gravity by rotating.</p>
+										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">The O'Neill Cylinder is our most spectacular colony. Designed by physicist Gerard K. O'Neill, it generates artificial gravity by rotating.</p>
 									</div>
 								</div>
 								<div class="carousel-item">
@@ -377,9 +384,9 @@
 									style="height:440px; object-fit: cover;									"
 									alt="..."
 									/>
-									<div class="carousel-caption d-none d-md-block text-light viga">
+									<div class="carousel-caption d-md-block text-light viga">
 										<h5 style="text-shadow: 2px 2px #000000;">Colony Mimas</h5>
-										<p style="text-shadow: 2px 2px #000000;">Our most intense experience - Mimas has little to no atmosphere but aweing sights and spectacular geographic formations.</p>
+										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">Our most intense experience - Mimas has little to no atmosphere but aweing sights and spectacular geographic formations.</p>
 									</div>
 								</div>
 								<div class="carousel-item">
@@ -390,9 +397,9 @@
 									style="height:440px; object-fit: cover;									"
 									alt="..."
 									/>
-									<div class="carousel-caption d-none d-md-block text-light viga">
+									<div class="carousel-caption d-md-block text-light viga">
 										<h5 style="text-shadow: 2px 2px #000000;">Colony Iapetus </h5>
-										<p style="text-shadow: 2px 2px #000000;">Iapetus is a remote research facility dedicated to monitoring the entire Saturn Tourism complex.</p>
+										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">Iapetus is a remote research facility dedicated to monitoring the entire Saturn Tourism complex.</p>
 									</div>
 								</div>
 								<div class="carousel-item">
@@ -403,9 +410,9 @@
 									style="height:440px; object-fit: cover;									"
 									alt="..."
 									/>
-									<div class="carousel-caption d-none d-md-block text-light viga">
+									<div class="carousel-caption d-md-block text-light viga">
 										<h5 style="text-shadow: 2px 2px #000000;">Colony Rhea</h5>
-										<p style="text-shadow: 2px 2px #000000;">Rhea is Saturn Tourism's intergalactic port. It receives numerous tourists and many resources to sustain all the colonies. </p>
+										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">Rhea is Saturn Tourism's intergalactic port. It receives numerous tourists and many resources to sustain all the colonies. </p>
 									</div>
 								</div>
 							</div>
@@ -432,276 +439,261 @@
 				</div>
 			</section>
 
+
 			<!-- Border Arc -->
 			<div class="border-curvy " style="background-color: black;"></div>
+
+			<!-- Vertical scroll progress bar
+			<div id="scroll-progress"></div> -->
 
 			<!--Timeline-->
 			<section class="ag-timeline-block position-relative">
 
 				<!-- Timeline Header -->
-				<div class="ag-timeline_title-box sticky-md-top " >
+				<div id="#timelineheader" class="ag-timeline_title-box sticky-md-top " >
 					<div class="ag-timeline_tagline viga reveal text-yellow" style="text-shadow: 2px 2px #644c1a; ">Our story</div>
 					<div id="shrink" class="ag-timeline_title prompt reveal">Discover Saturn Tourism</div>
 					<div class="opacity-gradient position-absolute top-0 left-0"></div>
 
 				</div>
 
-
 				<section class="ag-section overflow-hidden">
 				<div class="ag-format-container">
-					<div class="js-timeline ag-timeline">
-					<div class="js-timeline_line ag-timeline_line">
-						<div id="#header_parent" class="js-timeline_line-progress ag-timeline_line-progress"></div>
-					</div>
-					<div class="ag-timeline_list">
-						<div class="js-timeline_item ag-timeline_item">
-						<div class="ag-timeline-card_box">
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2022</div>
-							</div>
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">October 11, 2022</div>
-							</div>
+					<div id="timeline" class="js-timeline ag-timeline">
+						<div class="js-timeline_line ag-timeline_line">
+							<div id="#header_parent" class=" ag-timeline_line-progress sticky-top"></div>
 						</div>
-						<div class="ag-timeline-card_item reveal fade-left">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="/img/founded.jpg" class="ag-timeline-card_img" width="640" height="260" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Saturn Tourism is Established</div>
-								<div class="ag-timeline-card_desc">
-								Saturn Tourism is founded by the Saturn Tourism Corporation. The company is dedicated to providing the best space tourism experience in the solar system.
-								</div>
-							</div>
-							</div>
-							<div class="ag-timeline-card_arrow"></div>
-						</div>
-						</div>
-
-						<div class="js-timeline_item ag-timeline_item">
-						<div class="ag-timeline-card_box">
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">December 15, 2027</div>
-							</div>
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2027</div>
-							</div>
-						</div>
-						<div class="ag-timeline-card_item reveal fade-right">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-12.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Saturn Tourism Introduces Saturn Tourism Complex</div>
-								<div class="ag-timeline-card_desc">
-								Saturn Tourism begins construction on the first tourism colony on the moon of Enceladus, with plentiful natural resources like water. The colony will be the first of many to be built in the Saturn system.
-								</div>
-							</div>
-							</div>
-							<div class="ag-timeline-card_arrow"></div>
-						</div>
-						</div>
-
-						<div class="js-timeline_item ag-timeline_item">
-						<div class="ag-timeline-card_box">
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2032</div>
-							</div>
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">October 11, 2032</div>
-							</div>
-						</div>
-						<div class="ag-timeline-card_item reveal fade-left">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-11.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Saturn Tourism Completes the Saturn Colonial Complex</div>
-								<div class="ag-timeline-card_desc">
-								The Enceladus, Titan, Mimas, Rhea, and Iapetus colonies are completed in 5 years, with each dedicated to unique functions.
-								</div>
-							</div>
-							</div>
-							<div class="ag-timeline-card_arrow"></div>
-						</div>
-						</div>
-
-						<div class="js-timeline_item ag-timeline_item ">
+						<div class="">
+							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
-								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">March 18th, 2033</div>
-								</div>
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2033</div>
+								<div class="ag-timeline-card_point">2022</div>
+								</div>
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">October 11, 2022</div>
 								</div>
 							</div>
-							<div class="ag-timeline-card_item reveal fade-right">
+							<div class="ag-timeline-card_item reveal fade-left">
 								<div class="ag-timeline-card_inner">
 								<div class="ag-timeline-card_img-box">
-									<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-10.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
+									<img src="/img/founded.jpg" class="ag-timeline-card_img" width="640" height="260" />
 								</div>
 								<div class="ag-timeline-card_info">
-									<div class="ag-timeline-card_title">First Tourists Arrive at Saturn</div>
+									<div class="ag-timeline-card_title">Saturn Tourism is Established</div>
 									<div class="ag-timeline-card_desc">
-										Very first tourists arrive at Saturn Tourism Complex. The first tourists are a group of fifty researchers, tourists, and permanent residents, who are the first to experience the wonders of Saturn.
+									Saturn Tourism is founded by the Saturn Tourism Corporation. The company is dedicated to providing the best space tourism experience in the solar system.
 									</div>
 								</div>
 								</div>
 								<div class="ag-timeline-card_arrow"></div>
 							</div>
-						</div>
+							</div>
 
-						<div class="js-timeline_item ag-timeline_item">
-						<div class="ag-timeline-card_box">
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2035</div>
-							</div>
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">December 19th, 2035</div>
-							</div>
-						</div>
-						<div class="ag-timeline-card_item reveal fade-left">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-9.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Saturn Tourism Celebrates its 10th Tour</div>
-								<div class="ag-timeline-card_desc">
-									Saturn Tourism celebrates its 10th tour, with the first tourists arriving at the Saturn Tourism Complex in 2033.
+							<div class="js-timeline_item ag-timeline_item">
+							<div class="ag-timeline-card_box">
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">December 15, 2027</div>
+								</div>
+								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+								<div class="ag-timeline-card_point">2027</div>
 								</div>
 							</div>
+							<div class="ag-timeline-card_item reveal fade-right">
+								<div class="ag-timeline-card_inner">
+								<div class="ag-timeline-card_img-box">
+									<img src="/img/saturn-station.jpg" class="ag-timeline-card_img" width="640" height="260" />
+								</div>
+								<div class="ag-timeline-card_info">
+									<div class="ag-timeline-card_title">Saturn Tourism Introduces Saturn Tourism Complex</div>
+									<div class="ag-timeline-card_desc">
+									Saturn Tourism begins construction on the first tourism colony on the moon of Enceladus, with plentiful natural resources like water. The colony will be the first of many to be built in the Saturn system.
+									</div>
+								</div>
+								</div>
+								<div class="ag-timeline-card_arrow"></div>
 							</div>
-							<div class="ag-timeline-card_arrow"></div>
-						</div>
-						</div>
+							</div>
 
-						<div class="js-timeline_item ag-timeline_item ">
-						<div class="ag-timeline-card_box">
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">Season 8</div>
-							</div>
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2018</div>
-							</div>
-						</div>
-						<div class="ag-timeline-card_item reveal fade-right">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-8.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Season 8</div>
-								<div class="ag-timeline-card_desc">
-								Donec quam felis, ultricies nec, pellentesque eu,
-								pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-								vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-								venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-								tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+							<div class="js-timeline_item ag-timeline_item">
+							<div class="ag-timeline-card_box">
+								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+								<div class="ag-timeline-card_point">2032</div>
+								</div>
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">October 11, 2032</div>
 								</div>
 							</div>
+							<div class="ag-timeline-card_item reveal fade-left">
+								<div class="ag-timeline-card_inner">
+								<div class="ag-timeline-card_img-box">
+									<img src="/img/saturn-station2.jpg" class="ag-timeline-card_img" width="640" height="260" />
+								</div>
+								<div class="ag-timeline-card_info">
+									<div class="ag-timeline-card_title">Saturn Tourism Completes the Saturn Colonial Complex</div>
+									<div class="ag-timeline-card_desc">
+									The Enceladus, Titan, Mimas, Rhea, and Iapetus colonies are completed in 5 years, with each dedicated to unique functions.
+									</div>
+								</div>
+								</div>
+								<div class="ag-timeline-card_arrow"></div>
 							</div>
-							<div class="ag-timeline-card_arrow"></div>
-						</div>
-						</div>
+							</div>
 
-						<div class="js-timeline_item ag-timeline_item">
-						<div class="ag-timeline-card_box">
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2018</div>
-							</div>
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">Season 7</div>
-							</div>
-						</div>
-						<div class="ag-timeline-card_item reveal fade-left">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-7.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Season 7</div>
-								<div class="ag-timeline-card_desc">
-								Quisque rutrum. Aenean imperdiet. Etiam ultricies
-								nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-								Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-								adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-								hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+							<div class="js-timeline_item ag-timeline_item ">
+								<div class="ag-timeline-card_box">
+									<div class="ag-timeline-card_meta-box">
+									<div class="ag-timeline-card_meta">March 18th, 2033</div>
+									</div>
+									<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+									<div class="ag-timeline-card_point">2033</div>
+									</div>
+								</div>
+								<div class="ag-timeline-card_item reveal fade-right">
+									<div class="ag-timeline-card_inner">
+									<div class="ag-timeline-card_img-box">
+										<img src="/img/saturn-tourists.jpg" class="ag-timeline-card_img" width="640" height="260" />
+									</div>
+									<div class="ag-timeline-card_info">
+										<div class="ag-timeline-card_title">First Tourists Arrive at Saturn</div>
+										<div class="ag-timeline-card_desc">
+											Very first tourists arrive at Saturn Tourism Complex. The first tourists are a group of fifty researchers, tourists, and permanent residents, who are the first to experience the wonders of Saturn.
+										</div>
+									</div>
+									</div>
+									<div class="ag-timeline-card_arrow"></div>
 								</div>
 							</div>
-							</div>
-							<div class="ag-timeline-card_arrow"></div>
-						</div>
-						</div>
 
-						<div class="js-timeline_item ag-timeline_item">
-						<div class="ag-timeline-card_box">
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">Season 6</div>
-							</div>
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2017</div>
-							</div>
-						</div>
-						<div class="ag-timeline-card_item reveal fade-right">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-6.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Season 6</div>
-								<div class="ag-timeline-card_desc">
-								Vivamus elementum semper nisi. Aenean vulputate eleifend
-								tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-								Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-								nulla ut metus varius laoreet. Quisque rutrum.
+							<div class="js-timeline_item ag-timeline_item">
+							<div class="ag-timeline-card_box">
+								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+								<div class="ag-timeline-card_point">2035</div>
+								</div>
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">December 19th, 2035</div>
 								</div>
 							</div>
+							<div class="ag-timeline-card_item reveal fade-left">
+								<div class="ag-timeline-card_inner">
+								<div class="ag-timeline-card_img-box">
+									<img src="/img/10th-tour.jpg" class="ag-timeline-card_img" width="640" height="260" />
+								</div>
+								<div class="ag-timeline-card_info">
+									<div class="ag-timeline-card_title">Saturn Tourism Celebrates its 10th Tour</div>
+									<div class="ag-timeline-card_desc">
+										Saturn Tourism celebrates its 10th tour, with the first tourists arriving at the Saturn Tourism Complex in 2035.
+									</div>
+								</div>
+								</div>
+								<div class="ag-timeline-card_arrow"></div>
 							</div>
-							<div class="ag-timeline-card_arrow"></div>
-						</div>
-						</div>
+							</div>
 
-						<div class="js-timeline_item ag-timeline_item">
-						<div class="ag-timeline-card_box">
-							<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-							<div class="ag-timeline-card_point">2017</div>
-							</div>
-							<div class="ag-timeline-card_meta-box">
-							<div class="ag-timeline-card_meta">Season 5</div>
-							</div>
-						</div>
-						<div class="ag-timeline-card_item reveal fade-left">
-							<div class="ag-timeline-card_inner">
-							<div class="ag-timeline-card_img-box">
-								<img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-5.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-							</div>
-							<div class="ag-timeline-card_info">
-								<div class="ag-timeline-card_title">Season 5</div>
-								<div class="ag-timeline-card_desc">
-								Donec pede justo, fringilla
-								vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-								venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-								tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-								tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-								Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-								nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-								nisi vel augue. Curabitur ullamcorper ultricies nisi.
+							<div class="js-timeline_item ag-timeline_item ">
+							<div class="ag-timeline-card_box">
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">August 4th, 2038</div>
+								</div>
+								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+								<div class="ag-timeline-card_point">2038</div>
 								</div>
 							</div>
+							<div class="ag-timeline-card_item reveal fade-right">
+								<div class="ag-timeline-card_inner">
+								<div class="ag-timeline-card_img-box">
+									<img src="/img/O'Neill-Colony.jpg" class="ag-timeline-card_img" width="640" height="260" />
+								</div>
+								<div class="ag-timeline-card_info">
+									<div class="ag-timeline-card_title">First O'Neill Colony Constructed</div>
+									<div class="ag-timeline-card_desc">
+									Saturn tourism inaugurates the first O'Neill colony, an orbital station employing centrifugal forces to generate aritficial gravity. It is assigned to the moon of Titan.
+									</div>
+								</div>
+								</div>
+								<div class="ag-timeline-card_arrow"></div>
 							</div>
-							<div class="ag-timeline-card_arrow"></div>
+							</div>
+
+							<div class="js-timeline_item ag-timeline_item">
+							<div class="ag-timeline-card_box">
+								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+								<div class="ag-timeline-card_point">2039</div>
+								</div>
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">February 14th, 2039</div>
+								</div>
+							</div>
+							<div class="ag-timeline-card_item reveal fade-left">
+								<div class="ag-timeline-card_inner">
+								<div class="ag-timeline-card_img-box">
+									<img src="/img/enceladus-water.jpg" class="ag-timeline-card_img" width="640" height="260" />
+								</div>
+								<div class="ag-timeline-card_info">
+									<div class="ag-timeline-card_title">Water Discovered on Enceladus</div>
+									<div class="ag-timeline-card_desc">
+										Saturn Tourism researchers locate and identify massive plumes of water, confirming the presence of the natural resource on Enceladus. The discovery is a major step towards the colonization of Saturn's entire system.
+									</div>
+								</div>
+								</div>
+								<div class="ag-timeline-card_arrow"></div>
+							</div>
+							</div>
+
+							<div class="js-timeline_item ag-timeline_item">
+							<div class="ag-timeline-card_box">
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">October 31st, 2041</div>
+								</div>
+								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+								<div class="ag-timeline-card_point">2041</div>
+								</div>
+							</div>
+							<div class="ag-timeline-card_item reveal fade-right">
+								<div class="ag-timeline-card_inner">
+								<div class="ag-timeline-card_img-box">
+									<img src="/img/Iapetus-Colony.jpg" class="ag-timeline-card_img" width="640" height="260" />
+								</div>
+								<div class="ag-timeline-card_info">
+									<div class="ag-timeline-card_title">Iapetus Research Colony Completed</div>
+									<div class="ag-timeline-card_desc">
+										The Iapetus Research observatory is completed, allowing for the first in-depth study of the moon's surface. The observatory is a major step in advancing the research of the universe and intergalactic phenomena.
+									</div>
+								</div>
+								</div>
+								<div class="ag-timeline-card_arrow"></div>
+							</div>
+							</div>
+
+							<div class="js-timeline_item ag-timeline_item">
+							<div class="ag-timeline-card_box">
+								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
+								<div class="ag-timeline-card_point">2049</div>
+								</div>
+								<div class="ag-timeline-card_meta-box">
+								<div class="ag-timeline-card_meta">The Present</div>
+								</div>
+							</div>
+							<div class="ag-timeline-card_item reveal fade-left">
+								<div class="ag-timeline-card_inner">
+								<div class="ag-timeline-card_img-box">
+									<img src="/img/cassini-probe.webp" class="ag-timeline-card_img" width="640" height="260" />
+								</div>
+								<div class="ag-timeline-card_info">
+									<div class="ag-timeline-card_title">Saturn Tourism</div>
+									<div class="ag-timeline-card_desc">
+										Saturn Tourism continues offering exciting tourism services and experiences to its customers. In addition to providing recreational opportunities, Saturn Tourism has now launched an effort to use probes to better understand Saturn and its moons.
+									</div>
+								</div>
+								</div>
+								<div class="ag-timeline-card_arrow"></div>
+							</div>
+							</div>
+
+
+
+
+
 						</div>
-						</div>
-
-
-
-
-
-					</div>
 					</div>
 				</div>
 				</section>
@@ -713,83 +705,186 @@
 
 	     <!--Overview-->
 
-		 <section id="Overview" class="overview text-dark p-2 text-left pb-4">
-			<div class="container">
-			  <div class="row">
+		<section id="Overview" class="text-dark text-left">
 
-				<div class="col-sm-6 py-3">
+			<div class="container mt-4 mt-md-0 pb-3 pb-md-0 " style=" border-radius:12px">
+				<h1 class="viga text-yellow" style="font-size:40px;text-shadow: 3px 3px #644c1a;">Like What You See?</h1>
+				<p class="text-light fira" style="font-size:21px">Consider booking one of the stations below.</p>
 
-					  <div id="Frontier" class="col-sm mt-4 mt-md-0 pb-3 pb-md-0 " style=" border-radius:12px">
-						  <div class="container " style="padding:24px" >
-							  <h2 class=" viga"  style="text-shadow: 2px 2px #fad88d;">Want to Book a Station?</h2>
+				<div class="row " style="margin-top:2rem;">
+					<div class="col-md-4">
+						s
+					</div>
+					<div class="col-md-4">
+						s
 
-							  <div class="grid" id="ovPadLeft" style="border-radius:12px; padding:8px">
+					</div>
+					<div class="col-md-4">
+						s
 
-								  <div class="row">
-									  <div class="my-auto py-2 col-sm-4">
-										  <img id="roverhead" src="/img/rover-head.png" alt="rover head"  />
-									  </div>
-									  <p class="my-auto ml-2 fira col-sm-8">
-										  <span class=" viga "  style=" font-size:25px">It's Easy.</span>
-
-										  You can choose from a variety of stations. We offer a variety of experiences, from the most intense to the most relaxing.
-									  </p>
-								  </div>
-
-								  <hr class="my-3">
-
-								  <div class="row " id="ovPadLeft" style="border-radius:12px; padding:7px">
-									  <p class="my-auto fira col-sm mb-2 mb-md-0">
-										  <span class=" viga "  style=" font-size:25px">Decided yet?</span>
-
-										  Make a reservation right now! We'll be waiting for you at our Launch Centers across Florida and Cuba.
-
-									  </p>
-									  <div class="btn-group-vertical col-sm">
-										  <button class="header-button viga btn btn-warning">Colony: Enceladus</button>
-										  <button class="header-button viga btn btn-warning">Colony: O'Neill-Titan</button>
-										  <button class="header-button viga btn btn-warning">Colony: Mimas</button>
-									  </div>
-								  </div>
-
-								  <hr class="my-3">
-
-								  <div class="row " id="ovPadLeft" style="border-radius:12px; padding:7px">
-									  <p class="my-auto fira col-sm mb-2 mb-md-0">
-										  <span class=" viga "  style=" font-size:25px">Payment Methods</span>
-
-										  Make a reservation right now! We'll be waiting for you at our Launch Centers across Florida and Cuba.
-
-									  </p>
-									  <div class="btn-group-vertical col-sm">
-										  <button class="header-button viga btn btn-warning">Colony: Enceladus</button>
-										  <button class="header-button viga btn btn-warning">Colony: O'Neill-Titan</button>
-										  <button class="header-button viga btn btn-warning">Colony: Mimas</button>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-
+					</div>
 				</div>
-				<div class="col-sm-6 mt-4 mt-md-0 ">
-				  <div class="mt-2">
-					  <h2 class="noPadLeft viga text-light"  style="text-shadow: 2px 2px #eeaa2e;">Meet LIRA:</h2>
-					  <p class="lead fira" id="ovPadLeft">
-						  She takes all the pictures!
-					  </p>
-				  </div>
-				  <div class="rover-container">
-					  <img src="/img/astronaut.png" alt="astronaut" id="astronaut" style="height:400px"/>
-				  </div>
-			  </div>
-			  </div>
+
 			</div>
 		</section>
 
+		<!-- Border Arc -->
+		<div class="border-curvy " style="background-color: #eeaa2e;"></div>
+
+		<!--Spotlight-->
+		<section id="spotlight" class="">
+			<div  class="container ">
+				<div class="row col-md-11">
+					<div class="col-12 col-lg-10">
+						<h1 class="text-dark viga" style="font-size:40px;text-shadow: 3px 3px #fad88d;">Saturn Tourism's Mission</h1>
+						<p class="text-dark fira" style="font-size:21px">Our mission is to provide exciting and educational experiences to our customers through immersive tourism services. We also want to use our knowledge of the Saturn system to better understand the universe and the phenomena that occur in it.</p>
+						<div class="row " style="margin-top:2rem;">
+							<form class="form-inline col-12 col-lg-7">
+
+								<div class="input-group ">
+									<input type="text" style="font-size:21px" class="form-control fira p-2" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon2">
+									<span class="input-group-text viga" id="basic-addon2">Sign up for Saturn Tourism</span>
+								</div>
+
+							</form>
+
+							<div  class="col-12 col-lg-4 left-border">
+
+								<button class="spotlight-button viga btn btn-warning col-12 mt-lg-0 mt-3" style="font-size:21px">Learn About Us <span class="ml-2 bi-arrow-right"></span></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 position-relative d-lg-block d-none">
+						<div class="position-absolute" >
+							<img id="astronaut" src="/img/astronaut.png"></img>
+						</div>
+					</div>
+				</div>
+
+				<div id="agencies" class="">
+					<div class="text-uppercase fira fw-bold" style="font-size:18px">Trusted by the world's leading Space Agencies <i class="bi bi-arrow-down-right-circle-fill"></i>
+					</div>
+					<div class="row mt-4 reveal" >
+						<a href="https://www.isro.gov.in/" class="agency col-4 col-md-2 " ><img class="img-fluid" src="/img/isro.png" alt="isro"></img></a>
+						<a href="https://www.nasa.gov/" class="agency col-4 col-md-2 "><img class="img-fluid" src="/img/nasa.png" alt="nasa" ></img></a>
+						<a href="https://en.wikipedia.org/wiki/Roscosmos" class="agency col-4 col-md-2 " ><img class="img-fluid" src="/img/roscomos.png" alt="roscomos"></img></a>
+						<a href="https://global.jaxa.jp/" class="agency col-4 col-md-2 " ><img class="img-fluid" src="/img/jaxa.png" alt="cnsa"></img></a>
+						<a href="https://www.spacex.com/" class="agency col-4 col-md-2 " ><img class="img-fluid" src="/img/spacex.png" alt="spacex"></img></a>
+						<a href="https://www.esa.int/" class="agency col-4 col-md-2 "><img class="img-fluid" src="/img/esa.png" alt="esa"></img></a>
+
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+
+		<!-- Border Arc -->
+		<div class="border-curvy " style="background-color: #ffffff"></div>
+
+		<footer class="text-center text-lg-start text-muted bg-white">
+			<!-- Section: Social media -->
+			<section class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+				<!-- Left -->
+				<div class="me-5 d-none d-lg-block fira">
+					<span>Get connected with us on social networks:</span>
+				</div>
+				<!-- Left -->
+
+				<!-- Right -->
+				<div>
+					<a href="" class="me-4 text-reset">
+					<i class="bi bi-facebook"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+					<i class="bi bi-twitter"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+					<i class="bi bi-google"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+					<i class="bi bi-instagram"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+					<i class="bi bi-github"></i>
+					</a>
+				</div>
+				<!-- Right -->
+			</section>
+			<!-- Section: Social media -->
+
+			<!-- Section: Links  -->
+			<section class="">
+			<div class="container text-center text-md-start mt-5">
+				<!-- Grid row -->
+				<div class="row mt-3">
+					<!-- Grid column -->
+					<div class="container col-md-4 col-lg-6 mx-auto mb-4">
+						<!-- Content -->
+						<div class="row">
+							<div class="my-auto py-6 col-3 d-lg-block d-none">
+								<img id="roverhead" src="/img/rover-head.png" alt="rover head"  />
+							</div>
+							<p class="my-auto  fira col-lg-9">
+								<span class=" text-uppercase fw-bold fira "  style=" font-size:25px">It's Time for Saturn Tourism.</span>
+
+								We'll take you to the most beautiful places in the Solar System.
+							</p>
+
+						</div>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-4 col-lg-2 mx-auto mb-4 viga">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4 fira">
+						Useful links
+						</h6>
+						<p>
+						<a href="#!" class="text-reset">Pricing</a>
+						</p>
+						<p>
+						<a href="#!" class="text-reset">Settings</a>
+						</p>
+						<p>
+						<a href="#!" class="text-reset">Orders</a>
+						</p>
+						<p>
+						<a href="#!" class="text-reset">Help</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-4  col-lg-3 mx-auto mb-md-0 mb-4 viga">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4 fira">Contact</h6>
+						<p><i class="fas bi-house me-3"></i>Space Commerce Way, FL 32953</p>
+						<p>
+						<i class="fas bi-envelope me-3"></i>
+						saturn@tourism.com
+						</p>
+						<p><i class="fas bi-phone me-3"></i> + 01 234 567 88</p>
+						<p><i class="fas bi-printer me-3"></i> + 01 234 567 89</p>
+					</div>
+					<!-- Grid column -->
+				</div>
+				<!-- Grid row -->
+			</div>
+			</section>
+			<!-- Section: Links  -->
+
+			<!-- Copyright -->
+			<div class="text-center viga p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2022 Copyright:
+			<a class="text-reset fw-bold" href="/">Saturn Tourism</a>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
 		</main>
 
-		<footer></footer>
+
 	</body>
 </html>

@@ -66,18 +66,34 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-//Scrollbar
-window.onscroll = function () {
-	myFunction();
-};
+//Timeline Progress
 
-function myFunction() {
-	var winScroll =
+const scrollProgress = document.getElementById("#header_parent");
+
+const height =
+	document.documentElement.scrollHeight -
+	document.documentElement.clientHeight;
+
+window.addEventListener("scroll", () => {
+	const scrollTop =
 		document.body.scrollTop || document.documentElement.scrollTop;
-	var height =
+	scrollProgress.style.height = `${
+		((scrollTop - 750) / (height - 400)) * 105
+	}%`;
+});
+
+//Overall Scroll progress
+function scrollDist() {
+	const scrollProgress = document.getElementById("scroll-progress");
+	const height =
 		document.documentElement.scrollHeight -
 		document.documentElement.clientHeight;
-	var scrolled = (winScroll / height) * 100;
-	document.getElementById("ag-timeline_line-progress").style.height =
-		scrolled + "%";
+
+	window.addEventListener("scroll", () => {
+		const scrollTop =
+			document.body.scrollTop || document.documentElement.scrollTop;
+		scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+	});
 }
+
+scrollDist();
