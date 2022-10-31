@@ -35,7 +35,7 @@ titan.addEventListener("click", () => {
     titan.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     cova.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     titan_text.style.opacity = "1";
-    titan_text.style.transform = "translateX(50%)";
+    titan_text.style.transform = "translateX(65%) scale(1.2, 1.2)";
   }
   else {
     titan.style.transform = "";
@@ -71,7 +71,7 @@ enc.addEventListener("click", () => {
     enc.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     cova_e.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     enc_text.style.opacity = "1";
-    enc_text.style.transform = "translateX(-50%)";
+    enc_text.style.transform = "translateX(-65%) scale(1.2, 1.2)";
   }
   else {
     enc.style.transform = "";
@@ -107,7 +107,7 @@ iap.addEventListener("click", () => {
     iap.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     cova_i.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     iap_text.style.opacity = "1";
-    iap_text.style.transform = "translateX(50%)";
+    iap_text.style.transform = "translateX(65%) scale(1.2, 1.2)";
   }
   else {
     iap.style.transform = "";
@@ -143,7 +143,7 @@ rhea.addEventListener("click", () => {
     rhea.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     cova_r.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     rhea_text.style.opacity = "1";
-    rhea_text.style.transform = "translateX(-50%)";
+    rhea_text.style.transform = "translateX(-65%) scale(1.2, 1.2)";
   }
   else {
     rhea.style.transform = "";
@@ -179,7 +179,7 @@ mimas.addEventListener("click", () => {
     mimas.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     cova_m.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     mimas_text.style.opacity = "1";
-    mimas_text.style.transform = "translateX(50%)";
+    mimas_text.style.transform = "translateX(65%) scale(1.2, 1.2)";
   }
   else {
     mimas.style.transform = "";
