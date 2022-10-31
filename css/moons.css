@@ -5,6 +5,10 @@ html{
   scroll-snap-type: y mandatory;
 }
 
+body {
+  height: 100%;
+}
+
 .space_bg{
   background-image: url("../img/stars_bg.jpg");
   background-repeat: repeat-y;
@@ -159,7 +163,7 @@ html{
 
 h2{
   color: var(--li-color);
-  font-size: 5em;
+  font-size: 4em;
 }
 
 /* titan rotating effect */
