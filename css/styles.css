@@ -163,12 +163,23 @@ main {
 /*Header Image*/
 header {
 	/* height: 100vh; */
-	height: 100%;
+	height: 752px;
 	width: 100%;
 	z-index: 10;
 	background-color: black;
 	background-size: cover;
 	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+}
+
+@media (max-width: 1000px) {
+	header {
+		height: 100%;
+		width: 100%;
+		z-index: 10;
+		background-color: black;
+		background-size: cover;
+		background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+	}
 }
 
 .border-curvy {
@@ -264,8 +275,8 @@ footer {
 }
 
 #roverhead {
-	border-radius: 100%;
 	width: 100%;
-	background-color: #0e0d0b;
+	/* background-color: #0e0d0b;
 	border: #ffeac4 2px solid;
+	border-radius: 100%; */
 }

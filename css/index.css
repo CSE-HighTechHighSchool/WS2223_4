@@ -8,6 +8,18 @@
 	padding: 10px 20px;
 }
 
+.saturn-header {
+	font-size: 60px;
+	text-shadow: 3px 3px #644c1a;
+}
+
+@media (max-width: 400px) {
+	.saturn-header {
+		font-size: 20px;
+		text-shadow: 3px 3px #644c1a;
+	}
+}
+
 .quote {
 	color: white;
 }
@@ -37,12 +49,11 @@
 
 #spotlight {
 	background-color: #eeaa2e;
-	/* background-image: url("/img/clouds.png"); */
-
+	/* background-image: url("/img/moon-crater.png"); */
+	padding-top: 30px;
+	padding-bottom: 6rem;
 	background-size: cover;
-	padding-bottom: 2rem;
 	background-repeat: no-repeat;
-	padding-bottom: 90px;
 }
 
 .spotlight-button {
@@ -97,7 +108,7 @@
 	background-image: url("/img/moon-crater.png");
 	background-size: cover;
 	padding-bottom: 6rem;
-	padding-top: 6rem;
+	padding-top: 12rem;
 }
 
 /*Body*/
@@ -267,3 +278,7 @@
 	width: 11px;
 	content: "";
 } */
+
+.booking {
+	border-radius: 20px;
+}

@@ -14,6 +14,14 @@
 	text-align: center;
 }
 
+@media only screen and (max-width: 779px) {
+	.ag-timeline_title-box {
+		padding: 0 0 60px;
+		text-align: center;
+		position: relative;
+	}
+}
+
 .ag-timeline_title {
 	background-image: url(/img/titan-crater.jpg);
 	background-repeat: no-repeat;
