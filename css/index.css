@@ -33,6 +33,10 @@
 	color: #eeaa2e;
 }
 
+.bg-yellow {
+	background-color: #eeaa2e;
+}
+
 .font-massive {
 	font-size: 55px;
 }
@@ -107,8 +111,8 @@
 	/* background-color: #eeaa2e; */
 	background-image: url("/img/moon-crater.png");
 	background-size: cover;
-	padding-bottom: 6rem;
-	padding-top: 12rem;
+	padding-bottom: 10rem;
+	margin-top: 12rem;
 }
 
 /*Body*/
@@ -280,5 +284,7 @@
 } */
 
 .booking {
-	border-radius: 20px;
+	border-radius: 15px;
+	padding-left: 0;
+	padding-right: 0;
 }
