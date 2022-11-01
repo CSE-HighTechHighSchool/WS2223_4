@@ -29,78 +29,513 @@
 
 		<!-- Custom CSS & JS -->
 		<link href="css/styles.css" rel="stylesheet" />
+		<link href="css/stars.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
+
+
 		<script src="js/script.js" defer></script>
 
-		<title>Document</title>
+		<!-- Custom Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Michroma&family=Montserrat&family=Fira+Mono:wght@300;400;500;600;700&family=Viga&family=Prompt:ital,wght@0,600;1,300;1,500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Saturn Tourism</title>
 	</head>
 
 	<body>
-		<!-- Navbar -->
-		<nav class="navbar navbar-expand-md shadow m-md-4 sticky-md-top">
-			<div class="container-fluid">
-				<a class="navbar-brand light-text" href="#">Home</a>
-				<div>
-					<!-- light/dark mode switch for screens smaller than medium -->
+		<header class=" pt-md-2 overflow-hidden">
+			<!-- Navbar -->
+			<nav
+				class="navbar navbar-expand-md shadow m-md-4 mt-0 sticky-md-top"
+			>
+				<div class="container-fluid">
+					<a class="navbar-brand light-text" href="/">
+						<img class="block my-auto" style="height:40px " src="https://www.svgrepo.com/show/94162/saturn.svg"/>
+					</a>
+					<p class="navbar-brand light-text my-auto prompt" >Saturn Tourism</p>
+
+					<div>
+						<!-- light/dark mode switch for screens smaller than medium -->
+						<button
+							class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+							aria-label="Switch theme"
+							type="button"
+						>
+							<i class="bi bi-sun-fill hide-sun"></i>
+							<i class="bi bi-moon-stars-fill hide-moon"></i>
+						</button>
+
+						<!-- burger icon for collapsible navigation menu-->
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#toggler"
+							aria-controls="toggler"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+
+					<div
+						class="collapse navbar-collapse justify-content-center"
+						id="toggler"
+					>
+						<!-- navigation links -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a
+									class="nav-link active light-text"
+									aria-current="page"
+									href="#"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Saturn</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>The Jovian System</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Information</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Tickets</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled light-text"
+									>Sign Up</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- light/dark mode switch for screens medium and above -->
 					<button
-						class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+						class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
 						aria-label="Switch theme"
 						type="button"
 					>
 						<i class="bi bi-sun-fill hide-sun"></i>
 						<i class="bi bi-moon-stars-fill hide-moon"></i>
 					</button>
-					<!-- burger icon for collapsible navigation menu-->
-					<button
-						class="navbar-boggler d-md-none btn"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#toggler"
-						aria-controls="toggler"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<i class="bi bi-list light-text"></i>
-					</button>
 				</div>
+			</nav>
 
-				<div
-					class="collapse navbar-collapse justify-content-center"
-					id="toggler"
-				>
-					<!-- navigation links -->
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a
-								class="nav-link active light-text"
-								aria-current="page"
-								href="#"
-								>Home</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link light-text" href="#">Link</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled light-text">Disabled</a>
-						</li>
-					</ul>
-				</div>
-
-				<!-- light/dark mode switch for screens medium and above -->
-				<button
-					class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
-					aria-label="Switch theme"
-					type="button"
-				>
-					<i class="bi bi-sun-fill hide-sun"></i>
-					<i class="bi bi-moon-stars-fill hide-moon"></i>
-				</button>
+			<!-- Star particles -->
+			<div class="star-animation"  style="z-index:5">
+				<div id="stars" ></div>
+				<div id="stars2"></div>
+				<div id="stars3"></div>
+				<div id="stars4"></div>
 			</div>
-		</nav>
 
-		<header></header>
+			<!-- Header Body -->
+			<div class="overflow-hidden mt-4 " >
+				<!-- Cover -->
+				<div class="container">
+					<div class="row container">
+						<div class=" col-sm "  style="z-index:20">
+							<div class="text-light">
+								<h2 class="fira">Welcome to...</h2>
+								<h1 class="font-massive fira text-yellow"  style="text-shadow: 3px 3px #644c1a;">Saturn System</h1>
+							</div>
+							<!-- <hr class=""> -->
+							<div class=" text-light font-weight-light mt-4">
+								<h4 class="quote font-italic my-4 prompt">"The most beautiful place in the universe"</h4>
+								<ul class="features viga">
+									<li class="mt-2 "><h5>Explore <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">5+</span> incredible moons on your own timetable</h5></li>
+									<li class="mt-2 "><h5>Premier <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">tourism</span> and <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">residential</span> services</h5></li>
+									<li class="mt-2 "><h5>Reserve <span class="text-yellow" style="text-shadow: 1.5px 1.5px #644c1a;">your spot</span> near the Ringed Planet!</h5></li>
+								</ul>
+							</div>
+							<div class="mx-auto my-5 pb-5" >
+								<button class="header-button mr-2 viga btn btn-warning">Learn More</button>
+								<button class="header-button mx-2 viga btn btn-warning">Plan your Trip</button>
+							</div>
+						</div>
 
-		<main></main>
+						<!-- Interactive Saturn -->
+						<div class="col-sm" style="z-index:20">
+							<div id="saturn-parent" class="container flex justify-center align-center">
+								<div id="saturn-layer" class="box ">
+									<img id="saturn-image" class="saturn" alt="saturn" src="/img/saturn-transparent.png"></img>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+		</header>
+
+		<!-- Border Arc -->
+		<div class="border-curvy" ></div>
+
+		<main class="" >
+
+			<!--Spotlight-->
+			<section id="latest" class="overflow-hidden">
+				<div class="container">
+					<div class=" py-3">
+						<h1 class="noPadLeft viga text-yellow" style="text-shadow: 2px 2px #644c1a;">The Latest from Saturn System</h1>
+						<p class="lead fira light-text" id="ovPadLeft">
+							Like what you're seeing?
+						</p>
+					</div>
+
+				  <div class="grid">
+					<div class="row">
+
+					  <div class="col-sm flex">
+						<div class="card latest-card shadow-sm" style="width: 1/3; border:none">
+							<img class="card-img-top card-image" style="object-fit: cover;" src="/img/saturn.webp" alt="View of Saturn">
+							<div class="card-body">
+							  <h5 class="card-title viga">Saturn. 16:02 SST</h5>
+							  <p class="card-text fira ">Saturn Tourism vessel camera captures Saturn on approach to Enceladus Station, 16:02 SST.</p>
+							</div>
+						</div>
+					  </div>
+
+					  <div class="col-sm flex mt-md-0 mt-4" >
+						<div class="card latest-card shadow-sm" style="width: 1/3; border:none">
+							<img class="card-img-top card-image" style="object-fit: cover; border:none"  src="/img/titan-orbit.jpg" alt="View of Saturn">
+							<div class="card-body">
+							  <h5 class="card-title viga">Mimas. 15:57 SST</h5>
+							  <p class="card-text fira ">Mimas Telescope provides unimpeded view of Saturn. Mimas has no atmosphere. 15:57 SST.</p>
+							</div>
+						</div>
+					  </div>
+
+					  <div class="col-sm flex mt-md-0 mt-4">
+						<div class="card latest-card shadow-sm" style="width: 1/3; border:none">
+							<img class="card-img-top card-image" style="object-fit: cover;"  src="/img/saturn-view.png" alt="View of Saturn">
+							<div class="card-body">
+							  <h5 class="card-title viga">Titan. 15:41 SST</h5>
+							  <p class="card-text fira ">View of Saturn from ground on Titan. Titan has a dense, gaseous atmosphere. 15:41 SST.</p>
+							</div>
+						</div>
+					  </div>
+
+					</div>
+					<div class="row mt-md-4">
+
+						<div class="col-sm flex mt-md-0 mt-4">
+						  <div class="card latest-card shadow-sm" style="width: 1/3; border:none">
+							  <img class="card-img-top card-image" style="object-fit: cover;" src="/img/titan-crater.jpg" alt="View of Saturn">
+							  <div class="card-body">
+								<h5 class="card-title viga">Titan. 15:13 SST</h5>
+								<p class="card-text fira ">Environment scanner captures largest impact crater on Titan. Impacts are rare. 15:13 SST.</p>
+							  </div>
+							</div>
+						</div>
+
+						<div class="col-sm flex mt-md-0 mt-4">
+						  <div class="card latest-card shadow-sm" style="width: 1/3; border:none">
+							  <img class="card-img-top card-image" style="object-fit: cover;"  src="/img/curiosity-drone.jpg" alt="View of Saturn">
+							  <div class="card-body">
+								<h5 class="card-title viga">Enceladus. 14:59 SST</h5>
+								<p class="card-text fira ">Research drone Lira takes a selfie on Enceladus planitiae. Planitiae are plains. 14:59 SST.</p>
+							  </div>
+							</div>
+						</div>
+
+						<div class="col-sm flex mt-md-0 mt-4">
+						  <div class="card latest-card shadow-sm" style="width: 1/3; border:none">
+							  <img class="card-img-top card-image" style="object-fit: cover;"  src="/img/saturn-astronaut.jpg" alt="View of Saturn">
+							  <div class="card-body">
+								<h5 class="card-title viga">Saturn. 14:55 SST</h5>
+								<p class="card-text fira ">Dr. Mark Watney, botanist and mechanical engineer, yet again lost on planet. 14:55 SST.</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				</div>
+			</section>
+
+			<!-- Border Arc -->
+			<div class="border-curvy " style="background-color: #eeaa2e;"></div>
+
+			<!--Carousel-->
+			<section id="carousel-component">
+				<div  class="container">
+					<div class="">
+						<h1 class="noPadLeft viga "  style="text-shadow: 2px 2px #fad88d;">A New Frontier...for Life</h1>
+						<p class="lead fira" id="ovPadLeft">
+							Saturn and its moons have breathtaking sights of each other, and the rest of the solar system. The Saturn Tourism Colonies are the only ways to see them all.
+						</p>
+					</div>
+
+					<div id="" class=" mx-1 mx-md-0" style="border-radius:16px;">
+						<div
+							id="carouselExampleCaptions"
+							class="carousel slide text-dark overflow-hidden col-xl-7 w-100"
+							style="border-radius:12px; padding: 8px 8px;"
+							data-bs-ride="carousel"
+
+						>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleCaptions"
+									data-bs-slide-to="0"
+									class="active btn btn-dark"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleCaptions"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"
+									class="btn btn-dark"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleCaptions"
+									data-bs-slide-to="2"
+									aria-label="Slide 3"
+									class="btn btn-dark"
+								></button>
+							</div>
+
+							<div class="carousel-inner"  style="overflow:hidden; border-radius:10px;">
+								<div class="carousel-item active  overflow-hidden " >
+									<img
+										src="/img/enceladus-colony.webp"
+										class="d-block w-100  object-contain img-fluid"
+										style="height:440px; object-fit: cover;
+										"
+										alt="..."
+									/>
+									<div class="carousel-caption d-none d-md-block text-light viga">
+										<h5 style="text-shadow: 2px 2px #000000;">Colony Enceladus</h5>
+										<p style="text-shadow: 2px 2px #000000;">Colony Enceladus offers research and leisure opportunities. Chilly, but an excellent view of Saturn's Rings and other moons.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img
+										src="/img/O'Neill-Colony.jpg"
+										class="d-block w-100"
+										style="height:440px; object-fit: cover;										"
+										alt="..."
+									/>
+									<div class="carousel-caption d-none d-md-block text-light viga">
+										<h5 style="text-shadow: 2px 2px #000000;">Colony O'Neill-Titan</h5>
+										<p style="text-shadow: 2px 2px #000000;">The O'Neill Cylinder is our most spectacular colony. Designed by physicist Gerard K. O'Neill, it generates artificial gravity by rotating.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img
+									src="/img/mimas-colony.png"
+									class="d-block w-100"
+									style="height:440px; object-fit: cover;									"
+									alt="..."
+									/>
+									<div class="carousel-caption d-none d-md-block text-light viga">
+										<h5 style="text-shadow: 2px 2px #000000;">Colony Mimas</h5>
+										<p style="text-shadow: 2px 2px #000000;">Our most intense experience - Mimas has little to no atmosphere but aweing sights and spectacular geographic formations.</p>
+									</div>
+								</div>
+							</div>
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide="prev"
+							>
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+							</button>
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide="next"
+							>
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+    <!--Overview-->
+
+      <section id="Overview" class="overview text-dark p-2 text-left pb-4">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-sm-6 py-3">
+
+					<div class="col-sm mt-4 mt-md-0 pb-3 pb-md-0 background-mode " style=" border-radius:12px">
+						<div class="container " style="padding:24px" >
+							<h2 class=" viga"  style="text-shadow: 2px 2px #fad88d;">Discover our Story</h2>
+
+							<div class="" id="ovPadLeft" style="border-radius:12px; padding:8px">
+								<!-- Section: Timeline -->
+								<section class="py-5 viga">
+									<ul class="timeline">
+									<li class="timeline-item mb-5">
+										<h5 class="fw-bold">Saturn Tourism starts its operations</h5>
+										<p class="text-muted mb-2 fw-bold">11 October 2022</p>
+										<p class="text-muted fira">
+										The founders of Saturn Tourism establish the company and start to build the first colony on Enceladus, in partnership with Lira Systems.
+										</p>
+									</li>
+
+									<li class="timeline-item mb-5">
+										<h5 class="fw-bold">First Missions</h5>
+										<p class="text-muted mb-2 fw-bold">19 March 2029</p>
+										<p class="text-muted fira">
+										Quisque ornare dui nibh, sagittis egestas nisi luctus nec. Sed
+										aliquet laoreet sapien, eget pulvinar lectus maximus vel.
+										Phasellus suscipit porta mattis.
+										</p>
+									</li>
+
+									<li class="timeline-item mb-5">
+										<h5 class="fw-bold">Our team exceeds 10 people</h5>
+										<p class="text-muted mb-2 fw-bold">24 June 2020</p>
+										<p class="text-muted fira">
+										Orci varius natoque penatibus et magnis dis parturient montes,
+										nascetur ridiculus mus. Nulla ullamcorper arcu lacus, maximus
+										facilisis erat pellentesque nec. Duis et dui maximus dui aliquam
+										convallis. Quisque consectetur purus erat, et ullamcorper sapien
+										tincidunt vitae.
+										</p>
+									</li>
+
+									<li class="timeline-item mb-5">
+										<h5 class="fw-bold">Earned the first million $!</h5>
+										<p class="text-muted mb-2 fw-bold ">15 October 2020</p>
+										<p class="text-muted fira">
+										Nulla ac tellus convallis, pulvinar nulla ac, fermentum diam. Sed
+										et urna sit amet massa dapibus tristique non finibus ligula. Nam
+										pharetra libero nibh, id feugiat tortor rhoncus vitae. Ut suscipit
+										vulputate mattis.
+										</p>
+									</li>
+									</ul>
+								</section>
+								<!-- Section: Timeline -->
+
+							</div>
+						</div>
+					</div>
+
+              </div>
+			  <div class="col-sm-6 mt-4 mt-md-0 ">
+				<div class="mt-2">
+					<h2 class="noPadLeft viga text-light"  style="text-shadow: 2px 2px #eeaa2e;">Meet LIRA:</h2>
+					<p class="lead fira" id="ovPadLeft">
+						She takes all the pictures!
+					</p>
+				</div>
+				<div class="rover-container">
+					<img src="/img/astronaut.png" alt="astronaut" id="astronaut" style="height:400px"/>
+				</div>
+			</div>
+            </div>
+		  </div>
+	  </section>
+
+	     <!--Overview-->
+
+		 <section id="Overview" class="overview text-dark p-2 text-left pb-4">
+			<div class="container">
+			  <div class="row">
+
+				<div class="col-sm-6 py-3">
+
+					  <div id="Frontier" class="col-sm mt-4 mt-md-0 pb-3 pb-md-0 " style=" border-radius:12px">
+						  <div class="container " style="padding:24px" >
+							  <h2 class=" viga"  style="text-shadow: 2px 2px #fad88d;">Want to Book a Station?</h2>
+
+							  <div class="grid" id="ovPadLeft" style="border-radius:12px; padding:8px">
+
+								  <div class="row">
+									  <div class="my-auto py-2 col-sm-4">
+										  <img id="roverhead" src="/img/rover-head.png" alt="rover head"  />
+									  </div>
+									  <p class="my-auto ml-2 fira col-sm-8">
+										  <span class=" viga "  style=" font-size:25px">It's Easy.</span>
+
+										  You can choose from a variety of stations. We offer a variety of experiences, from the most intense to the most relaxing.
+									  </p>
+								  </div>
+
+								  <hr class="my-3">
+
+								  <div class="row " id="ovPadLeft" style="border-radius:12px; padding:7px">
+									  <p class="my-auto fira col-sm mb-2 mb-md-0">
+										  <span class=" viga "  style=" font-size:25px">Decided yet?</span>
+
+										  Make a reservation right now! We'll be waiting for you at our Launch Centers across Florida and Cuba.
+
+									  </p>
+									  <div class="btn-group-vertical col-sm">
+										  <button class="header-button viga btn btn-warning">Colony: Enceladus</button>
+										  <button class="header-button viga btn btn-warning">Colony: O'Neill-Titan</button>
+										  <button class="header-button viga btn btn-warning">Colony: Mimas</button>
+									  </div>
+								  </div>
+
+								  <hr class="my-3">
+
+								  <div class="row " id="ovPadLeft" style="border-radius:12px; padding:7px">
+									  <p class="my-auto fira col-sm mb-2 mb-md-0">
+										  <span class=" viga "  style=" font-size:25px">Payment Methods</span>
+
+										  Make a reservation right now! We'll be waiting for you at our Launch Centers across Florida and Cuba.
+
+									  </p>
+									  <div class="btn-group-vertical col-sm">
+										  <button class="header-button viga btn btn-warning">Colony: Enceladus</button>
+										  <button class="header-button viga btn btn-warning">Colony: O'Neill-Titan</button>
+										  <button class="header-button viga btn btn-warning">Colony: Mimas</button>
+									  </div>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+
+				</div>
+				<div class="col-sm-6 mt-4 mt-md-0 ">
+				  <div class="mt-2">
+					  <h2 class="noPadLeft viga text-light"  style="text-shadow: 2px 2px #eeaa2e;">Meet LIRA:</h2>
+					  <p class="lead fira" id="ovPadLeft">
+						  She takes all the pictures!
+					  </p>
+				  </div>
+				  <div class="rover-container">
+					  <img src="/img/astronaut.png" alt="astronaut" id="astronaut" style="height:400px"/>
+				  </div>
+			  </div>
+			  </div>
+			</div>
+		</section>
+
+		</main>
 
 		<footer></footer>
 	</body>
