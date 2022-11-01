@@ -1,0 +1,667 @@
+/* import variable from styles.css */
+@import url("./styles.css");
+
+html{
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  height: 100%;
+}
+
+.space_bg{
+  background-image: url("../img/stars_bg.jpg");
+  background-repeat: repeat-y;
+  background-size: contain;
+  position: relative;
+  top: 80vh;
+  z-index: -9;
+  animation: 600s star_scroll linear infinite;
+  border-top-left-radius: 60% 1%;
+  border-top-right-radius: 60% 1%;
+  border-top: 3px solid var(--body-bg);
+}
+
+/* top background of the page */
+.spacer {
+  height: 79vh;
+  width: 100%;
+}
+
+.moons_top {
+  z-index: -9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-image: url("../img/space_bg.jpg");
+  background-size: cover;
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+.moon_title {
+  height: 15%;
+  width: calculate(19 * 4)vw;
+  border-radius: 50px;
+  padding-left: 2%;
+  padding-right: 2%;
+  backdrop-filter: blur(5px);
+}
+
+.moon_title h1 {
+  color: white;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.saturn_para {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#saturn {
+  height: auto;
+  rotate: -12deg;
+  width: 60vw;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#titan {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  background-image: url("../img/titan_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  animation: 10s rotate infinite linear, 15s orbit linear infinite;
+  position: absolute;
+  z-index: -1;
+  left: 9%;
+  top: 40%;
+  --orb: 70vw;
+}
+
+#enceladus {
+  height: 6vh;
+  width: 6vh;
+  border-radius: 50%;
+  background-image: url("../img/enceladus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  animation: 10s rotate infinite linear, 20s orbit linear infinite;
+  position: absolute;
+  z-index: -1;
+  left: 3%;
+  top: 70%;
+  --orb: 80vw -20vw;
+}
+
+#iapetus {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  background-image: url("../img/iapetus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  animation: 10s rotate infinite linear, 25s orbit linear infinite;
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 20%;
+  --orb: 60vw 40vh;
+}
+
+#rhea {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  background-image: url("../img/rhea_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  animation: 10s rotate infinite linear, 17s orbit linear infinite;
+  position: absolute;
+  z-index: -1;
+  left: 20%;
+  top: 10%;
+  --orb: 50vw 50vh;
+}
+
+#mimas {
+  height: 6vh;
+  width: 6vh;
+  border-radius: 50%;
+  background-image: url("../img/mimas_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  animation: 10s rotate infinite linear, 10s orbit linear infinite;
+  position: absolute;
+  z-index: -1;
+  left: 40%;
+  top: 20%;
+  --orb: 20vw 50vh;
+}
+
+h2{
+  color: var(--gainsboro);
+  font-size: 4.5em;
+}
+
+.whole {
+  position: relative;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -3;
+  scroll-snap-align: start;
+}
+
+/* titan moon section */
+.titan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/titan_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 25s rotate infinite linear;
+}
+
+.titan_text {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -2;
+  height: 50%;
+  width: 40%;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  border: 5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 2%;
+  background-color: var(--nav-bg);
+}
+
+.titan_text p {
+  margin: auto;
+  text-align: center;
+  color: var(--li-color);
+}
+
+.titan_alt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  transition: border-radius 1s ease, box-shadow 1s ease;
+  background-image: url("../img/titan_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+
+  animation: 25s rotate infinite linear;
+}
+
+.titan_alt_p {
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
+  border: 5px solid var(--border-color);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.titan_alt_p p {
+  text-align: center;
+  color: var(--gainsboro);
+  padding: 5%;
+}
+
+/* enceladus moon section */
+.enceladus {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/enceladus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 25s rotate infinite linear;
+}
+
+.enceladus_text {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: -5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -2;
+  height: 50%;
+  width: 40%;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  border: 5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 2%;
+  background-color: var(--nav-bg);
+}
+
+.enceladus_text p {
+  margin: auto;
+  text-align: center;
+  color: var(--li-color);
+}
+
+.enceladus_alt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  transition: border-radius 1s ease, box-shadow 1s ease;
+  background-image: url("../img/enceladus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+
+  animation: 25s rotate infinite linear;
+}
+
+.enceladus_alt_p {
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
+  border: 5px solid var(--border-color);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.enceladus_alt_p p {
+  text-align: center;
+    color: var(--gainsboro);
+  padding: 5%;
+}
+/* iapetus moon section */
+.iapetus {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/iapetus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 25s rotate infinite linear;
+}
+
+.iapetus_text {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -2;
+  height: 50%;
+  width: 40%;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  border: 5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 2%;
+  background-color: var(--nav-bg);
+}
+
+.iapetus_text p {
+  margin: auto;
+  text-align: center;
+  color: var(--li-color);
+}
+
+.iapetus_alt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  transition: border-radius 1s ease, box-shadow 1s ease;
+  background-image: url("../img/iapetus_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+
+  animation: 25s rotate infinite linear;
+}
+
+.iapetus_alt_p {
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
+  border: 5px solid var(--border-color);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.iapetus_alt_p p {
+  text-align: center;
+    color: var(--gainsboro);
+  padding: 5%;
+}
+
+/* rhea moon section */
+.rhea {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/rhea_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 25s rotate infinite linear;
+}
+
+.rhea_text {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: -5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -2;
+  height: 50%;
+  width: 40%;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  border: 5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 2%;
+  background-color: var(--nav-bg);
+}
+
+.rhea_text p {
+  margin: auto;
+  text-align: center;
+  color: var(--li-color);
+}
+
+.rhea_alt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  transition: border-radius 1s ease, box-shadow 1s ease;
+  background-image: url("../img/rhea_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 25s rotate infinite linear;
+}
+
+.rhea_alt_p {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
+  border-radius: 50%;
+  border: 5px solid var(--border-color);
+}
+
+.rhea_alt_p p {
+  text-align: center;
+    color: var(--gainsboro);
+  padding: 5%;
+}
+
+/* mimas moon section */
+.mimas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out;
+  background-image: url("../img/mimas_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+
+  animation: 25s rotate infinite linear;
+}
+
+.mimas_text {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -2;
+  height: 50%;
+  width: 40%;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  border: 5px solid var(--border-color);
+  border-radius: 30px;
+  padding: 2%;
+  background-color: var(--nav-bg);
+}
+
+.mimas_text p {
+  margin: auto;
+  text-align: center;
+  color: var(--li-color);
+}
+
+.mimas_alt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+  transition: border-radius 1s ease, box-shadow 1s ease;
+  background-image: url("../img/mimas_texture.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+
+  animation: 25s rotate infinite linear;
+}
+
+.mimas_alt_p {
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s ease, border-radius 1s ease, backdrop-filter 1s ease;
+  border: 5px solid var(--border-color);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.mimas_alt_p p {
+  text-align: center;
+    color: var(--gainsboro);
+  padding: 5%;
+}
+
+/* keyframes for animations */
+@keyframes orbit {
+  0% {
+    opacity: 1;
+    scale: 1 1;
+  }
+
+  25% {
+    opacity: 1;
+    scale: 1.5 1.5;
+  }
+
+  50% {
+    opacity: 1;
+    scale: 1 1;
+    translate: var(--orb);
+  }
+
+  75% {
+    scale: 0.05 0.05;
+    opacity: 0.5;
+  }
+
+  90% {
+    z-index: -9;
+  }
+
+  100% {
+    z-index: -9;
+    opacity: 1;
+    scale: 1 1;
+  }
+
+}
+
+@keyframes rotate {
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes star_scroll {
+  100% {
+    background-position: 0 200%;
+  }
+}
+
+/* @media query for breakpoints */
+@media screen and (max-width: 775px) {
+  .titan_alt {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .enceladus_alt {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .iapetus_alt {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .rhea_alt {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .mimas_alt {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .spacer {
+    height: 90vh;
+  }
+
+  h2 {
+    font-size: 4em;
+  }
+}
