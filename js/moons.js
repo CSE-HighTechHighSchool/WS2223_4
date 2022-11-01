@@ -1,30 +1,25 @@
 const titan = document.querySelector(".titan");
 const titan_text = document.querySelector(".titan_text");
-const cova = document.querySelector(".cova_t");
 const titan_alt = document.querySelector(".titan_alt");
 const titan_alt_p = document.querySelector(".titan_alt_p");
 
 const enc = document.querySelector(".enceladus");
 const enc_text = document.querySelector(".enceladus_text");
-const cova_e = document.querySelector(".cova_e");
 const enc_alt = document.querySelector(".enceladus_alt");
 const enc_alt_p = document.querySelector(".enceladus_alt_p");
 
 const iap = document.querySelector(".iapetus");
 const iap_text = document.querySelector(".iapetus_text");
-const cova_i = document.querySelector(".cova_i");
 const iap_alt = document.querySelector(".iapetus_alt");
 const iap_alt_p = document.querySelector(".iapetus_alt_p");
 
 const rhea = document.querySelector(".rhea");
 const rhea_text = document.querySelector(".rhea_text");
-const cova_r = document.querySelector(".cova_r");
 const rhea_alt = document.querySelector(".rhea_alt");
 const rhea_alt_p = document.querySelector(".rhea_alt_p");
 
 const mimas = document.querySelector(".mimas");
 const mimas_text = document.querySelector(".mimas_text");
-const cova_m = document.querySelector(".cova_m");
 const mimas_alt = document.querySelector(".mimas_alt");
 const mimas_alt_p = document.querySelector(".mimas_alt_p");
 
@@ -33,13 +28,11 @@ let counter_t = 0;
 titan.addEventListener("click", () => {
   if (counter_t % 2 === 0) {
     titan.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
-    cova.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     titan_text.style.opacity = "1";
-    titan_text.style.transform = "translateX(65%) scale(1.2, 1.2)";
+    titan_text.style.transform = "translateX(55%) scale(1.2, 1.2)";
   }
   else {
     titan.style.transform = "";
-    cova.style.transform = "";
     titan_text.style.opacity = "0";
     titan_text.style.transform = "";
   }
@@ -69,13 +62,11 @@ let counter_e = 0;
 enc.addEventListener("click", () => {
   if (counter_e % 2 === 0) {
     enc.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
-    cova_e.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     enc_text.style.opacity = "1";
-    enc_text.style.transform = "translateX(-65%) scale(1.2, 1.2)";
+    enc_text.style.transform = "translateX(-55%) scale(1.2, 1.2)";
   }
   else {
     enc.style.transform = "";
-    cova_e.style.transform = "";
     enc_text.style.opacity = "0";
     enc_text.style.transform = "";
   }
@@ -105,13 +96,11 @@ let counter_i = 0;
 iap.addEventListener("click", () => {
   if (counter_i % 2 === 0) {
     iap.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
-    cova_i.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     iap_text.style.opacity = "1";
-    iap_text.style.transform = "translateX(65%) scale(1.2, 1.2)";
+    iap_text.style.transform = "translateX(55%) scale(1.2, 1.2)";
   }
   else {
     iap.style.transform = "";
-    cova_i.style.transform = "";
     iap_text.style.opacity = "0";
     iap_text.style.transform = "";
   }
@@ -141,13 +130,11 @@ let counter_r = 0;
 rhea.addEventListener("click", () => {
   if (counter_r % 2 === 0) {
     rhea.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
-    cova_r.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
     rhea_text.style.opacity = "1";
-    rhea_text.style.transform = "translateX(-65%) scale(1.2, 1.2)";
+    rhea_text.style.transform = "translateX(-55%) scale(1.2, 1.2)";
   }
   else {
     rhea.style.transform = "";
-    cova_r.style.transform = "";
     rhea_text.style.opacity = "0";
     rhea_text.style.transform = "";
   }
@@ -177,13 +164,11 @@ let counter_m = 0;
 mimas.addEventListener("click", () => {
   if (counter_m % 2 === 0) {
     mimas.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
-    cova_m.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
     mimas_text.style.opacity = "1";
-    mimas_text.style.transform = "translateX(65%) scale(1.2, 1.2)";
+    mimas_text.style.transform = "translateX(55%) scale(1.2, 1.2)";
   }
   else {
     mimas.style.transform = "";
-    cova_m.style.transform = "";
     mimas_text.style.opacity = "0";
     mimas_text.style.transform = "";
   }

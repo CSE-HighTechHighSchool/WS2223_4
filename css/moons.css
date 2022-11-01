@@ -14,8 +14,12 @@ body {
   background-repeat: repeat-y;
   background-size: contain;
   position: relative;
-  z-index: -10;
+  top: 80vh;
+  z-index: -9;
   animation: 600s star_scroll linear infinite;
+  border-top-left-radius: 60% 1%;
+  border-top-right-radius: 60% 1%;
+  border-top: 3px solid var(--body-bg);
 }
 
 /* top background of the page */
@@ -43,7 +47,7 @@ body {
   border-radius: 50px;
   padding-left: 2%;
   padding-right: 2%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 }
 
 .moon_title h1 {
@@ -64,9 +68,9 @@ body {
 }
 
 #saturn {
-  height: 50%;
+  height: auto;
   rotate: -12deg;
-  width: auto;
+  width: 60vw;
   z-index: -5;
   position: absolute;
   top: 0;
@@ -75,8 +79,6 @@ body {
   bottom: 0;
   margin: auto;
 }
-
-
 
 #titan {
   height: 20vh;
@@ -90,9 +92,9 @@ body {
   animation: 10s rotate infinite linear, 15s orbit linear infinite;
   position: absolute;
   z-index: -1;
-  left: 10%;
+  left: 9%;
   top: 40%;
-  --orb: 65vw;
+  --orb: 70vw;
 }
 
 #enceladus {
@@ -164,25 +166,20 @@ body {
 }
 
 h2{
-  color: var(--li-color);
+  color: var(--gainsboro);
   font-size: 4.5em;
 }
 
-.enceladus_whole .comfortaa h2{
-  font-size: 4em;
-}
-
-/* titan rotating effect */
-.titan_whole {
+.whole {
   position: relative;
   right: 0;
   left: 0;
   height: 100vh;
   z-index: -3;
   scroll-snap-align: start;
-  background-color: var(--body-bg);
 }
 
+/* titan moon section */
 .titan {
   position: absolute;
   left: 0;
@@ -204,26 +201,11 @@ h2{
   animation: 25s rotate infinite linear;
 }
 
-.cova_t {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: 20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 35%;
-  height: 20%;
-  padding-bottom: 50%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
 .titan_text {
+  opacity: 0;
   position: absolute;
   left: 0;
-  right: 15%;
+  right: 5%;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -234,7 +216,7 @@ h2{
   border: 5px solid var(--border-color);
   border-radius: 30px;
   padding: 2%;
-  background-color: var(--bg-color);
+  background-color: var(--nav-bg);
 }
 
 .titan_text p {
@@ -274,21 +256,11 @@ h2{
 
 .titan_alt_p p {
   text-align: center;
-  color: black;
+  color: var(--gainsboro);
   padding: 5%;
 }
 
-/* enceladus rotating effect */
-.enceladus_whole {
-  position: relative;
-  right: 0;
-  left: 0;
-  height: 100vh;
-  z-index: -3;
-  scroll-snap-align: start;
-  background-color: var(--body-bg);
-}
-
+/* enceladus moon section */
 .enceladus {
   position: absolute;
   left: 0;
@@ -310,26 +282,11 @@ h2{
   animation: 25s rotate infinite linear;
 }
 
-.cova_e {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 35%;
-  height: 20%;
-  padding-bottom: 50%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
 .enceladus_text {
   position: absolute;
+  opacity: 0;
   left: 0;
-  right: -15%;
+  right: -5%;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -340,7 +297,7 @@ h2{
   border: 5px solid var(--border-color);
   border-radius: 30px;
   padding: 2%;
-  background-color: var(--bg-color);
+  background-color: var(--nav-bg);
 }
 
 .enceladus_text p {
@@ -380,20 +337,10 @@ h2{
 
 .enceladus_alt_p p {
   text-align: center;
-  color: black;
+    color: var(--gainsboro);
   padding: 5%;
 }
-/* iapetus rotating effect */
-.iapetus_whole {
-  position: relative;
-  right: 0;
-  left: 0;
-  height: 100vh;
-  z-index: -3;
-  scroll-snap-align: start;
-  background-color: var(--body-bg);
-}
-
+/* iapetus moon section */
 .iapetus {
   position: absolute;
   left: 0;
@@ -415,26 +362,11 @@ h2{
   animation: 25s rotate infinite linear;
 }
 
-.cova_i {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: 20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 35%;
-  height: 20%;
-  padding-bottom: 50%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
 .iapetus_text {
   position: absolute;
+  opacity: 0;
   left: 0;
-  right: 15%;
+  right: 5%;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -445,7 +377,7 @@ h2{
   border: 5px solid var(--border-color);
   border-radius: 30px;
   padding: 2%;
-  background-color: var(--bg-color);
+  background-color: var(--nav-bg);
 }
 
 .iapetus_text p {
@@ -485,21 +417,11 @@ h2{
 
 .iapetus_alt_p p {
   text-align: center;
-  color: black;
+    color: var(--gainsboro);
   padding: 5%;
 }
 
-/* rhea rotating effect */
-.rhea_whole {
-  position: relative;
-  right: 0;
-  left: 0;
-  height: 100vh;
-  z-index: -3;
-  scroll-snap-align: start;
-  background-color: var(--body-bg);
-}
-
+/* rhea moon section */
 .rhea {
   position: absolute;
   left: 0;
@@ -521,40 +443,22 @@ h2{
   animation: 25s rotate infinite linear;
 }
 
-.cova_r {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 35%;
-  height: 20%;
-  padding-bottom: 50%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
 .rhea_text {
   position: absolute;
+  opacity: 0;
   left: 0;
-  right: -15%;
+  right: -5%;
   top: 0;
   bottom: 0;
   margin: auto;
   z-index: -2;
   height: 50%;
   width: 40%;
-  --opac: 0;
-  opacity: var(--opac);
-  transform: var(--out);
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
   border: 5px solid var(--border-color);
   border-radius: 30px;
   padding: 2%;
-  background-color: var(--bg-color);
+  background-color: var(--nav-bg);
 }
 
 .rhea_text p {
@@ -594,21 +498,11 @@ h2{
 
 .rhea_alt_p p {
   text-align: center;
-  color: black;
+    color: var(--gainsboro);
   padding: 5%;
 }
 
-/* mimas rotating effect */
-.mimas_whole {
-  position: relative;
-  right: 0;
-  left: 0;
-  height: 100vh;
-  z-index: -3;
-  scroll-snap-align: start;
-  background-color: var(--body-bg);
-}
-
+/* mimas moon section */
 .mimas {
   position: absolute;
   left: 0;
@@ -630,26 +524,11 @@ h2{
   animation: 25s rotate infinite linear;
 }
 
-.cova_m {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  right: 20%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 35%;
-  height: 20%;
-  padding-bottom: 50%;
-  transform-box: initial;
-  transition: transform 1.5s ease-in-out;
-  background-color: var(--body-bg);
-}
-
 .mimas_text {
   position: absolute;
+  opacity: 0;
   left: 0;
-  right: 15%;
+  right: 5%;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -660,7 +539,7 @@ h2{
   border: 5px solid var(--border-color);
   border-radius: 30px;
   padding: 2%;
-  background-color: var(--bg-color);
+  background-color: var(--nav-bg);
 }
 
 .mimas_text p {
@@ -700,7 +579,7 @@ h2{
 
 .mimas_alt_p p {
   text-align: center;
-  color: black;
+    color: var(--gainsboro);
   padding: 5%;
 }
 
