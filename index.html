@@ -33,6 +33,7 @@
 		<link href="css/index.css" rel="stylesheet" />
 		<link href="css/timeline.css" rel="stylesheet" />
 
+
 		<script src="js/script.js" defer></script>
 
 		<!-- Bootstrap Font Icon CSS -->
@@ -51,19 +52,86 @@
 	</head>
 
 	<body>
-		<header class=" pt-md-2">
+
+		<header class="pt-md-2 overflow-hidden">
 			<!-- Navbar -->
 			<nav
-			class="navbar navbar-expand-md shadow m-md-4 my-0 sticky-md-top"
-		>
-			<div class="container-fluid">
-				<a class="navbar-brand light-text" href="/">
-					<img class="block my-auto" style="height:40px;" src="https://www.svgrepo.com/show/94162/saturn.svg"/>
-				</a>
-				<p class="navbar-brand light-text my-auto prompt" >Saturn Tourism</p>
+				class="navbar navbar-expand-md shadow m-md-4 mt-0 sticky-md-top"
+			>
+				<div class="container-fluid">
+					<a class="navbar-brand light-text" href="index.html">
+						<img
+							class="block my-auto"
+							style="height: 40px"
+							src="https://www.svgrepo.com/show/94162/saturn.svg"
+						/>
+					</a>
+					<a href="index.html" class="navbar-brand light-text my-auto prompt">
+						Saturn Tourism
+					</a>
 
-				<div>
-					<!-- light/dark mode switch for screens smaller than medium -->
+					<div>
+						<!-- light/dark mode switch for screens smaller than medium -->
+						<button
+							class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+							aria-label="Switch theme"
+							type="button"
+						>
+							<i class="bi bi-sun-fill hide-sun"></i>
+							<i class="bi bi-moon-stars-fill hide-moon"></i>
+						</button>
+
+						<!-- burger icon for collapsible navigation menu-->
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#toggler"
+							aria-controls="toggler"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+
+					<div
+						class="collapse navbar-collapse justify-content-center"
+						id="toggler"
+					>
+						<!-- navigation links -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link light-text" href="moons.html"
+									>Saturn's Moons</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link light-text"
+									href="destinations.html"
+									>Destinations</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Information</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Tickets</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled light-text"
+									>Sign Up</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- light/dark mode switch for screens medium and above -->
 					<button
 						class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
 						aria-label="Switch theme"
@@ -138,8 +206,8 @@
 
 		<div class="grid overflow-hidden ">
 			<!-- Star particles -->
-			<div class="star-animation"  style="z-index:5">
-				<div id="stars" ></div>
+			<div class="star-animation" style="z-index: 5">
+				<div id="stars"></div>
 				<div id="stars2"></div>
 				<div id="stars3"></div>
 				<div id="stars4"></div>
@@ -169,6 +237,7 @@
 									<a href="#learnmore"><button class="header-button mr-2 viga btn btn-warning" style="border:none">Learn More</button></a>
 									<a href="#Overview"><button class="header-button mx-2 viga btn btn-warning" style="border:none">Plan your Trip</button></a>
 								</div>
+
 							</div>
 						</div>
 
@@ -176,13 +245,12 @@
 						<div id="saturn-parent" class="col " style="z-index:20">
 								<div id="saturn-layer" >
 									<img id="saturn-image" alt="saturn" src="/img/saturn-transparent.png"/>
+
 								</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
 
 		</header>
 
@@ -192,11 +260,18 @@
 
 		<main class="position-relative" style="z-index:10">
 
+
+		<main class="">
 			<!--Spotlight-->
 			<section id="latest" class="overflow-hidden">
 				<div class="container">
-					<div class=" py-3">
-						<h1 class="noPadLeft viga text-yellow" style="text-shadow: 2px 2px #644c1a;">The Latest from Saturn System</h1>
+					<div class="py-3">
+						<h1
+							class="noPadLeft viga text-yellow"
+							style="text-shadow: 2px 2px #644c1a"
+						>
+							The Latest from Saturn System
+						</h1>
 						<p class="lead fira light-text" id="ovPadLeft">
 							Like what you're seeing?
 						</p>
@@ -235,8 +310,6 @@
 							  <h5 class="card-title viga">Titan. 15:41 SST</h5>
 							  <p class="card-text fira ">View of Saturn from ground on Titan. Titan has a dense, gaseous atmosphere. 15:41 SST.</p>
 							</div>
-						</div>
-					  </div>
 
 					</div>
 					<div class="row mt-md-4 ">
@@ -249,8 +322,33 @@
 								<h5 class="card-title viga">Titan. 15:13 SST</h5>
 								<p class="card-text fira ">Environment scanner captures largest impact crater on Titan. Impacts are rare. 15:13 SST.</p>
 							  </div>
+
 							</div>
 						</div>
+						<div class="row mt-md-4">
+							<div class="col-sm flex mt-md-0 mt-4">
+								<div
+									class="card latest-card shadow-sm"
+									style="width: 1/3; border: none"
+								>
+									<img
+										class="card-img-top card-image"
+										style="object-fit: cover"
+										src="img/titan-crater.jpg"
+										alt="View of Saturn"
+									/>
+									<div class="card-body">
+										<h5 class="card-title viga">
+											Titan. 15:13 SST
+										</h5>
+										<p class="card-text fira">
+											Environment scanner captures largest
+											impact crater on Titan. Impacts are
+											rare. 15:13 SST.
+										</p>
+									</div>
+								</div>
+							</div>
 
 						<div class="col-md flex mt-md-0 mt-4 reveal" style="transition-delay: 125ms;">
 						  <div class="card latest-card shadow-sm" style="width: 1/3; border:none">
@@ -259,8 +357,7 @@
 								<h5 class="card-title viga">Enceladus. 14:59 SST</h5>
 								<p class="card-text fira ">Research drone Lira takes a selfie on Enceladus planitiae. Planitiae are plains. 14:59 SST.</p>
 							  </div>
-							</div>
-						</div>
+
 
 						<div class="col-md flex mt-md-0 mt-4 reveal " style="transition-delay: 150ms;" >
 						  <div class="card latest-card shadow-sm" style="width: 1/3; border:none">
@@ -269,11 +366,10 @@
 								<h5 class="card-title viga">Saturn. 14:55 SST</h5>
 								<p class="card-text fira ">Dr. Mark Watney, botanist and mechanical engineer, yet again lost on planet. 14:55 SST.</p>
 							  </div>
+
 							</div>
 						</div>
 					</div>
-				</div>
-
 				</div>
 			</section>
 
@@ -292,12 +388,12 @@
 					</div>
 
 					<div id="" class="reveal mx-1 mx-md-0" style="border-radius:16px;">
+
 						<div
 							id="carouselExampleCaptions"
 							class="carousel slide text-dark overflow-hidden col-xl-7 w-100"
-							style="border-radius:12px; padding: 8px 8px;"
+							style="border-radius: 12px; padding: 8px 8px"
 							data-bs-ride="carousel"
-
 						>
 							<div class="carousel-indicators">
 								<button
@@ -341,11 +437,11 @@
 							<div class="carousel-inner"  style="overflow:hidden; border-radius:10px;">
 								<div class="carousel-item active  overflow-hidden " >
 									<div class="position-absolute text-light viga m-2 top-0 left-0" style="z-index:50"> <span class="blinking">❗Special Offer</span> </div>
+
 									<img
-										src="/img/enceladus-colony.webp"
-										class="d-block w-100  object-contain img-fluid"
-										style="height:440px; object-fit: cover;
-										"
+										src="img/enceladus-colony.webp"
+										class="d-block w-100 object-contain img-fluid"
+										style="height: 440px; object-fit: cover"
 										alt="..."
 									/>
 
@@ -353,28 +449,30 @@
 
 										<h5 style="text-shadow: 2px 2px #000000;">Colony Enceladus</h5>
 										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">Colony Enceladus offers research and leisure opportunities. Chilly, but an excellent view of Saturn's Rings and other moons.</p>
+
 									</div>
 								</div>
 								<div class="carousel-item">
 									<div class="position-absolute text-light viga m-2 top-0 left-0" style="z-index:50"> <span class="blinking">❗Special Offer</span> </div>
 									<img
-										src="/img/O'Neill-Colony.jpg"
+										src="img/O'Neill-Colony.jpg"
 										class="d-block w-100"
-										style="height:440px; object-fit: cover;										"
+										style="height: 440px; object-fit: cover"
 										alt="..."
 									/>
 									<div class="carousel-caption d-md-block text-light viga">
 										<h5 style="text-shadow: 2px 2px #000000;">Colony O'Neill-Titan</h5>
 										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">The O'Neill Cylinder is our most spectacular colony. Designed by physicist Gerard K. O'Neill, it generates artificial gravity by rotating.</p>
+
 									</div>
 								</div>
 								<div class="carousel-item">
 									<div class="position-absolute text-light viga m-2 top-0 left-0" style="z-index:50"> <span class="blinking">⬇️ Discounted</span> </div>
 									<img
-									src="/img/mimas-colony.png"
-									class="d-block w-100"
-									style="height:440px; object-fit: cover;									"
-									alt="..."
+										src="img/mimas-colony.png"
+										class="d-block w-100"
+										style="height: 440px; object-fit: cover"
+										alt="..."
 									/>
 									<div class="carousel-caption d-md-block text-light viga">
 										<h5 style="text-shadow: 2px 2px #000000;">Colony Mimas</h5>
@@ -405,6 +503,7 @@
 									<div class="carousel-caption d-md-block text-light viga">
 										<h5 style="text-shadow: 2px 2px #000000;">Colony Rhea</h5>
 										<p class="d-none d-md-block" style="text-shadow: 2px 2px #000000;">Rhea is Saturn Tourism's intergalactic port. It receives numerous tourists and many resources to sustain all the colonies. </p>
+
 									</div>
 								</div>
 							</div>
@@ -414,8 +513,11 @@
 								data-bs-target="#carouselExampleCaptions"
 								data-bs-slide="prev"
 							>
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Previous</span>
 							</button>
 							<button
 								class="carousel-control-next"
@@ -423,8 +525,11 @@
 								data-bs-target="#carouselExampleCaptions"
 								data-bs-slide="next"
 							>
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Next</span>
 							</button>
 						</div>
 					</div>
@@ -489,6 +594,7 @@
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
 								<div class="ag-timeline-card_point transition-yellow">2008</div>
 								</div>
+
 							</div>
 							<div class="ag-timeline-card_item reveal fade-right">
 								<div class="ag-timeline-card_inner">
@@ -933,6 +1039,7 @@
 			<!-- Copyright -->
 		</footer>
 		<!-- Footer -->
+
 		</main>
 
 

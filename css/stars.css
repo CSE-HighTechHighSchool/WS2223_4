@@ -1168,6 +1168,7 @@
 	from {
 		-webkit-transform: translateY(0px);
 	}
+
 	to {
 		-webkit-transform: translateY(-2000px);
 	}
@@ -1177,6 +1178,7 @@
 	from {
 		-moz-transform: translateY(0px);
 	}
+
 	to {
 		-moz-transform: translateY(-2000px);
 	}
@@ -1186,6 +1188,7 @@
 	from {
 		-ms-transform: translateY(0px);
 	}
+
 	to {
 		-ms-transform: translateY(-2000px);
 	}
@@ -1195,6 +1198,7 @@
 	from {
 		transform: translateY(0px);
 	}
+
 	to {
 		transform: translateY(-2000px);
 	}

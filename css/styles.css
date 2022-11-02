@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
 /* CSS Reset (adapted from tutorial https://elad.medium.com/the-new-css-reset-53f41f13282e) */
 *,
 *::before,
@@ -52,15 +54,17 @@
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
+	--border-color: var(--glaucous);
 }
 
 [theme="light"] {
 	--sun: none;
 	--moon: revert;
 
-	--body-bg: var(--alice-blue);
+	--body-bg: var(--gainsboro);
 	--nav-bg: var(--alice-blue-2);
 	--li-color: black;
+	--border-color: var(--gunmetal);
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
@@ -145,9 +149,11 @@ nav {
 .viga {
 	font-family: "Viga", sans-serif;
 }
+
 .comfortaa {
 	font-family: "Comfortaa", sans-serif;
 }
+
 /*End Fonts*/
 
 main {
