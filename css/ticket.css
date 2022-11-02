@@ -1,0 +1,28 @@
+.header {
+	margin-top: 4rem;
+	margin-bottom: 6rem;
+}
+
+header {
+	background-image: url("/img/space-launch.webp");
+	background-size: cover;
+	padding-bottom: 2rem;
+}
+h1 {
+	text-transform: uppercase;
+	font-weight: 900;
+	border-left: 10px solid #eeaa2e;
+	padding-left: 10px;
+	margin-bottom: 30px;
+}
+
+.booking {
+	border-radius: 15px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#tickets {
+	padding-top: 1rem;
+	padding-bottom: 6rem;
+}

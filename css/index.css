@@ -1,11 +1,34 @@
 /* Header contents */
 
+/*Header Image*/
+header {
+	/* height: 100vh; */
+	height: 752px;
+	width: 100%;
+	z-index: 10;
+	background-color: black;
+	background-size: cover;
+	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+}
+
 .header-button {
 	border-radius: 10px;
 	border: 1px solid var(--li-color);
 	background-color: var(--nav-bg);
 	color: var(--li-color);
 	padding: 10px 20px;
+}
+
+.saturn-header {
+	font-size: 60px;
+	text-shadow: 3px 3px #644c1a;
+}
+
+@media (max-width: 400px) {
+	.saturn-header {
+		font-size: 20px;
+		text-shadow: 3px 3px #644c1a;
+	}
 }
 
 .quote {
@@ -17,14 +40,12 @@
 	color: white;
 }
 
-.saturn {
-	height: 200%;
-	width: 150%;
-	z-index: 20;
-}
-
 .text-yellow {
 	color: #eeaa2e;
+}
+
+.bg-yellow {
+	background-color: #eeaa2e;
 }
 
 .font-massive {
@@ -38,7 +59,48 @@
 	background-size: cover;
 	padding-bottom: 2rem;
 	background-repeat: no-repeat;
-	/* background-image: url("/img/curiosity-rover.png"); */
+	padding-bottom: 90px;
+}
+
+#spotlight {
+	background-color: #eeaa2e;
+	/* background-image: url("/img/moon-crater.png"); */
+	padding-top: 30px;
+	padding-bottom: 6rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.spotlight-button {
+	border-radius: 10px;
+	border: 1.5px solid var(--li-color);
+	/* background-color: var(--nav-bg); */
+	background-color: transparent;
+	color: var(--li-color);
+	padding-top: 8px;
+
+	padding-bottom: 8px;
+}
+
+.left-border {
+	border-left: 1px solid #6e6e6e;
+}
+
+#agencies {
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+}
+
+.agency {
+	margin-top: auto;
+	margin-bottom: auto;
+	display: block;
+}
+
+.agency:hover {
+	scale: 105%;
+	animation-duration: 50ms;
+	transition-timing-function: ease-in-out;
 }
 
 .rover-container {
@@ -50,17 +112,18 @@
 	background-color: #eeaa2e;
 }
 
-#Frontier {
-	/* background-color: #eeaa2e;*/
+/* #Frontier {
 	background-image: url("/img/clouds.png");
 	background-size: cover;
 	background-color: var(--body-bg);
-}
+} */
 
 #Overview {
 	/* background-color: #eeaa2e; */
 	background-image: url("/img/moon-crater.png");
 	background-size: cover;
+	padding-bottom: 10rem;
+	margin-top: 6rem;
 }
 
 /*Body*/
@@ -74,13 +137,89 @@
 
 /* Saturn Animation */
 
+/*Bob up and down*/
+@-webkit-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
 #saturn-image {
 	position: relative;
 	left: -200px;
-	-webkit-animation: slide 1.5s forwards;
-	-webkit-animation-delay: 0.1s;
+
+	width: 100%;
+	height: auto;
+	z-index: 20;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+
 	animation: slide 1.5s forwards;
 	animation-delay: 0.1s;
+	-webkit-animation: slide 1.5s forwards;
+	-webkit-animation-delay: 0.1s;
+}
+
+#saturn-layer {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#saturn-parent {
+	display: flex;
+	justify-content: center;
+	-webkit-animation: mover 1s infinite alternate;
+	animation: mover 2s infinite alternate;
+}
+
+#astronaut {
+	display: flex;
+	justify-content: center;
+	-webkit-animation: mover 1s infinite alternate;
+	animation: mover 2.5s infinite alternate;
+
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg);
+	}
+	80% {
+		transform: rotate(0deg);
+	}
+	85% {
+		transform: rotate(5deg);
+	}
+	95% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.wiggle {
+	display: inline-block;
+	animation: wiggle 2.5s infinite;
+}
+
+.wiggle:hover {
+	animation: none;
 }
 
 @-webkit-keyframes slide {
@@ -97,7 +236,8 @@
 
 #saturn-image {
 	transition: 1s;
-	left: 100px;
+	left: 100%;
+	transition-delay: 350ms;
 }
 
 /* Cards */
@@ -105,6 +245,9 @@
 .card-image {
 	height: 18rem;
 	border-radius: 10px 10px 0px 0px;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 .latest-card {
@@ -124,17 +267,11 @@
 	z-index: 5;
 }
 
-#roverhead {
-	border-radius: 100%;
-	width: 100%;
-	background-color: #0e0d0b;
-	border: #eeaa2e 2px solid;
-}
-
-/* Timeline */
+/*
+/* Timeline
 
 .timeline {
-	border-left: 1px solid hsl(0, 31%, 57%);
+	border-left: 1px solid #eeaa2e;
 	position: relative;
 	list-style: none;
 }
@@ -150,10 +287,16 @@
 }
 
 .timeline .timeline-item:after {
-	background-color: hsl(0, 38%, 48%);
+	background-color: #eeaa2e;
 	left: -38px;
 	border-radius: 50%;
 	height: 11px;
 	width: 11px;
 	content: "";
+} */
+
+.booking {
+	border-radius: 15px;
+	padding-left: 0;
+	padding-right: 0;
 }

@@ -166,15 +166,15 @@ main {
 	position: relative;
 }
 
-/*Header Image*/
-header {
-	min-height: 100vh;
-	height: 100%;
-	width: 100%;
-	z-index: 10;
-	background-color: black;
-	background-size: cover;
-	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+@media (max-width: 1000px) {
+	header {
+		height: 100%;
+		width: 100%;
+		z-index: 10;
+		background-color: black;
+		background-size: cover;
+		background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+	}
 }
 
 .border-curvy {
@@ -183,4 +183,103 @@ header {
 	height: 50px;
 	margin-top: -50px;
 	z-index: 20;
+}
+
+/*Flashing css*/
+.blinking {
+	animation: blinker 1.25s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+/*Element appearing */
+.transition-yellow {
+	color: white;
+}
+.transition-yellow.active {
+	background-color: #ffb730;
+	color: black;
+	transition: 1.5s all ease;
+}
+
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s all ease;
+}
+
+.reveal.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.active.fade-bottom {
+	animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+	animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+	animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+	0% {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes fade-left {
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-right {
+	0% {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 700px) {
+	@keyframes fade-left {
+		0% {
+			transform: translateX(100px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+}
+
+footer {
+	/* background-color: #eeaa2e; */
+	border: none;
+}
+
+#roverhead {
+	width: 100%;
+	/* background-color: #0e0d0b;
+	border: #ffeac4 2px solid;
+	border-radius: 100%; */
 }
