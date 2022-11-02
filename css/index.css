@@ -8,7 +8,7 @@ header {
 	z-index: 10;
 	background-color: black;
 	background-size: cover;
-	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
+	background-image: url("../img/space_bg.jpg");
 }
 
 .header-button {
