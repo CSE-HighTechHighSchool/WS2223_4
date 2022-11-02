@@ -160,17 +160,6 @@ main {
 	position: relative;
 }
 
-/*Header Image*/
-header {
-	/* height: 100vh; */
-	height: 752px;
-	width: 100%;
-	z-index: 10;
-	background-color: black;
-	background-size: cover;
-	background-image: url("https://wallpapercave.com/wp/wp3493599.jpg");
-}
-
 @media (max-width: 1000px) {
 	header {
 		height: 100%;
@@ -202,6 +191,14 @@ header {
 }
 
 /*Element appearing */
+.transition-yellow {
+	color: white;
+}
+.transition-yellow.active {
+	background-color: #ffb730;
+	color: black;
+	transition: 1.5s all ease;
+}
 
 .reveal {
 	position: relative;

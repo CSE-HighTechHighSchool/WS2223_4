@@ -51,7 +51,7 @@
 	</head>
 
 	<body>
-		<header class=" pt-md-2 ">
+		<header class=" pt-md-2">
 			<!-- Navbar -->
 			<nav
 			class="navbar navbar-expand-md shadow m-md-4 my-0 sticky-md-top"
@@ -93,14 +93,7 @@
 				>
 					<!-- navigation links -->
 					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a
-								class="nav-link active light-text"
-								aria-current="page"
-								href="#"
-								>Home</a
-							>
-						</li>
+
 						<li class="nav-item">
 							<a class="nav-link light-text" href="#"
 								>Saturn</a
@@ -112,12 +105,12 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link light-text" href="#"
+							<a class="nav-link light-text" href="./pages/information.html"
 								>Information</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link light-text" href="#"
+							<a class="nav-link light-text" href="./pages/tickets.html"
 								>Tickets</a
 							>
 						</li>
@@ -173,15 +166,15 @@
 									</ul>
 								</div>
 								<div class="mx-auto my-5 pb-5" >
-									<button class="header-button mr-2 viga btn btn-warning" style="border:none">Learn More</button>
-									<button class="header-button mx-2 viga btn btn-warning" style="border:none">Plan your Trip</button>
+									<a href="#learnmore"><button class="header-button mr-2 viga btn btn-warning" style="border:none">Learn More</button></a>
+									<a href="#Overview"><button class="header-button mx-2 viga btn btn-warning" style="border:none">Plan your Trip</button></a>
 								</div>
 							</div>
 						</div>
 
 						<!-- Interactive Saturn -->
 						<div id="saturn-parent" class="col " style="z-index:20">
-								<div id="saturn-layer">
+								<div id="saturn-layer" >
 									<img id="saturn-image" alt="saturn" src="/img/saturn-transparent.png"/>
 								</div>
 						</div>
@@ -191,7 +184,6 @@
 		</div>
 
 
-		</div>
 		</header>
 
 
@@ -287,7 +279,7 @@
 
 
 			<!-- Border Arc -->
-			<div class="border-curvy " style="background-color: #eeaa2e;"></div>
+			<div id="learnmore" class="border-curvy " style="background-color: #eeaa2e;"></div>
 
 			<!--Carousel-->
 			<section id="carousel-component">
@@ -441,7 +433,7 @@
 
 
 			<!-- Border Arc -->
-			<div class="border-curvy " style="background-color: black;"></div>
+			<div id="Timeline" class="border-curvy " style="background-color: black;"></div>
 
 			<!-- Vertical scroll progress bar
 			<div id="scroll-progress"></div> -->
@@ -451,7 +443,7 @@
 
 				<!-- Timeline Header -->
 				<div id="#timelineheader" class="ag-timeline_title-box sticky-md-top " >
-					<div class="ag-timeline_tagline viga reveal text-yellow" style="text-shadow: 2px 2px #644c1a; ">Our story</div>
+					<div class="ag-timeline_tagline viga reveal text-yellow" style="text-shadow: 1px 1px #644c1a; ">Our story</div>
 					<div id="shrink" class="ag-timeline_title prompt reveal">Discover Saturn Tourism</div>
 					<div class="opacity-gradient position-absolute top-0 left-0 "></div>
 
@@ -461,16 +453,16 @@
 				<div class="ag-format-container">
 					<div id="timeline" class="js-timeline ag-timeline">
 						<div class="js-timeline_line ag-timeline_line">
-							<div id="#header_parent" class=" ag-timeline_line-progress sticky-top"></div>
+							<div id="#header_parent" class=" ag-timeline_line-progress transition-yellow"></div>
 						</div>
 						<div class="">
 							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2022</div>
+								<div class="ag-timeline-card_point  transition-yellow">2003</div>
 								</div>
 								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">October 11, 2022</div>
+								<div class="ag-timeline-card_meta">July 11, 2003</div>
 								</div>
 							</div>
 							<div class="ag-timeline-card_item reveal fade-left">
@@ -492,10 +484,10 @@
 							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
 								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">December 15, 2027</div>
+								<div class="ag-timeline-card_meta">December 15, 2008</div>
 								</div>
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2027</div>
+								<div class="ag-timeline-card_point transition-yellow">2008</div>
 								</div>
 							</div>
 							<div class="ag-timeline-card_item reveal fade-right">
@@ -517,10 +509,10 @@
 							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2032</div>
+								<div class="ag-timeline-card_point transition-yellow">2013</div>
 								</div>
 								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">October 11, 2032</div>
+								<div class="ag-timeline-card_meta">October 11, 2013</div>
 								</div>
 							</div>
 							<div class="ag-timeline-card_item reveal fade-left">
@@ -542,10 +534,10 @@
 							<div class="js-timeline_item ag-timeline_item ">
 								<div class="ag-timeline-card_box">
 									<div class="ag-timeline-card_meta-box">
-									<div class="ag-timeline-card_meta">March 18th, 2033</div>
+									<div class="ag-timeline-card_meta">March 18th, 2015</div>
 									</div>
 									<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-									<div class="ag-timeline-card_point">2033</div>
+									<div class="ag-timeline-card_point transition-yellow">2015</div>
 									</div>
 								</div>
 								<div class="ag-timeline-card_item reveal fade-right">
@@ -567,10 +559,10 @@
 							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2035</div>
+								<div class="ag-timeline-card_point transition-yellow">2017</div>
 								</div>
 								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">December 19th, 2035</div>
+								<div class="ag-timeline-card_meta">December 19th, 2017</div>
 								</div>
 							</div>
 							<div class="ag-timeline-card_item reveal fade-left">
@@ -581,7 +573,7 @@
 								<div class="ag-timeline-card_info">
 									<div class="ag-timeline-card_title">Saturn Tourism Celebrates its 10th Tour</div>
 									<div class="ag-timeline-card_desc">
-										Saturn Tourism celebrates its 10th tour, with the first tourists arriving at the Saturn Tourism Complex in 2035.
+										Saturn Tourism celebrates its 10th tour, with the first tourists arriving at the Saturn Tourism Complex in 2017.
 									</div>
 								</div>
 								</div>
@@ -592,10 +584,10 @@
 							<div class="js-timeline_item ag-timeline_item ">
 							<div class="ag-timeline-card_box">
 								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">August 4th, 2038</div>
+								<div class="ag-timeline-card_meta">August 4th, 2019</div>
 								</div>
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2038</div>
+								<div class="ag-timeline-card_point transition-yellow">2019</div>
 								</div>
 							</div>
 							<div class="ag-timeline-card_item reveal fade-right">
@@ -617,10 +609,10 @@
 							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2039</div>
+								<div class="ag-timeline-card_point transition-yellow">2021</div>
 								</div>
 								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">February 14th, 2039</div>
+								<div class="ag-timeline-card_meta">February 14th, 2021</div>
 								</div>
 							</div>
 							<div class="ag-timeline-card_item reveal fade-left">
@@ -642,10 +634,10 @@
 							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
 								<div class="ag-timeline-card_meta-box">
-								<div class="ag-timeline-card_meta">October 31st, 2041</div>
+								<div class="ag-timeline-card_meta">October 31st, 2022</div>
 								</div>
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2041</div>
+								<div class="ag-timeline-card_point transition-yellow">2022</div>
 								</div>
 							</div>
 							<div class="ag-timeline-card_item reveal fade-right">
@@ -667,7 +659,7 @@
 							<div class="js-timeline_item ag-timeline_item">
 							<div class="ag-timeline-card_box">
 								<div class="js-timeline-card_point-box ag-timeline-card_point-box">
-								<div class="ag-timeline-card_point">2049</div>
+								<div class="ag-timeline-card_point transition-yellow">2023</div>
 								</div>
 								<div class="ag-timeline-card_meta-box">
 								<div class="ag-timeline-card_meta">The Present</div>
@@ -704,7 +696,7 @@
 				<section id="Overview" class=" text-dark text-center">
 
 					<div class="container mt-4 mt-md-0 pb-3 pb-md-0 " style=" border-radius:12px">
-						<h1 class="viga text-yellow reveal" style="font-size:40px;text-shadow: 3px 3px #644c1a;">Like What You See?</h1>
+						<h1 class="viga text-yellow reveal" style="font-size:38px;text-shadow: 2px 2px #644c1a;">Like What You See?</h1>
 						<p class="text-light fira reveal" style="font-size:21px">Consider booking one of the stations below.</p>
 
 						<div class="container">
@@ -726,7 +718,7 @@
 									</ul>
 								  </div>
 
-								  <a href="#" class="btn btn-warning viga bg-yellow ">Get Started</a>
+								  <a href="./pages/tickets.html" class="btn btn-warning viga bg-yellow ">Get Started</a>
 								</div>
 							</div>
 
@@ -746,7 +738,7 @@
 									</ul>
 								  </div>
 
-								  <a href="#" class="btn btn-warning viga bg-yellow ">Get Started</a>
+								  <a href="./pages/tickets.html" class="btn btn-warning viga bg-yellow ">Get Started</a>
 								</div>
 							</div>
 
@@ -758,7 +750,7 @@
 								<div class="card-body ">
 								  <h5 class="card-title mt-2" style="font-size:40px;">$999,999<span class="text-muted" style="font-size:30px;"> / year</span></h5>
 								  <div class="card-text">
-									<ul class="list-group list-group-flush my-4 ">
+									<ul class="list-group list-group-flush my-4">
 										<li class="list-group-item"><i class="bi bi-people-fill"></i> Up to 20 Members</li>
 										<li class="list-group-item"><i class="bi bi-airplane-engines-fill"></i> Personal Spacecraft</li>
 										<li class="list-group-item"><i class="bi bi-robot"></i> Servant Robots</li>
@@ -766,7 +758,7 @@
 									</ul>
 								  </div>
 
-								  <a href="#" class="btn btn-warning viga bg-yellow ">Get Started</a>
+								  <a href="./pages/tickets.html" class="btn btn-warning viga bg-yellow ">Get Started</a>
 								</div>
 							</div>
 
@@ -802,7 +794,9 @@
 
 							<div  class="col-12 col-lg-5 left-border">
 
-								<button class="spotlight-button viga btn btn-warning col-12 mt-lg-0 mt-3" style="font-size:18px">Learn About Us <span class="ml-2 bi-arrow-right"></span></button>
+								<a href="#Timeline">
+									<button class="spotlight-button viga btn btn-warning col-12 mt-lg-0 mt-3" style="font-size:18px">Learn About Us <span class="ml-2 bi-arrow-right"></span></button>
+								</a>
 							</div>
 						</div>
 
@@ -875,10 +869,12 @@
 						<!-- Content -->
 						<div class="row">
 							<div class="my-auto py-6 col-5 d-lg-block d-none">
-								<img id="roverhead" src="/img/moon-landing.png" alt="rover head"  />
+								<img id="roverhead" src="./img/moon-landing.png" alt="rover head"  />
 							</div>
 							<p class="my-auto  fira col-lg-7">
-								<span class=" text-uppercase fw-bold fira "  style=" font-size:25px">It's Time for Saturn.</span>
+								<span class=" text-uppercase fw-bold fira "  style=" font-size:25px; border-left: 10px solid #eeaa2e;padding-left: 10px;">
+									It's Time for Saturn.
+								</span>
 
 								We'll take you to the most beautiful moons in the Solar System.
 							</p>
@@ -898,7 +894,7 @@
 							<a href="#" class="text-reset col-6 link-secondary text-decoration-none">Back to Top</a>
 							</p>
 							<p>
-							<a href="#!" class="text-reset col-6 link-secondary  text-decoration-none">Pricing</a>
+							<a href="#Overview" class="text-reset col-6 link-secondary  text-decoration-none">Pricing</a>
 							</p>
 							<p>
 							<a href="#!" class="text-reset col-6 link-secondary  text-decoration-none">Orders</a>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+			integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+			defer
+		></script>
+
+		<!-- Custom CSS & JS -->
+		<link href="../css/styles.css" rel="stylesheet" />
+		<link href="../css/stars.css" rel="stylesheet" />
+		<link href="../css/information.css" rel="stylesheet" />
+
+		<script src="../js/script.js" defer></script>
+
+		<!-- Bootstrap Font Icon CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+		/>
+
+		<!-- Custom Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Michroma&family=Montserrat&family=Fira+Mono:wght@300;400;500;600;700&family=Viga&family=Prompt:ital,wght@0,600;1,300;1,500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Saturn Tourism</title>
+	</head>
+
+	<body>
+		<header class="pt-md-2">
+			<!-- Navbar -->
+			<nav
+				class="navbar navbar-expand-md shadow m-md-4 my-0 sticky-md-top"
+			>
+				<div class="container-fluid">
+					<a class="navbar-brand light-text" href="/">
+						<img
+							class="block my-auto"
+							style="height: 40px"
+							src="https://www.svgrepo.com/show/94162/saturn.svg"
+						/>
+					</a>
+					<p class="navbar-brand light-text my-auto prompt">
+						Saturn Tourism
+					</p>
+
+					<div>
+						<!-- light/dark mode switch for screens smaller than medium -->
+						<button
+							class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+							aria-label="Switch theme"
+							type="button"
+						>
+							<i class="bi bi-sun-fill hide-sun"></i>
+							<i class="bi bi-moon-stars-fill hide-moon"></i>
+						</button>
+
+						<!-- burger icon for collapsible navigation menu-->
+						<button
+							class="navbar-boggler d-md-none btn"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#toggler"
+							aria-controls="toggler"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<i class="bi bi-list light-text"></i>
+						</button>
+					</div>
+
+					<div
+						class="collapse navbar-collapse justify-content-center"
+						id="toggler"
+					>
+						<!-- navigation links -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Saturn</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>The Jovian System</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link light-text" href="#"
+									>Information</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link light-text"
+									href="./tickets.html"
+									>Tickets</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled light-text"
+									>Sign Up</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- light/dark mode switch for screens medium and above -->
+					<button
+						class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
+						aria-label="Switch theme"
+						type="button"
+					>
+						<i class="bi bi-sun-fill hide-sun"></i>
+						<i class="bi bi-moon-stars-fill hide-moon"></i>
+					</button>
+				</div>
+			</nav>
+
+			<div class="jumbotron container header text-light">
+				<h1 class="display-4 viga">Our Schedule</h1>
+				<p class="lead viga">
+					Saturn Tourism offers special events and tourism
+					opportunities for the public.
+				</p>
+				<hr class="my-4" />
+				<p class="fira">
+					Check out our schedule below to see what's coming up!
+				</p>
+				<a
+					class="header-button btn btn-warning btn-lg viga"
+					href="#schedule"
+					role="button"
+					>Our Schedule</a
+				>
+			</div>
+		</header>
+
+		<!-- Border Arc -->
+		<div class="border-curvy position-relative" style="z-index: 10"></div>
+
+		<section class="container events">
+			<h1 class="viga light-text">Events</h1>
+			<div class="container fira">
+				<div class="row">
+					<article class="card fl-left overflow-hidden">
+						<section class="date">
+							<time datetime="12th nov">
+								<span>12</span><span>Nov</span>
+							</time>
+						</section>
+						<section class="card-cont">
+							<small>Saturn Tourism</small>
+							<h3>History of Saturn Presentation</h3>
+							<div class="even-date">
+								<i class="fa fa-calendar"></i>
+								<time>
+									<span>Saturday 12 November 2023</span>
+									<span>23:47 pm to 01:25 am</span>
+								</time>
+							</div>
+							<div class="even-info">
+								<i class="fa fa-map-marker"></i>
+								<p>Enceladus Visitor Center</p>
+							</div>
+							<a class="ticket-active" href="#">Tickets</a>
+						</section>
+					</article>
+					<article class="card fl-left overflow-hidden">
+						<section class="date">
+							<time datetime="28th feb">
+								<span>28</span><span>dec</span>
+							</time>
+						</section>
+						<section class="card-cont">
+							<small>Saturn Tourism</small>
+							<h3>Private Orbital Spacewalks (LIM. 4)</h3>
+							<div class="even-date">
+								<i class="fa fa-calendar"></i>
+								<time>
+									<span>wednesday 28 december 2022</span>
+									<span>08:55 pm to 12:00 am</span>
+								</time>
+							</div>
+							<div class="even-info">
+								<i class="fa fa-map-marker"></i>
+								<p>O'Neill Cylinder</p>
+							</div>
+							<a class="ticket-expired" href="#">Expired</a>
+						</section>
+					</article>
+				</div>
+				<div class="row">
+					<article class="card fl-left overflow-hidden">
+						<section class="date">
+							<time datetime="16th dec">
+								<span>16</span><span>Dec</span>
+							</time>
+						</section>
+						<section class="card-cont">
+							<small>Mimas Astroplex</small>
+							<h3>Asteroid Cluster Viewing (Free)</h3>
+							<div class="even-date">
+								<i class="fa fa-calendar"></i>
+								<time>
+									<span>Saturday 16 December 2023</span>
+									<span>23:47 pm to 01:25 am</span>
+								</time>
+							</div>
+							<div class="even-info">
+								<i class="fa fa-map-marker"></i>
+								<p>Mimas Stadium</p>
+							</div>
+							<a class="ticket-active" href="#">tickets</a>
+						</section>
+					</article>
+					<article class="card fl-left overflow-hidden">
+						<section class="date">
+							<time datetime="14th feb">
+								<span>14</span><span>feb</span>
+							</time>
+						</section>
+						<section class="card-cont">
+							<small>Saturn Tourism</small>
+							<h3>Live Saturn Tourism Probe Launch</h3>
+							<div class="even-date">
+								<i class="fa fa-calendar"></i>
+								<time>
+									<span>Tuesday 14 Feburary 2024</span>
+									<span>16:33 pm to 17:05 am</span>
+								</time>
+							</div>
+							<div class="even-info">
+								<i class="fa fa-map-marker"></i>
+								<p>Mimas Stadium</p>
+							</div>
+							<a class="ticket-cancelled" href="#">Cancelled</a>
+						</section>
+					</article>
+				</div>
+			</div>
+
+			<div id="schedule">
+				<h1 class="viga light-text">Launch Schedule</h1>
+				<div class="fira">
+					<div class="timetable-img text-center">
+						<img src="img/content/timetable.png" alt="" />
+					</div>
+					<div class="table-responsive">
+						<table
+							class="table table-bordered text-center overflow-hidden"
+							style="border-radius: 15px"
+						>
+							<thead>
+								<tr class="bg-light-gray">
+									<th class="text-uppercase">Time</th>
+									<th class="text-uppercase">Monday</th>
+									<th class="text-uppercase">Tuesday</th>
+									<th class="text-uppercase">Wednesday</th>
+									<th class="text-uppercase">Thursday</th>
+									<th class="text-uppercase">Friday</th>
+									<th class="text-uppercase">Saturday</th>
+								</tr>
+							</thead>
+							<tbody class="bg-light">
+								<tr>
+									<td class="align-middle">09:00 am</td>
+									<td>
+										<span
+											class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>SpaceX</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											9:00-10:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Falcon 9/Enceladus
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ESA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											9:00-10:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Superheavy 7/Mimas
+										</div>
+									</td>
+
+									<td>
+										<span
+											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ISRO</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											9:00-10:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Astrosat/Titan
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>JAXA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											9:00-10:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Hayabusa 2/Rhea
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>NASA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											9:00-10:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Saturn X/Mimas
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Roscosmos</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											9:00-10:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Orel 12/Mimas
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="align-middle">10:00 am</td>
+									<td>
+										<span
+											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ISRO</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											10:00-11:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Astrosat/Rhea
+										</div>
+									</td>
+									<td
+										class="bg-light-gray"
+										style="background-color: #f3f3f3"
+									></td>
+									<td>
+										<span
+											class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>NASA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											10:00-11:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Saturn X/Titan
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ESA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											10:00-11:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Superheavy 7/Enceladus
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Roscosmos</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											10:00-11:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Orel 12/Enceladus
+										</div>
+									</td>
+									<td
+										class="bg-light-gray"
+										style="background-color: #f3f3f3"
+									></td>
+								</tr>
+
+								<tr>
+									<td class="align-middle">11:00 am</td>
+									<td>
+										<span
+											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Sat. Tours</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											11:00-12:00
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Sat. Tours</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											11:00-12:00
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Sat. Tours</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											11:00-12:00
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Sat. Tours</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											11:00-12:00
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Sat. Tours</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											11:00-12:00
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Sat. Tours</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											11:00-12:00
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="align-middle">12:00 pm</td>
+									<td
+										class="bg-light-gray"
+										style="background-color: #f3f3f3"
+									></td>
+									<td>
+										<span
+											class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>NASA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											12:00-1:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Saturn X/Mimas
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>JAXA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											12:00-1:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Hayabusa 2/Rhea
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ISRO</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											12:00-1:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Astrosat/Titan
+										</div>
+									</td>
+									<td
+										class="bg-light-gray"
+										style="background-color: #f3f3f3"
+									></td>
+									<td>
+										<span
+											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ESA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											12:00-1:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Superheavy 7/Enceladus
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="align-middle">01:00 pm</td>
+									<td>
+										<span
+											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Roscosmos</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											1:00-2:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Orel 12/Enceladus
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ISRO</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											1:00-2:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Astrosat/Rhea
+										</div>
+									</td>
+									<td
+										class="bg-light-gray"
+										style="background-color: #f3f3f3"
+									></td>
+									<td>
+										<span
+											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>Roscosmos</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											1:00-2:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Orel 12/Enceladus
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ESA</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											1:00-2:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Superheavy 7/Mimas
+										</div>
+									</td>
+									<td>
+										<span
+											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
+											>ISRO</span
+										>
+										<div
+											class="margin-10px-top font-size14"
+										>
+											1:00-2:00
+										</div>
+										<div
+											class="font-size13 text-light-gray"
+										>
+											Astrosat/Rhea
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+
+		<!-- Border Arc -->
+		<div
+			class="border-curvy position-relative"
+			style="background-color: #ffffff; z-index: 10"
+		></div>
+
+		<footer
+			class="position-relative text-center text-lg-start text-muted bg-white"
+			style="z-index: 10"
+		>
+			<!-- Section: Social media -->
+			<section
+				class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+			>
+				<!-- Left -->
+				<div class="me-5 d-none d-lg-block fira">
+					<span>Get connected with us on social networks:</span>
+				</div>
+				<!-- Left -->
+
+				<!-- Right -->
+				<div>
+					<a href="" class="me-4 text-reset">
+						<i class="bi bi-facebook"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+						<i class="bi bi-twitter"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+						<i class="bi bi-google"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+						<i class="bi bi-instagram"></i>
+					</a>
+					<a href="" class="me-4 text-reset">
+						<i class="bi bi-github"></i>
+					</a>
+				</div>
+				<!-- Right -->
+			</section>
+			<!-- Section: Social media -->
+
+			<!-- Section: Links  -->
+			<section class="">
+				<div class="container text-center text-md-start mt-5">
+					<!-- Grid row -->
+					<div class="row mt-3">
+						<!-- Grid column -->
+						<div class="container col-md-4 col-lg-6 mx-auto mb-4">
+							<!-- Content -->
+							<div class="row">
+								<div
+									class="my-auto py-6 col-5 d-lg-block d-none"
+								>
+									<img
+										id="roverhead"
+										src="/img/moon-landing.png"
+										alt="rover head"
+									/>
+								</div>
+								<p class="my-auto fira col-lg-7">
+									<span
+										class="text-uppercase fw-bold fira"
+										style="
+											font-size: 25px;
+											border-left: 10px solid #eeaa2e;
+											padding-left: 10px;
+										"
+									>
+										It's Time for Saturn.
+									</span>
+
+									We'll take you to the most beautiful moons
+									in the Solar System.
+								</p>
+							</div>
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-4 col-lg-2 mx-auto mb-4 viga">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4 fira">
+								Useful links
+							</h6>
+							<div class="row">
+								<p>
+									<a
+										href="#"
+										class="text-reset col-6 link-secondary text-decoration-none"
+										>Back to Top</a
+									>
+								</p>
+								<p>
+									<a
+										href="#Overview"
+										class="text-reset col-6 link-secondary text-decoration-none"
+										>Pricing</a
+									>
+								</p>
+								<p>
+									<a
+										href="#!"
+										class="text-reset col-6 link-secondary text-decoration-none"
+										>Orders</a
+									>
+								</p>
+								<p>
+									<a
+										href="#!"
+										class="text-reset col-6 link-secondary text-decoration-none"
+										>Help</a
+									>
+								</p>
+							</div>
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div
+							class="col-md-4 col-lg-3 mx-auto mb-md-0 mb-4 viga"
+						>
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4 fira">
+								Contact
+							</h6>
+							<p>
+								<i class="fas bi-house me-3"></i>Space Commerce
+								Way, FL 32953
+							</p>
+							<p>
+								<i class="fas bi-envelope me-3"></i>
+								saturn@tourism.com
+							</p>
+							<p>
+								<i class="fas bi-phone me-3"></i> + 01 234 567
+								88
+							</p>
+							<p>
+								<i class="fas bi-printer me-3"></i> + 01 234 567
+								89
+							</p>
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+			</section>
+			<!-- Section: Links  -->
+
+			<!-- Copyright -->
+			<div
+				class="text-center viga p-4"
+				style="background-color: rgba(0, 0, 0, 0.05)"
+			>
+				© 2022 Copyright:
+				<a class="text-reset fw-bold" href="/">Saturn Tourism</a>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
+	</body>
+</html>

@@ -46,9 +46,10 @@ mouseOverContainer.onmousemove = function (e) {
 	});
 };
 
-// Reveal element
+// Reveal and bg-yellow elements
 function reveal() {
 	var reveals = document.querySelectorAll(".reveal");
+	var yellows = document.querySelectorAll(".transition-yellow");
 
 	for (var i = 0; i < reveals.length; i++) {
 		var windowHeight = window.innerHeight;
@@ -57,6 +58,19 @@ function reveal() {
 
 		if (elementTop < windowHeight) {
 			reveals[i].classList.add("active");
+		}
+		// else {
+		// 	reveals[i].classList.remove("active");
+		// }
+	}
+
+	for (var i = 0; i < yellows.length; i++) {
+		var windowHeight = window.innerHeight;
+		var elementTop = yellows[i].getBoundingClientRect().top;
+		// var elementVisible = 10;
+
+		if (elementTop < windowHeight) {
+			yellows[i].classList.add("active");
 		}
 		// else {
 		// 	reveals[i].classList.remove("active");
@@ -77,23 +91,23 @@ const height =
 window.addEventListener("scroll", () => {
 	const scrollTop =
 		document.body.scrollTop || document.documentElement.scrollTop;
-	scrollProgress.style.height = `${
-		((scrollTop - 750) / (height - 400)) * 105
-	}%`;
+	scrollProgress.style.height = `${(scrollTop / height) * 120}%`;
 });
 
 //Overall Scroll progress
-function scrollDist() {
-	const scrollProgress = document.getElementById("scroll-progress");
-	const height =
-		document.documentElement.scrollHeight -
-		document.documentElement.clientHeight;
+// function scrollDist() {
+// 	const scrollProgress = document.getElementById("scroll-progress");
+// 	const height =
+// 		document.documentElement.scrollHeight -
+// 		document.documentElement.clientHeight;
 
-	window.addEventListener("scroll", () => {
-		const scrollTop =
-			document.body.scrollTop || document.documentElement.scrollTop;
-		scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
-	});
-}
+// 	window.addEventListener("scroll", () => {
+// 		const scrollTop =
+// 			document.body.scrollTop || document.documentElement.scrollTop;
+// 		scrollProgress.style.width = `${
+// 			((scrollTop - 7500) / (height - 750)) * 200
+// 		}%`;
+// 	});
+// }
 
-scrollDist();
+// scrollDist();
