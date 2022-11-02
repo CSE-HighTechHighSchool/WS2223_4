@@ -142,14 +142,17 @@ header {
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(-10px);
 	}
 }
+
 @keyframes mover {
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(-10px);
 	}
@@ -162,9 +165,12 @@ header {
 	width: 100%;
 	height: auto;
 	z-index: 20;
-	-webkit-user-select: none; /* Safari */
-	-ms-user-select: none; /* IE 10 and IE 11 */
-	user-select: none; /* Standard syntax */
+	-webkit-user-select: none;
+	/* Safari */
+	-ms-user-select: none;
+	/* IE 10 and IE 11 */
+	user-select: none;
+	/* Standard syntax */
 
 	animation: slide 1.5s forwards;
 	animation-delay: 0.1s;
@@ -190,24 +196,31 @@ header {
 	-webkit-animation: mover 1s infinite alternate;
 	animation: mover 2.5s infinite alternate;
 
-	-webkit-user-select: none; /* Safari */
-	-ms-user-select: none; /* IE 10 and IE 11 */
-	user-select: none; /* Standard syntax */
+	-webkit-user-select: none;
+	/* Safari */
+	-ms-user-select: none;
+	/* IE 10 and IE 11 */
+	user-select: none;
+	/* Standard syntax */
 }
 
 @keyframes wiggle {
 	0% {
 		transform: rotate(0deg);
 	}
+
 	80% {
 		transform: rotate(0deg);
 	}
+
 	85% {
 		transform: rotate(5deg);
 	}
+
 	95% {
 		transform: rotate(-5deg);
 	}
+
 	100% {
 		transform: rotate(0deg);
 	}
@@ -245,9 +258,12 @@ header {
 .card-image {
 	height: 18rem;
 	border-radius: 10px 10px 0px 0px;
-	-webkit-user-select: none; /* Safari */
-	-ms-user-select: none; /* IE 10 and IE 11 */
-	user-select: none; /* Standard syntax */
+	-webkit-user-select: none;
+	/* Safari */
+	-ms-user-select: none;
+	/* IE 10 and IE 11 */
+	user-select: none;
+	/* Standard syntax */
 }
 
 .latest-card {
