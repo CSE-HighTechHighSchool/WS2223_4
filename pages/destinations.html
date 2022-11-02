@@ -27,9 +27,6 @@
 			defer
 		></script>
 
-		<!-- Confetti JS -->
-		<script src="https://confettijs.org/confetti.min.js" defer></script>
-
 		<!-- Custom CSS & JS -->
 		<link href="../css/styles.css" rel="stylesheet" />
 		<link href="../css/destinations.css" rel="stylesheet" />
@@ -45,6 +42,10 @@
 			rel="stylesheet"
 		/>
 
+		<link
+			rel="shortcut icon"
+			href="https://www.svgrepo.com/show/94162/saturn.svg"
+		/>
 		<title>Destinations</title>
 	</head>
 	<body class="pt-md-2">
@@ -117,9 +118,7 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link light-text" href="./tickets.html"
-								>Tickets</a
-							>
+							<a class="nav-link light-text" href="#">Tickets</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link disabled light-text">Sign Up</a>
@@ -140,41 +139,49 @@
 			</div>
 		</nav>
 
-		<!-- interactive picker for saturn's moons -->
-		<main>
-			<div class="saturn">
-				<a
-					data-moon="mimas"
-					href="moons.html#mimas-link"
-					style="--size: 12%; --period: 16s"
-				></a>
-				<a
-					data-moon="titan"
-					href="moons.html#titan-link"
-					style="--size: 15%; --period: 16s"
-				></a>
-				<a
-					data-moon="enceladus"
-					href="moons.html#enceladus-link"
-					style="--size: 10%; --period: 12s"
-				></a>
-				<a
-					data-moon="iapetus"
-					href="moons.html#iapetus-link"
-					style="--size: 13%; --period: 18s"
-				></a>
-				<a
-					data-moon="rhea"
-					href="moons.html#rhea-link"
-					style="--size: 13%; --period: 20s"
-				></a>
+		<div class="">
+			<div
+				class="jumbotron container m-4 header light-text position-absolute d-none d-lg-block"
+			>
+				<h2 class="display-4 viga">The Navigator</h2>
+				<p class="fira">Hover over an orbit to select a moon.</p>
 			</div>
-		</main>
+			<!-- interactive picker for saturn's moons -->
+			<main class="">
+				<div class="saturn">
+					<a
+						data-moon="mimas"
+						href="moons.html#mimas-link"
+						style="--size: 12%; --period: 16s"
+					></a>
+					<a
+						data-moon="titan"
+						href="moons.html#titan-link"
+						style="--size: 15%; --period: 16s"
+					></a>
+					<a
+						data-moon="enceladus"
+						href="moons.html#enceladus-link"
+						style="--size: 10%; --period: 12s"
+					></a>
+					<a
+						data-moon="iapetus"
+						href="moons.html#iapetus-link"
+						style="--size: 13%; --period: 18s"
+					></a>
+					<a
+						data-moon="rhea"
+						href="moons.html#rhea-link"
+						style="--size: 13%; --period: 20s"
+					></a>
+				</div>
+			</main>
+		</div>
 
 		<!-- Border Arc -->
 		<div
-			class="border-curvy mt-5 position-relative"
-			style="background-color: #ffffff; z-index: 10"
+			class="border-curvy mt-md-5 position-relative"
+			style="background-color: #ffffff"
 		></div>
 
 		<footer

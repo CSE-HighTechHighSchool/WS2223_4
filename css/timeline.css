@@ -5,7 +5,7 @@
 .ag-timeline-block {
 	/* padding: 20px 0; */
 	background-color: black;
-	background-image: url("/img/tall-bg.jpg");
+	background-image: url("../img/tall-bg.jpg");
 	/* background-repeat: no-repeat; */
 	/* background-size: contain; */
 }
@@ -42,11 +42,13 @@
 	height: 170%;
 	width: 100%;
 	z-index: 5;
-	-webkit-mask-image: -webkit-gradient(linear,
-			left top,
-			left bottom,
-			from(rgba(0, 0, 0, 1)),
-			to(rgba(0, 0, 0, 0)));
+	-webkit-mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(rgba(0, 0, 0, 1)),
+		to(rgba(0, 0, 0, 0))
+	);
 }
 
 .ag-timeline_line {
@@ -315,7 +317,8 @@ img {
 	}
 }
 
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
 	.ag-format-container {
@@ -335,11 +338,13 @@ img {
 		height: 10%;
 		width: 100%;
 		z-index: 5;
-		-webkit-mask-image: -webkit-gradient(linear,
-				left top,
-				left bottom,
-				from(rgba(0, 0, 0, 1)),
-				to(rgba(0, 0, 0, 0)));
+		-webkit-mask-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(rgba(0, 0, 0, 1)),
+			to(rgba(0, 0, 0, 0))
+		);
 	}
 }
 
