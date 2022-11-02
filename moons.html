@@ -45,24 +45,20 @@
 		<title>Saturn's Moons</title>
 	</head>
 
-	<body>
+	<body class="pt-md-2">
 		<!-- Navbar -->
-		<!-- Navbar -->
-		<nav class="navbar navbar-expand-md shadow m-md-4 mt-0 sticky-md-top">
+		<nav class="navbar navbar-expand-md shadow m-md-4 my-0 sticky-md-top">
 			<div class="container-fluid">
-				<a class="navbar-brand light-text" href="index.html">
+				<a class="navbar-brand light-text" href="/">
 					<img
 						class="block my-auto"
 						style="height: 40px"
 						src="https://www.svgrepo.com/show/94162/saturn.svg"
 					/>
 				</a>
-				<a
-					href="index.html"
-					class="navbar-brand light-text my-auto prompt"
-				>
+				<p class="navbar-brand light-text my-auto prompt">
 					Saturn Tourism
-				</a>
+				</p>
 
 				<div>
 					<!-- light/dark mode switch for screens smaller than medium -->
@@ -77,7 +73,7 @@
 
 					<!-- burger icon for collapsible navigation menu-->
 					<button
-						class="navbar-toggler"
+						class="navbar-boggler d-md-none btn"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#toggler"
@@ -85,7 +81,7 @@
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<span class="navbar-toggler-icon"></span>
+						<i class="bi bi-list light-text"></i>
 					</button>
 				</div>
 
@@ -108,12 +104,18 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link light-text" href="#"
+							<a
+								class="nav-link light-text"
+								href="./pages/information.html"
 								>Information</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link light-text" href="#">Tickets</a>
+							<a
+								class="nav-link light-text"
+								href="./pages/tickets.html"
+								>Tickets</a
+							>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link disabled light-text">Sign Up</a>
