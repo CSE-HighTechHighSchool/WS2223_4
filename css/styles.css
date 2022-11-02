@@ -17,7 +17,7 @@
 	transition: all 0.1s ease-out;
 
 	/* Polar Night */
-	--gunmetal: #2e3440ff;
+	--gunmetal: #262b35;
 	--charcoal: #3b4252ff;
 	--independence: #434c5eff;
 	--independence-2: #4c566aff;
@@ -55,6 +55,10 @@
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
 	--border-color: var(--glaucous);
+
+	--card-body-bg: var(--charcoal);
+	--card-header-bg: var(--gunmetal);
+	--card-text-color: var(--gainsboro);
 }
 
 [theme="light"] {
@@ -68,6 +72,10 @@
 
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
+
+	--card-body-bg: white;
+	--card-header-bg: var(--alice-blue-2);
+	--card-text-color: var(--gunmetal);
 }
 
 /* End Theme Variables */

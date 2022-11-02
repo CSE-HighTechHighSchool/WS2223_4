@@ -14,7 +14,7 @@ header {
 .header-button {
 	border-radius: 10px;
 	border: 1px solid var(--li-color);
-	background-color: var(--nav-bg);
+	background-color: var(--card-body-bg);
 	color: var(--li-color);
 	padding: 10px 20px;
 }
@@ -255,6 +255,15 @@ header {
 
 /* Cards */
 
+.card-header {
+	background-color: var(--card-header-bg);
+}
+
+.card-body {
+	background-color: var(--card-body-bg);
+	border-radius: 0px 0px 10px 10px;
+}
+
 .card-image {
 	height: 18rem;
 	border-radius: 10px 10px 0px 0px;
@@ -264,6 +273,10 @@ header {
 	/* IE 10 and IE 11 */
 	user-select: none;
 	/* Standard syntax */
+}
+
+.card-title, .card-text {
+	color: var(--card-text-color) !important;
 }
 
 .latest-card {
