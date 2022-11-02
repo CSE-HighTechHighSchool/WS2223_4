@@ -28,11 +28,11 @@
 		></script>
 
 		<!-- Custom CSS & JS -->
-		<link href="css/moons.css" rel="stylesheet" />
-		<link href="css/styles.css" rel="stylesheet" />
+		<link href="../css/moons.css" rel="stylesheet" />
+		<link href="../css/styles.css" rel="stylesheet" />
 
-		<script src="js/script.js" defer></script>
-		<script src="js/moons.js" defer></script>
+		<script src="../js/script.js" defer></script>
+		<script src="../js/moons.js" defer></script>
 
 		<!-- Custom Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,16 +49,19 @@
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-md shadow m-md-4 my-0 sticky-md-top">
 			<div class="container-fluid">
-				<a class="navbar-brand light-text" href="/">
+				<a class="navbar-brand light-text" href="../index.html">
 					<img
 						class="block my-auto"
 						style="height: 40px"
 						src="https://www.svgrepo.com/show/94162/saturn.svg"
 					/>
 				</a>
-				<p class="navbar-brand light-text my-auto prompt">
+				<a
+					href="../index.html"
+					class="navbar-brand light-text my-auto prompt"
+				>
 					Saturn Tourism
-				</p>
+				</a>
 
 				<div>
 					<!-- light/dark mode switch for screens smaller than medium -->
@@ -92,28 +95,26 @@
 					<!-- navigation links -->
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link light-text" href="moons.html"
+							<a class="nav-link active light-text" href="./moons.html"
 								>Saturn's Moons</a
 							>
 						</li>
 						<li class="nav-item">
 							<a
 								class="nav-link light-text"
-								href="destinations.html"
+								href="./destinations.html"
 								>Destinations</a
 							>
 						</li>
 						<li class="nav-item">
 							<a
 								class="nav-link light-text"
-								href="./pages/information.html"
+								href="./information.html"
 								>Information</a
 							>
 						</li>
 						<li class="nav-item">
-							<a
-								class="nav-link light-text"
-								href="./pages/tickets.html"
+							<a class="nav-link light-text" href="./tickets.html"
 								>Tickets</a
 							>
 						</li>
@@ -142,7 +143,7 @@
 				<div class="saturn_para d-none d-md-block">
 					<img
 						id="saturn"
-						src="./img/saturn_moonspage.png"
+						src="../img/saturn_moonspage.png"
 						alt="saturn"
 					/>
 					<div id="titan"></div>
@@ -304,7 +305,5 @@
 				</div>
 			</div>
 		</main>
-
-		<footer></footer>
 	</body>
 </html>
