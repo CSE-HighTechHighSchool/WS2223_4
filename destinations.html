@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+			integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+			defer
+		></script>
+
+		<!-- Custom CSS & JS -->
+		<link href="css/styles.css" rel="stylesheet" />
+		<link href="css/destinations.css" rel="stylesheet" />
+
+		<script src="js/script.js" defer></script>
+
+		<!-- Custom Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Michroma&family=Montserrat&family=Fira+Mono:wght@300;400;500;600;700&family=Viga&family=Prompt:ital,wght@0,600;1,300;1,500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Destinations</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-md shadow m-md-4 mt-0 sticky-md-top">
+			<div class="container-fluid">
+				<a class="navbar-brand light-text" href="/">
+					<img
+						class="block my-auto"
+						style="height: 40px"
+						src="https://www.svgrepo.com/show/94162/saturn.svg"
+					/>
+				</a>
+				<p class="navbar-brand light-text my-auto prompt">
+					Saturn Tourism
+				</p>
+
+				<div>
+					<!-- light/dark mode switch for screens smaller than medium -->
+					<button
+						class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+						aria-label="Switch theme"
+						type="button"
+					>
+						<i class="bi bi-sun-fill hide-sun"></i>
+						<i class="bi bi-moon-stars-fill hide-moon"></i>
+					</button>
+
+					<!-- burger icon for collapsible navigation menu-->
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#toggler"
+						aria-controls="toggler"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+
+				<div
+					class="collapse navbar-collapse justify-content-center"
+					id="toggler"
+				>
+					<!-- navigation links -->
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a
+								class="nav-link active light-text"
+								aria-current="page"
+								href="#"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link light-text" href="moons.html"
+								>Saturn's Moons</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link light-text"
+								href="destinations.html"
+								>Destinations</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link light-text" href="#"
+								>Information</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link light-text" href="#">Tickets</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled light-text">Sign Up</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- light/dark mode switch for screens medium and above -->
+				<button
+					class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
+					aria-label="Switch theme"
+					type="button"
+				>
+					<i class="bi bi-sun-fill hide-sun"></i>
+					<i class="bi bi-moon-stars-fill hide-moon"></i>
+				</button>
+			</div>
+		</nav>
+
+		<!-- interactive picker for saturn's moons -->
+		<main>
+			<div class="saturn">
+				<a
+					data-moon="mimas"
+					href="/moons.html#mimas-link"
+					style="--size: 12%; --period: 16s"
+				></a>
+				<a
+					data-moon="titan"
+					href="/moons.html#titan-link"
+					style="--size: 15%; --period: 16s"
+				></a>
+				<a
+					data-moon="enceladus"
+					href="/moons.html#enceladus-link"
+					style="--size: 10%; --period: 12s"
+				></a>
+				<a
+					data-moon="iapetus"
+					href="/moons.html#iapetus-link"
+					style="--size: 13%; --period: 18s"
+				></a>
+				<a
+					data-moon="rhea"
+					href="/moons.html#rhea-link"
+					style="--size: 13%; --period: 20s"
+				></a>
+			</div>
+		</main>
+	</body>
+</html>

@@ -60,7 +60,7 @@
 [theme="light"] {
 	--sun: none;
 	--moon: revert;
-	
+
 	--body-bg: var(--gainsboro);
 	--nav-bg: var(--alice-blue-2);
 	--li-color: black;
@@ -149,9 +149,11 @@ nav {
 .viga {
 	font-family: "Viga", sans-serif;
 }
+
 .comfortaa {
 	font-family: "Comfortaa", sans-serif;
 }
+
 /*End Fonts*/
 
 main {

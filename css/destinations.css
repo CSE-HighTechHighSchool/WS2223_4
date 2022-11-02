@@ -1,0 +1,118 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Loop variables */
+:nth-child(1) {
+	--n: 1;
+}
+
+:nth-child(2) {
+	--n: 2;
+}
+
+:nth-child(3) {
+	--n: 3;
+}
+
+:nth-child(4) {
+	--n: 4;
+}
+
+:nth-child(5) {
+	--n: 5;
+}
+
+/* End loop variables */
+
+main {
+	display: grid;
+	place-items: center;
+	height: calc(100vh - 8rem);
+}
+
+/* Default styles for the entire system */
+.saturn {
+	z-index: 10;
+	width: 25vh;
+	height: 25vh;
+	display: grid;
+	border-radius: 50%;
+	place-items: center;
+	background-image: url("../img/saturn_texture.jpg");
+	background-repeat: repeat-x;
+	background-size: cover;
+	animation: 10s rotate infinite linear;
+	box-shadow: inset -10px -5px 10px black, inset 10px 5px 20px white;
+}
+
+@keyframes rotate {
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+/* Styles for all moon containers */
+[data-moon] {
+	display: grid;
+	grid-area: 1 / 1;
+	border-radius: 50%;
+	position: relative;
+	place-items: start center;
+	border: 3px solid darkgrey;
+	z-index: calc(5 - var(--n));
+	animation: rotation var(--period) infinite linear;
+	width: calc(100% + (30% + var(--size)) * var(--n));
+	height: calc(100% + (30% + var(--size)) * var(--n));
+}
+
+/* Styles for the circle at the top of the container */
+[data-moon]::after {
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	width: var(--size);
+	height: var(--size);
+	background-size: cover;
+	top: calc(0% - var(--size) / 2);
+}
+
+/* Hover effect for selected moons */
+[data-moon="enceladus"]::after,
+[data-moon="enceladus"]:hover {
+	background-image: url("../img/enceladus_texture.jpg");
+}
+
+[data-moon="iapetus"]::after,
+[data-moon="iapetus"]:hover {
+	background-image: url("../img/iapetus_texture.jpg");
+}
+
+[data-moon="titan"]::after,
+[data-moon="titan"]:hover {
+	background-image: url("../img/titan_texture.jpg");
+}
+
+[data-moon="mimas"]::after,
+[data-moon="mimas"]:hover {
+	background-image: url("../img/mimas_texture.jpg");
+}
+
+[data-moon="rhea"]::after,
+[data-moon="rhea"]:hover {
+	background-image: url("../img/rhea_texture.jpg");
+}
+
+/* Rotate moon container squares */
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(359deg);
+	}
+}
