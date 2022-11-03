@@ -98,33 +98,33 @@ main {
 }
 
 /* Hover effect for selected moons */
-[data-moon]:hover::after{
-	scale: 1.2 1.2;
+[data-moon]:hover::after {
+	scale: 1.1 1.1;
 	transition: scale 1s ease;
 }
 
-[data-moon]:hover{
-	border: 3px dashed yellow;
-	transition: border 2s ease;
+[data-moon]:hover {
+	border: 3px dashed #eeaa2e;
+	transition: border 1s ease;
 }
 
-[data-moon="enceladus"]::after{
-	background-image:url("../img/enceladus_texture.jpg");
+[data-moon="enceladus"]::after {
+	background-image: url("../img/enceladus_texture.jpg");
 }
 
-[data-moon="iapetus"]::after{
+[data-moon="iapetus"]::after {
 	background-image: url("../img/iapetus_texture.jpg");
 }
 
-[data-moon="titan"]::after{
+[data-moon="titan"]::after {
 	background-image: url("../img/titan_texture.jpg");
 }
 
-[data-moon="mimas"]::after{
+[data-moon="mimas"]::after {
 	background-image: url("../img/mimas_texture.jpg");
 }
 
-[data-moon="rhea"]::after{
+[data-moon="rhea"]::after {
 	background-image: url("../img/rhea_texture.jpg");
 }
 
@@ -143,4 +143,10 @@ h2 {
 	/* text-transform: uppercase; */
 	border-left: 10px solid #eeaa2e;
 	padding-left: 10px;
+}
+
+body {
+	background-image: url("../img/tall-bg.jpg");
+	/* background-size: cover;
+	background-repeat: no-repeat; */
 }

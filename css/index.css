@@ -162,6 +162,10 @@ header {
 	position: relative;
 	left: -200px;
 
+	transition: 1s;
+	left: 100%;
+	transition-delay: 350ms;
+
 	width: 100%;
 	height: auto;
 	z-index: 20;
@@ -247,12 +251,6 @@ header {
 	}
 }
 
-#saturn-image {
-	transition: 1s;
-	left: 100%;
-	transition-delay: 350ms;
-}
-
 /* Cards */
 
 .card-header {
@@ -275,7 +273,8 @@ header {
 	/* Standard syntax */
 }
 
-.card-title, .card-text {
+.card-title,
+.card-text {
 	color: var(--card-text-color) !important;
 }
 

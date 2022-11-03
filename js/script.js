@@ -37,7 +37,7 @@ function transformElement(el, xyEl) {
 	el.style.transform = transforms.apply(null, xyEl);
 }
 
-if (!mouseOverContainer) {
+if (mouseOverContainer) {
 	mouseOverContainer.onmousemove = function (e) {
 		let xy = [e.clientX, e.clientY];
 		let position = xy.concat([ex1Layer]);
@@ -106,7 +106,6 @@ window.addEventListener("scroll", () => {
 // 	document.querySelector(".nav-img").style.setProperty("--spindeg", spindeg);
 // 	});
 // });
-	
 
 //Overall Scroll progress
 // function scrollDist() {

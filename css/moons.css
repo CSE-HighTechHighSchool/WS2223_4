@@ -24,8 +24,8 @@ header {
 .space_bg {
 	/* background-image: url("../img/stars_bg.jpg"); */
 	background-image: url("../img/tall-bg.jpg");
-	background-repeat: repeat-y;
-	background-size: contain;
+	/* background-repeat: repeat-y;
+	background-size: contain; */
 	position: relative;
 	top: 80vh;
 	z-index: -9;
