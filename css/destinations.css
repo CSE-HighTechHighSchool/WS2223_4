@@ -85,28 +85,33 @@ main {
 }
 
 /* Hover effect for selected moons */
-[data-moon="enceladus"]::after,
-[data-moon="enceladus"]:hover {
-	background-image: url("../img/enceladus_texture.jpg");
+[data-moon]:hover::after{
+	scale: 1.2 1.2;
+	transition: scale 1s ease;
 }
 
-[data-moon="iapetus"]::after,
-[data-moon="iapetus"]:hover {
+[data-moon]:hover{
+	border: 3px dashed yellow;
+	transition: border 2s ease;
+}
+
+[data-moon="enceladus"]::after{
+	background-image:url("../img/enceladus_texture.jpg");
+}
+
+[data-moon="iapetus"]::after{
 	background-image: url("../img/iapetus_texture.jpg");
 }
 
-[data-moon="titan"]::after,
-[data-moon="titan"]:hover {
+[data-moon="titan"]::after{
 	background-image: url("../img/titan_texture.jpg");
 }
 
-[data-moon="mimas"]::after,
-[data-moon="mimas"]:hover {
+[data-moon="mimas"]::after{
 	background-image: url("../img/mimas_texture.jpg");
 }
 
-[data-moon="rhea"]::after,
-[data-moon="rhea"]:hover {
+[data-moon="rhea"]::after{
 	background-image: url("../img/rhea_texture.jpg");
 }
 

@@ -96,14 +96,17 @@ window.addEventListener("scroll", () => {
 	scrollProgress.style.height = `${(scrollTop / height) * 120}%`;
 });
 
-document.querySelector(".nav-img").addEventListener("mouseover", () => {
-	let spindeg = Math.round(Math.random() * 2000 / 360) * 360;
-	let spinx = Math.round(Math.random());
-	let spiny = Math.round(Math.random());
-	let spinz = Math.round(Math.random());
-	spindeg = spinx + ", " + spiny + ", " + spinz + ", " + spindeg.toString() + "deg";
-	document.querySelector(".nav-img").style.setProperty("--spindeg", spindeg);
-})
+// document.querySelectorAll(".nav-img").forEach((spin) => {
+// 	spin.addEventListener("mouseover", () => {
+// 	let spindeg = Math.round(Math.random() * 2000 / 360) * 360;
+// 	let spinx = Math.round(Math.random());
+// 	let spiny = Math.round(Math.random());
+// 	let spinz = Math.round(Math.random());
+// 	spindeg = spinx + ", " + spiny + ", " + spinz + ", " + spindeg.toString() + "deg";
+// 	document.querySelector(".nav-img").style.setProperty("--spindeg", spindeg);
+// 	});
+// });
+	
 
 //Overall Scroll progress
 // function scrollDist() {

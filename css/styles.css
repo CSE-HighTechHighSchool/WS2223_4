@@ -89,17 +89,22 @@ nav {
 
 .nav-img{
 	transition: transform 1.5s ease;
+	cursor: pointer;
 }
 
 .nav-img:hover{
-	--spindeg: 0;
-	transform: rotate3d(var(--spindeg)) scale(1.2, 1.2);
+	transform: rotate3d(1, 1, 1, 360deg) scale(1.2, 1.2);
 	transition: transform 1.5s ease;
 }
 
 .navbar-nav{
 	margin-right: 5%;
 	font-size: 1.2em;
+}
+
+.nav-link{
+	font-size: 1em;
+	cursor: pointer;
 }
 
 .nav-link:hover{
@@ -337,9 +342,20 @@ footer {
 	border-radius: 100%; */
 }
 
-@keyframes wiggle {
-	100%{
-		rotate: 360deg;
+@media screen and (max-width: 1100px) and (min-width: 910px){
+	.nav-link{
+		font-size: .8em;
 	}
+}
 
+@media screen and (max-width: 910px) and (min-width: 850px){
+	.nav-link{
+		font-size: 0.7em;
+	}
+}
+
+@media screen and (max-width: 850px) and (min-width: 765px){
+	.nav-link{
+		font-size: 0.55em;
+	}
 }

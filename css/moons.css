@@ -36,10 +36,6 @@ header {
 }
 
 /* top background of the page */
-.spacer {
-	height: 79vh;
-	width: 100%;
-}
 
 .moons_top {
 	z-index: -9;
