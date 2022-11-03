@@ -95,6 +95,10 @@ nav {
 	font-family: "Viga", sans-serif;
 }
 
+a{
+	cursor: pointer;
+}
+
 .nav-img {
 	transition: transform 1.5s ease;
 	cursor: pointer;
