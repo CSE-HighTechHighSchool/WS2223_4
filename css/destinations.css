@@ -30,8 +30,21 @@
 
 main {
 	display: grid;
+	padding-top: 2rem;
 	place-items: center;
 	height: calc(100vh - 8rem);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	main {
+		display: grid;
+		place-items: center;
+		height: calc(100vh - 8rem);
+		overflow-x: hidden;
+		padding-top: 6rem;
+	}
 }
 
 /* Default styles for the entire system */
@@ -124,4 +137,10 @@ main {
 	to {
 		transform: rotate(359deg);
 	}
+}
+
+h2 {
+	/* text-transform: uppercase; */
+	border-left: 10px solid #eeaa2e;
+	padding-left: 10px;
 }
