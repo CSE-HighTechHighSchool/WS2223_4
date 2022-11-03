@@ -27,12 +27,16 @@
 			defer
 		></script>
 
+		<!-- Confetti JS -->
+		<script src="https://confettijs.org/confetti.min.js" defer></script>
+
 		<!-- Custom CSS & JS -->
 		<link href="../css/styles.css" rel="stylesheet" />
 		<link href="../css/stars.css" rel="stylesheet" />
 		<link href="../css/ticket.css" rel="stylesheet" />
 
 		<script src="../js/script.js" defer></script>
+		<script src="../js/confetti.js" defer></script>
 
 		<!-- Bootstrap Font Icon CSS -->
 		<link
@@ -75,9 +79,10 @@
 					<div>
 						<!-- light/dark mode switch for screens smaller than medium -->
 						<button
-							class="btn btn-primary d-inline-block d-md-none switch shadow-sm"
+							class="btn btn-primary d-inline-block d-md-none switch confetti shadow-sm"
 							aria-label="Switch theme"
 							type="button"
+							id="switch-lt-md"
 						>
 							<i class="bi bi-sun-fill hide-sun"></i>
 							<i class="bi bi-moon-stars-fill hide-moon"></i>
@@ -139,9 +144,10 @@
 
 					<!-- light/dark mode switch for screens medium and above -->
 					<button
-						class="btn btn-primary d-none d-md-inline-block switch shadow-sm"
+						class="btn btn-primary d-none d-md-inline-block switch confetti shadow-sm"
 						aria-label="Switch theme"
 						type="button"
+						id="switch-gt-md"
 					>
 						<i class="bi bi-sun-fill hide-sun"></i>
 						<i class="bi bi-moon-stars-fill hide-moon"></i>
@@ -228,11 +234,12 @@
 									</ul>
 								</div>
 
-								<a
+								<div
 									href="#"
 									class="btn btn-warning viga bg-yellow"
-									>Get Started</a
 								>
+									Get Started
+								</div>
 							</div>
 						</div>
 
@@ -413,7 +420,7 @@
 									class="card-title mt-2"
 									style="font-size: 40px"
 								>
-									$395,474
+									$537,881
 									<div
 										class="text-muted mt-4"
 										style="font-size: 20px"
