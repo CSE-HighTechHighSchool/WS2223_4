@@ -1,6 +1,8 @@
 /* import variable from styles.css */
 @import url("./styles.css");
 
+/*Element classes*/
+
 html {
 	scroll-snap-type: y mandatory;
 }
@@ -9,17 +11,19 @@ body {
 	height: 100%;
 }
 
-#footer {
-	margin-top: 8rem;
+header {
+	height: 100%;
 }
 
 footer {
 	scroll-snap-align: center;
 }
 
-header {
-	height: 100%;
+#footer {
+	margin-top: 8rem;
 }
+
+/* Scrolling background*/
 
 .space_bg {
 	/* background-image: url("../img/stars_bg.jpg"); */
@@ -86,6 +90,8 @@ header {
 	width: 100%;
 	overflow: hidden;
 }
+
+/* Moon ids */
 
 #saturn {
 	height: auto;

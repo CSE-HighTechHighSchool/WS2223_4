@@ -1,3 +1,5 @@
+/* Main Timeline section classes */
+
 .ag-section {
 	overflow-x: hidden;
 }
@@ -49,6 +51,8 @@
 			to(rgba(0, 0, 0, 0)));
 }
 
+/* Timeline progress bar classes */
+
 .ag-timeline_line {
 	width: 2px;
 	background-color: #393935;
@@ -77,6 +81,7 @@
 	width: 100%;
 }
 
+/* Timeline year bubbles */
 .ag-timeline-card_point {
 	height: 50px;
 	line-height: 50px;
@@ -98,6 +103,8 @@
 	color: #1d1d1b;
 	background-color: #eeaa2e;
 }
+
+/* Timeline cards */
 
 .ag-timeline-card_meta-box {
 	display: inline-block;
@@ -135,7 +142,7 @@
 	position: relative;
 }
 
-/* Card text */
+/* Card classes */
 
 .ag-timeline-card_title {
 	font-family: "Viga", sans-serif;
@@ -167,16 +174,6 @@ img {
 	z-index: 10;
 }
 
-.ag-timeline_item {
-	margin: 0 0 50px;
-
-	position: relative;
-}
-
-.ag-timeline_item:nth-child(2n) {
-	text-align: right;
-}
-
 .ag-timeline {
 	display: inline-block;
 	width: 100%;
@@ -184,6 +181,18 @@ img {
 	margin: 0 auto;
 
 	position: relative;
+}
+
+.ag-timeline_item {
+	margin: 0 0 50px;
+
+	position: relative;
+}
+
+/* Card left or right controller classes */
+
+.ag-timeline_item:nth-child(2n) {
+	text-align: right;
 }
 
 .ag-timeline-card_box {
@@ -205,7 +214,7 @@ img {
 
 .js-ag-active .ag-timeline-card_point {
 	color: #1d1d1b;
-	background-color: #ff0;
+	background-color: #eeaa2e;
 }
 
 .ag-timeline-card_arrow {
@@ -249,6 +258,8 @@ img {
 .ag-timeline-card_info {
 	padding: 20px 30px;
 }
+
+/* Breakpoint classes */
 
 @media only screen and (max-width: 979px) {
 	.ag-timeline_line {
@@ -343,6 +354,7 @@ img {
 	}
 }
 
+/* Horizontal scroll progress */
 #scroll-progress {
 	position: fixed;
 	bottom: 0;

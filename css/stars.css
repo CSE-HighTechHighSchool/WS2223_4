@@ -1,4 +1,4 @@
-/*stars*/
+/* Container */
 
 .full-wh {
 	position: absolute;
@@ -8,6 +8,8 @@
 	width: 100%;
 }
 
+/*Stars grouped*/
+
 .star-animation {
 	position: relative;
 	top: 0;
@@ -16,6 +18,8 @@
 	z-index: 5;
 	height: auto;
 }
+
+/* Individual stars */
 
 #stars {
 	width: 1px;
