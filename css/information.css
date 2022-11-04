@@ -1,3 +1,5 @@
+/* Header classes */
+
 .header {
 	margin-top: 4rem;
 	margin-bottom: 6rem;
@@ -39,6 +41,8 @@ h1 {
 	background-color: #eeaa2e;
 }
 
+/*Card classes */
+
 .card {
 	display: table-row;
 	width: 49%;
@@ -53,6 +57,8 @@ h1 {
 .card + .card {
 	margin-left: 2%;
 }
+
+/* Date of ticket*/
 
 .date {
 	display: table-cell;
@@ -136,6 +142,8 @@ h1 {
 	right: 10px;
 	bottom: 10px;
 }
+
+/* Ticket status classes */
 
 .ticket-active {
 	background-color: #037fdd;

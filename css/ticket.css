@@ -1,7 +1,4 @@
-.header {
-	margin-top: 4rem;
-	margin-bottom: 6rem;
-}
+/* header classes */
 
 header {
 	background-image: url("../img/space-launch.webp");
@@ -17,6 +14,13 @@ h1 {
 	margin-bottom: 30px;
 }
 
+/* Spacing for title */
+.hero {
+	margin-top: 4rem;
+	margin-bottom: 6rem;
+}
+
+/* Ticket classes */
 .booking {
 	border-radius: 15px;
 	padding-left: 0;

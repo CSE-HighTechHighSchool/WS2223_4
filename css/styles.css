@@ -80,6 +80,8 @@
 
 /* End Theme Variables */
 
+/* Background classes */
+
 body {
 	background-color: var(--body-bg);
 	font-family: "", sans-serif;
@@ -90,12 +92,14 @@ body {
 	color: var(--li-color);
 }
 
+/* Navbar classes */
+
 nav {
 	background-color: var(--nav-bg);
 	font-family: "Viga", sans-serif;
 }
 
-a{
+a {
 	cursor: pointer;
 }
 
@@ -160,6 +164,8 @@ a{
 	opacity: 0.5;
 }
 
+/* Dark Mode Button Classes */
+
 .navbar-boggler {
 	border: 1px solid var(--li-color);
 	border-radius: 10px;
@@ -217,15 +223,7 @@ a{
 
 /*End Fonts*/
 
-main {
-	height: 100px;
-}
-
-.box {
-	height: 100%;
-	width: auto;
-	position: relative;
-}
+/* Header breakpoint*/
 
 @media (max-width: 1000px) {
 	header {
@@ -238,6 +236,7 @@ main {
 	}
 }
 
+/* Curved border */
 .border-curvy {
 	background-color: var(--body-bg);
 	border-radius: 150% 150% 0px 0px;
@@ -257,7 +256,7 @@ main {
 	}
 }
 
-/*Element appearing */
+/*Element appearing animation */
 .transition-yellow {
 	color: white;
 }
@@ -342,18 +341,6 @@ main {
 	}
 }
 
-footer {
-	/* background-color: #eeaa2e; */
-	border: none;
-}
-
-#roverhead {
-	width: 100%;
-	/* background-color: #0e0d0b;
-	border: #ffeac4 2px solid;
-	border-radius: 100%; */
-}
-
 @media screen and (max-width: 1100px) and (min-width: 910px) {
 	.nav-link {
 		font-size: 0.8em;
@@ -370,4 +357,27 @@ footer {
 	.nav-link {
 		font-size: 0.55em;
 	}
+}
+
+main {
+	height: 100px;
+}
+
+/* Footer classes */
+footer {
+	/* background-color: #eeaa2e; */
+	border: none;
+}
+
+#roverhead {
+	width: 100%;
+	/* background-color: #0e0d0b;
+	border: #ffeac4 2px solid;
+	border-radius: 100%; */
+}
+
+.box {
+	height: 100%;
+	width: auto;
+	position: relative;
 }
