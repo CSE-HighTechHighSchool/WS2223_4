@@ -18,6 +18,7 @@
 
 	/* Polar Night */
 	--gunmetal: #262b35;
+	--gunmetal-2: #2c323d;
 	--charcoal: #3b4252ff;
 	--independence: #434c5eff;
 	--independence-2: #4c566aff;
@@ -49,15 +50,17 @@
 	--moon: none;
 
 	--body-bg: var(--gunmetal);
-	--nav-bg: var(--charcoal);
-	--li-color: var(--gainsboro);
+	--nav-bg: var(--gunmetal-2);
+	--footer-bg: var(--gunmetal-2);
+	--footer-bg-2: var(--gunmetal);
 
+	--li-color: var(--gainsboro);
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
 	--border-color: var(--glaucous);
 
 	--card-body-bg: var(--charcoal);
-	--card-header-bg: var(--gunmetal);
+	--card-header-bg: var(--gunmetal-2);
 	--card-text-color: var(--gainsboro);
 }
 
@@ -67,18 +70,37 @@
 
 	--body-bg: var(--gainsboro);
 	--nav-bg: var(--alice-blue-2);
-	--li-color: black;
-	--border-color: var(--gunmetal);
+	--footer-bg: var(--alice-blue-2);
+	--footer-bg-2: var(--gainsboro);
 
+	--li-color: var(--gunmetal);
+	--border-color: var(--gunmetal);
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
 
-	--card-body-bg: white;
+	--card-body-bg: var(--alice-blue-2);
 	--card-header-bg: var(--alice-blue-2);
 	--card-text-color: var(--gunmetal);
 }
 
 /* End Theme Variables */
+
+/* Cards */
+.card-header {
+	background-color: var(--card-header-bg);
+}
+
+.card-body {
+	background-color: var(--card-body-bg);
+	border-radius: 0px 0px 10px 10px;
+}
+
+.card-title,
+.card-text {
+	color: var(--card-text-color) !important;
+}
+
+/* End Cards */
 
 body {
 	background-color: var(--body-bg);
@@ -95,7 +117,7 @@ nav {
 	font-family: "Viga", sans-serif;
 }
 
-a{
+a {
 	cursor: pointer;
 }
 
@@ -244,6 +266,20 @@ main {
 	height: 50px;
 	margin-top: -50px;
 	z-index: 20;
+}
+
+.border-curvy.footer,
+footer,
+footer>section {
+	background-color: var(--footer-bg);
+}
+
+footer>div {
+	background-color: var(--footer-bg-2);
+}
+
+.social-icons a i:hover {
+	color: var(--gainsboro);
 }
 
 /*Flashing css*/

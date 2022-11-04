@@ -50,7 +50,7 @@ h1 {
 	position: relative;
 }
 
-.card + .card {
+.card+.card {
 	margin-left: 2%;
 }
 
@@ -119,7 +119,7 @@ h1 {
 	font-size: 130%;
 }
 
-.card-cont > div {
+.card-cont>div {
 	display: table-row;
 }
 
@@ -157,7 +157,7 @@ h1 {
 		margin-bottom: 10px;
 	}
 
-	.card + .card {
+	.card+.card {
 		margin-left: 0;
 	}
 
