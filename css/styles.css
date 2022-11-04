@@ -58,6 +58,8 @@
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
 	--border-color: var(--glaucous);
+	--icon-hover-color: var(--gainsboro);
+	--footer-text-color: var(--gainsboro);
 
 	--card-body-bg: var(--charcoal);
 	--card-header-bg: var(--gunmetal-2);
@@ -77,6 +79,8 @@
 	--border-color: var(--gunmetal);
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
+	--icon-hover-color: var(--gunmetal);
+	--footer-text-color: var(--independence-2);
 
 	--card-body-bg: var(--alice-blue-2);
 	--card-header-bg: var(--alice-blue-2);
@@ -276,8 +280,12 @@ footer>div {
 	background-color: var(--footer-bg-2);
 }
 
+footer span, footer h6 {
+	color: var(--footer-text-color);
+}
+
 .social-icons a i:hover {
-	color: var(--gainsboro);
+	color: var(--icon-hover-color);
 }
 
 /*Flashing css*/
