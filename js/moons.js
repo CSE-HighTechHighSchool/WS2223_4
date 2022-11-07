@@ -1,3 +1,4 @@
+//variables for moon click effects
 const titan = document.querySelector(".titan");
 const titan_text = document.querySelector(".titan_text");
 const titan_alt = document.querySelector(".titan_alt");
