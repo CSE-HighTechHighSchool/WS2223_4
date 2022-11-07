@@ -253,15 +253,6 @@ header {
 
 /* Cards */
 
-.card-header {
-	background-color: var(--card-header-bg);
-}
-
-.card-body {
-	background-color: var(--card-body-bg);
-	border-radius: 0px 0px 10px 10px;
-}
-
 .card-image {
 	height: 18rem;
 	border-radius: 10px 10px 0px 0px;
@@ -271,11 +262,6 @@ header {
 	/* IE 10 and IE 11 */
 	user-select: none;
 	/* Standard syntax */
-}
-
-.card-title,
-.card-text {
-	color: var(--card-text-color) !important;
 }
 
 .latest-card {

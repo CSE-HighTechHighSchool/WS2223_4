@@ -18,6 +18,7 @@
 
 	/* Polar Night */
 	--gunmetal: #262b35;
+	--gunmetal-2: #2c323d;
 	--charcoal: #3b4252ff;
 	--independence: #434c5eff;
 	--independence-2: #4c566aff;
@@ -49,15 +50,19 @@
 	--moon: none;
 
 	--body-bg: var(--gunmetal);
-	--nav-bg: var(--charcoal);
-	--li-color: var(--gainsboro);
+	--nav-bg: var(--gunmetal-2);
+	--footer-bg: var(--gunmetal-2);
+	--footer-bg-2: var(--gunmetal);
 
+	--li-color: var(--gainsboro);
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
 	--border-color: var(--glaucous);
+	--icon-hover-color: var(--gainsboro);
+	--footer-text-color: var(--gainsboro);
 
 	--card-body-bg: var(--charcoal);
-	--card-header-bg: var(--gunmetal);
+	--card-header-bg: var(--gunmetal-2);
 	--card-text-color: var(--gainsboro);
 }
 
@@ -67,19 +72,41 @@
 
 	--body-bg: var(--gainsboro);
 	--nav-bg: var(--alice-blue-2);
-	--li-color: black;
-	--border-color: var(--gunmetal);
+	--footer-bg: var(--alice-blue-2);
+	--footer-bg-2: var(--gainsboro);
 
+	--li-color: var(--gunmetal);
+	--border-color: var(--gunmetal);
 	--switch-bg: var(--air-superiority-blue);
 	--switch-hover-bg: var(--glaucous);
+	--icon-hover-color: var(--gunmetal);
+	--footer-text-color: var(--independence-2);
 
-	--card-body-bg: white;
+	--card-body-bg: var(--alice-blue-2);
 	--card-header-bg: var(--alice-blue-2);
 	--card-text-color: var(--gunmetal);
 }
 
 /* End Theme Variables */
 
+/* Cards */
+.card-header {
+	background-color: var(--card-header-bg);
+}
+
+.card-body {
+	background-color: var(--card-body-bg);
+	border-radius: 0px 0px 10px 10px;
+}
+
+.card-title,
+.card-text {
+	color: var(--card-text-color) !important;
+}
+
+/* End Cards */
+
+/* Background Classes */
 body {
 	background-color: var(--body-bg);
 	font-family: "", sans-serif;
@@ -90,12 +117,14 @@ body {
 	color: var(--li-color);
 }
 
+/* Navbar classes */
+
 nav {
 	background-color: var(--nav-bg);
 	font-family: "Viga", sans-serif;
 }
 
-a{
+a {
 	cursor: pointer;
 }
 
@@ -160,6 +189,8 @@ a{
 	opacity: 0.5;
 }
 
+/* Dark Mode Button Classes */
+
 .navbar-boggler {
 	border: 1px solid var(--li-color);
 	border-radius: 10px;
@@ -217,15 +248,7 @@ a{
 
 /*End Fonts*/
 
-main {
-	height: 100px;
-}
-
-.box {
-	height: 100%;
-	width: auto;
-	position: relative;
-}
+/* Header breakpoint*/
 
 @media (max-width: 1000px) {
 	header {
@@ -238,12 +261,31 @@ main {
 	}
 }
 
+/* Curved border */
 .border-curvy {
 	background-color: var(--body-bg);
 	border-radius: 150% 150% 0px 0px;
 	height: 50px;
 	margin-top: -50px;
 	z-index: 20;
+}
+
+.border-curvy.footer,
+footer,
+footer>section {
+	background-color: var(--footer-bg);
+}
+
+footer>div {
+	background-color: var(--footer-bg-2);
+}
+
+footer span, footer h6 {
+	color: var(--footer-text-color);
+}
+
+.social-icons a i:hover {
+	color: var(--icon-hover-color);
 }
 
 /*Flashing css*/
@@ -257,7 +299,7 @@ main {
 	}
 }
 
-/*Element appearing */
+/*Element appearing animation */
 .transition-yellow {
 	color: white;
 }
@@ -342,18 +384,6 @@ main {
 	}
 }
 
-footer {
-	/* background-color: #eeaa2e; */
-	border: none;
-}
-
-#roverhead {
-	width: 100%;
-	/* background-color: #0e0d0b;
-	border: #ffeac4 2px solid;
-	border-radius: 100%; */
-}
-
 @media screen and (max-width: 1100px) and (min-width: 910px) {
 	.nav-link {
 		font-size: 0.8em;
@@ -370,4 +400,27 @@ footer {
 	.nav-link {
 		font-size: 0.55em;
 	}
+}
+
+main {
+	height: 100px;
+}
+
+/* Footer classes */
+footer {
+	/* background-color: #eeaa2e; */
+	border: none;
+}
+
+#roverhead {
+	width: 100%;
+	/* background-color: #0e0d0b;
+	border: #ffeac4 2px solid;
+	border-radius: 100%; */
+}
+
+.box {
+	height: 100%;
+	width: auto;
+	position: relative;
 }
