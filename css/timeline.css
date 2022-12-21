@@ -44,11 +44,13 @@
 	height: 170%;
 	width: 100%;
 	z-index: 5;
-	-webkit-mask-image: -webkit-gradient(linear,
-			left top,
-			left bottom,
-			from(rgba(0, 0, 0, 1)),
-			to(rgba(0, 0, 0, 0)));
+	-webkit-mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(rgba(0, 0, 0, 1)),
+		to(rgba(0, 0, 0, 0))
+	);
 }
 
 /* Timeline progress bar classes */
@@ -79,6 +81,11 @@
 	top: 0;
 	height: 0%;
 	width: 100%;
+}
+
+.ag-timeline-card_img-box {
+	overflow: hidden;
+	border-radius: 15px;
 }
 
 /* Timeline year bubbles */
@@ -326,7 +333,8 @@ img {
 	}
 }
 
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
 	.ag-format-container {
@@ -346,11 +354,13 @@ img {
 		height: 10%;
 		width: 100%;
 		z-index: 5;
-		-webkit-mask-image: -webkit-gradient(linear,
-				left top,
-				left bottom,
-				from(rgba(0, 0, 0, 1)),
-				to(rgba(0, 0, 0, 0)));
+		-webkit-mask-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(rgba(0, 0, 0, 1)),
+			to(rgba(0, 0, 0, 0))
+		);
 	}
 }
 
