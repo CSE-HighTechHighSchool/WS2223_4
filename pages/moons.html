@@ -38,6 +38,7 @@
 		<script src="../js/script.js" defer></script>
 		<script src="../js/moons.js" defer></script>
 		<script src="../js/confetti.js" defer></script>
+		<script type="module" src="../js/userController.js" defer></script>
 
 		<!-- Custom Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,9 +57,7 @@
 	<body>
 		<header class="pt-md-2">
 			<!-- Navbar -->
-			<nav
-				class="navbar navbar-expand-md shadow m-md-4 my-0 sticky-md-top position-relative"
-			>
+			<nav class="navbar navbar-expand-md shadow m-md-4 my-0">
 				<div class="container-fluid">
 					<a class="navbar-brand light-text" href="../index.html">
 						<img
@@ -106,6 +105,32 @@
 					>
 						<!-- navigation links -->
 						<ul class="navbar-nav">
+							<div>
+								<!-- Login button for screens smaller than medium -->
+								<a
+									class="btn light-text btn-confirm d-inline-block d-md-none"
+									data-bs-toggle="modal"
+									href="#loginModal"
+									role="button"
+									id="loginMedium"
+									>Login</a
+								>
+
+								<!-- Signed-in menu for screens smaller than medium -->
+								<a
+									href="./purchases.html"
+									id="greetingMedium"
+									class="light-text m-2 d-md-none text-decoration-none"
+								>
+									Hello, Guest
+								</a>
+								<button
+									id="signOutMedium"
+									class="btn light-text btn-confirm ml-auto d-md-none"
+								>
+									Sign out
+								</button>
+							</div>
 							<li class="nav-item">
 								<a
 									class="nav-link light-text"
@@ -136,14 +161,281 @@
 									>Tickets</a
 								>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled light-text"
-									>Sign Up</a
-								>
-							</li>
 						</ul>
 					</div>
 
+					<!-- Login button for screens medium and above -->
+					<a
+						class="btn header-button btn-warning m-2 d-none d-md-inline-block"
+						data-bs-toggle="modal"
+						href="#loginModal"
+						role="button"
+						id="loginLarge"
+						>Login</a
+					>
+
+					<!-- Signed in menu for screens medium and above -->
+					<a
+						href="./purchases.html"
+						id="greetingLarge"
+						class="light-text m-2 d-none text-decoration-none"
+					>
+						Hello, Guest
+					</a>
+					<button
+						id="signOutLarge"
+						class="btn header-button btn-warning m-2 d-none"
+					>
+						Sign out
+					</button>
+
+					<!-- Sign in modal -->
+					<div
+						class="modal fade"
+						id="loginModal"
+						aria-hidden="true"
+						aria-labelledby="loginModalLabel"
+						tabindex="-1"
+					>
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content background-mode">
+								<div class="modal-header">
+									<h1
+										class="modal-title fs-5"
+										id="loginModalLabel"
+									>
+										Login
+									</h1>
+									<button
+										type="button"
+										class="btn-close btn-close-white"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+
+								<form>
+									<div class="modal-body">
+										<div class="form-group mb-2">
+											<label for="loginEmail"
+												>Email address</label
+											>
+											<div class="input-group">
+												<input
+													type="email"
+													class="form-control"
+													id="loginEmail"
+													placeholder="Enter your email"
+													required
+												/>
+												<div class="input-group-append">
+													<span
+														class="input-group-text"
+														>@ctemc.org</span
+													>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group mb-2">
+											<label for="loginPassword"
+												>Password</label
+											>
+											<input
+												type="password"
+												class="form-control"
+												id="loginPassword"
+												placeholder="Enter your password"
+												minlength="6"
+												required
+											/>
+										</div>
+
+										<div class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input"
+												id="loginRememberMe"
+											/>
+											<label
+												class="form-check-label"
+												for="loginRememberMe"
+												>Remember me</label
+											>
+										</div>
+
+										<small class="text-muted"
+											>Don't have an account?
+											<a
+												class="text-info"
+												data-bs-target="#registerModal"
+												data-bs-toggle="modal"
+												role="button"
+												>Sign up instead</a
+											>.</small
+										>
+									</div>
+
+									<div class="modal-footer">
+										<button
+											type="button"
+											class="btn btn-secondary"
+											data-bs-dismiss="modal"
+										>
+											Close
+										</button>
+										<button
+											type="submit"
+											id="loginButton"
+											class="btn text-white header-button btn-warning"
+											data-bs-dismiss="modal"
+										>
+											Login
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- Registration modal -->
+					<div
+						class="modal fade"
+						id="registerModal"
+						aria-hidden="true"
+						aria-labelledby="registerModalLabel"
+						tabindex="-1"
+					>
+						<div class="modal-dialog modal-dialog-centered">
+							<div
+								class="modal-content light-text background-mode"
+							>
+								<div class="modal-header">
+									<h1
+										class="modal-title fs-5"
+										id="registerModalLabel"
+									>
+										Register
+									</h1>
+									<button
+										type="button"
+										class="btn-close btn-close-white"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+
+								<form>
+									<div class="modal-body">
+										<div class="form-group mb-2">
+											<label for="fullName"
+												>Full name</label
+											>
+											<div class="input-group">
+												<input
+													type="text"
+													class="form-control"
+													id="fullName"
+													placeholder="Enter your full name"
+													required
+												/>
+											</div>
+										</div>
+
+										<div class="form-group mb-2">
+											<label for="registerEmail"
+												>Email address</label
+											>
+											<div class="input-group">
+												<input
+													type="email"
+													class="form-control"
+													aria-describedby="emailHelp"
+													id="registerEmail"
+													placeholder="Enter your email"
+													required
+												/>
+												<div class="input-group-append">
+													<span
+														class="input-group-text"
+														>@ctemc.org</span
+													>
+												</div>
+											</div>
+											<small
+												id="emailHelp"
+												class="form-text text-muted"
+												>Please use your school email
+												address.</small
+											>
+										</div>
+
+										<div class="form-group mb-2">
+											<label for="registerPassword"
+												>Password</label
+											>
+											<input
+												type="password"
+												class="form-control"
+												aria-describedby="passwordHelp"
+												id="registerPassword"
+												placeholder="Enter your password"
+												minlength="6"
+												required
+											/>
+											<small
+												id="passwordHelp"
+												class="form-text text-muted"
+												>Your password should be over 6
+												characters.</small
+											>
+										</div>
+
+										<div class="form-check mb-2">
+											<input
+												type="checkbox"
+												class="form-check-input"
+												id="registerRememberMe"
+											/>
+											<label
+												class="form-check-label"
+												for="registerRememberMe"
+												>Remember me</label
+											>
+										</div>
+
+										<small class="text-muted"
+											>Already have an account?
+											<a
+												class="text-info"
+												data-bs-target="#loginModal"
+												data-bs-toggle="modal"
+												role="button"
+												>Sign in instead</a
+											>.</small
+										>
+									</div>
+
+									<div class="modal-footer">
+										<button
+											type="button"
+											class="btn btn-secondary"
+											data-bs-dismiss="modal"
+										>
+											Close
+										</button>
+										<button
+											type="submit"
+											id="registerButton"
+											class="btn text-white btn-warning header-button"
+										>
+											Register
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 					<!-- light/dark mode switch for screens medium and above -->
 					<button
 						class="btn btn-primary d-none d-md-inline-block switch confetti shadow-sm"

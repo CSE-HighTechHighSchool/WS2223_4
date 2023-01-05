@@ -11,7 +11,7 @@ header {
 	background-image: url("../img/space_bg.jpg");
 }
 
-.header-button {
+.top-button {
 	border-radius: 10px;
 	border: 1px solid var(--li-color);
 	background-color: var(--card-body-bg);

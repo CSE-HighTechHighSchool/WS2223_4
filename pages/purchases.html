@@ -33,11 +33,10 @@
 		<!-- Custom CSS & JS -->
 		<link href="../css/styles.css" rel="stylesheet" />
 		<link href="../css/stars.css" rel="stylesheet" />
-		<link href="../css/information.css" rel="stylesheet" />
+		<link href="../css/ticket.css" rel="stylesheet" />
 
 		<script src="../js/script.js" defer></script>
 		<script src="../js/confetti.js" defer></script>
-
 		<script type="module" src="../js/userController.js" defer></script>
 
 		<!-- Bootstrap Font Icon CSS -->
@@ -57,11 +56,14 @@
 			rel="shortcut icon"
 			href="https://www.svgrepo.com/show/94162/saturn.svg"
 		/>
-		<title>Information</title>
+		<title>Your Packages</title>
 	</head>
 
 	<body>
-		<header class="pt-md-2">
+		<header
+			class="pt-md-2"
+			style="background-image: url('../img/titan-crater.jpg')"
+		>
 			<!-- Navbar -->
 			<nav class="navbar navbar-expand-md shadow m-md-4 my-0">
 				<div class="container-fluid">
@@ -124,8 +126,8 @@
 
 								<!-- Signed-in menu for screens smaller than medium -->
 								<a
-									href="./purchases.html"
 									id="greetingMedium"
+									href="./purchases.html"
 									class="light-text m-2 d-md-none text-decoration-none"
 								>
 									Hello, Guest
@@ -155,7 +157,7 @@
 
 							<li class="nav-item">
 								<a
-									class="nav-link active light-text"
+									class="nav-link light-text"
 									href="./information.html"
 									>Information</a
 								>
@@ -182,8 +184,8 @@
 
 					<!-- Signed in menu for screens medium and above -->
 					<a
-						href="./purchases.html"
 						id="greetingLarge"
+						href="./purchases.html"
 						class="light-text m-2 d-none text-decoration-none"
 					>
 						Hello, Guest
@@ -194,6 +196,8 @@
 					>
 						Sign out
 					</button>
+
+					<!-- Modals -->
 
 					<!-- Sign in modal -->
 					<div
@@ -455,21 +459,19 @@
 				</div>
 			</nav>
 
-			<div class="jumbotron container header text-light">
-				<h1 class="display-4 viga">Our Schedule</h1>
-				<p class="lead viga">
-					Saturn Tourism offers special events and tourism
-					opportunities for the public.
-				</p>
+			<!-- Hero -->
+			<div class="jumbotron container hero text-light">
+				<h1 class="display-4 viga">Your Packages</h1>
+				<p class="lead viga">View your purchase history here.</p>
 				<hr class="my-4" />
 				<p class="fira">
-					Check out our schedule below to see what's coming up!
+					Saturn Tourism offers various packages. View them here:
 				</p>
 				<a
 					class="header-button btn btn-warning btn-lg viga"
-					href="#schedule"
+					href="./tickets.html"
 					role="button"
-					>Our Schedule</a
+					>View Packages</a
 				>
 			</div>
 		</header>
@@ -477,556 +479,398 @@
 		<!-- Border Arc -->
 		<div class="border-curvy position-relative" style="z-index: 10"></div>
 
-		<!-- Events Section -->
-		<section class="container events">
-			<h1 class="viga light-text">Events</h1>
-			<!-- Tickets -->
-			<div class="container fira">
-				<div class="row">
-					<article class="card fl-left overflow-hidden border-0">
-						<section class="date">
-							<time datetime="12th nov">
-								<span>12</span><span>Nov</span>
-							</time>
-						</section>
-						<section class="card-cont">
-							<small>Saturn Tourism</small>
-							<h3>History of Saturn Presentation (Free)</h3>
-							<div class="even-date">
-								<i class="fa fa-calendar"></i>
-								<time>
-									<span>Saturday 12 November 2023</span>
-									<span>23:47 pm to 01:25 am</span>
-								</time>
-							</div>
-							<div class="even-info">
-								<i class="fa fa-map-marker"></i>
-								<p>Enceladus Visitor Center</p>
-							</div>
-							<a class="ticket-active" href="#">Tickets</a>
-						</section>
-					</article>
-					<article class="card fl-left overflow-hidden border-0">
-						<section class="date">
-							<time datetime="28th dec">
-								<span>28</span><span>dec</span>
-							</time>
-						</section>
-						<section class="card-cont">
-							<small>Saturn Tourism</small>
-							<h3>Private Orbital Spacewalks (LIM. 4)</h3>
-							<div class="even-date">
-								<i class="fa fa-calendar"></i>
-								<time>
-									<span>wednesday 28 december 2022</span>
-									<span>08:55 pm to 12:00 am</span>
-								</time>
-							</div>
-							<div class="even-info">
-								<i class="fa fa-map-marker"></i>
-								<p>O'Neill Cylinder</p>
-							</div>
-							<a class="ticket-expired" href="#">Expired</a>
-						</section>
-					</article>
-				</div>
-				<div class="row">
-					<article class="card fl-left overflow-hidden border-0">
-						<section class="date">
-							<time datetime="16th dec">
-								<span>16</span><span>Dec</span>
-							</time>
-						</section>
-						<section class="card-cont">
-							<small>Mimas Astroplex</small>
-							<h3>Asteroid Cluster Viewing (Vesta Way)</h3>
-							<div class="even-date">
-								<i class="fa fa-calendar"></i>
-								<time>
-									<span>Saturday 16 December 2023</span>
-									<span>23:47 pm to 01:25 am</span>
-								</time>
-							</div>
-							<div class="even-info">
-								<i class="fa fa-map-marker"></i>
-								<p>Mimas Stadium</p>
-							</div>
-							<a class="ticket-active" href="#">tickets</a>
-						</section>
-					</article>
-					<article class="card fl-left overflow-hidden border-0">
-						<section class="date">
-							<time datetime="14th feb">
-								<span>14</span><span>feb</span>
-							</time>
-						</section>
-						<section class="card-cont">
-							<small>Saturn Tourism</small>
-							<h3>Live Saturn Tourism Probe Launch</h3>
-							<div class="even-date">
-								<i class="fa fa-calendar"></i>
-								<time>
-									<span>Tuesday 14 Feburary 2024</span>
-									<span>16:33 pm to 17:05 am</span>
-								</time>
-							</div>
-							<div class="even-info">
-								<i class="fa fa-map-marker"></i>
-								<p>Mimas Stadium</p>
-							</div>
-							<a class="ticket-cancelled" href="#">Cancelled</a>
-						</section>
-					</article>
-				</div>
-			</div>
+		<!-- All Packages -->
+		<section id="tickets" class="text-dark">
+			<div
+				class="container mt-4 mt-md-0 pb-3 pb-md-0"
+				style="border-radius: 12px"
+			>
+				<h1 class="viga light-text">Our Packages</h1>
 
-			<!-- Launch Schedule -->
-			<div id="schedule">
-				<h1 class="viga light-text">Launch Schedule</h1>
-				<div class="fira">
-					<!-- Calendar -->
-					<div class="table-responsive">
-						<table
-							class="table table-bordered text-center overflow-hidden"
-							style="border-radius: 15px"
+				<div class="container text-center">
+					<!-- First Row of Packages -->
+					<div
+						class="row gap-4 card-deck mb-3 text-center"
+						style="margin-top: 2rem"
+					>
+						<div class="card booking border-0 col-md fira">
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								Enceladus Package
+							</div>
+							<div class="card-body">
+								<h5
+									class="card-title mt-2"
+									style="font-size: 40px"
+								>
+									$5,550<span
+										class="text-muted"
+										style="font-size: 30px"
+									>
+										/ week</span
+									>
+								</h5>
+								<div class="card-text">
+									<ul
+										class="list-group list-group-flush my-4"
+									>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i class="bi bi-people-fill"></i> Up
+											to 4 Members
+										</li>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i
+												class="bi bi-binoculars-fill"
+											></i>
+											Free Spacesuits and Tours
+										</li>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i class="bi bi-tools"></i> Free
+											Maintenance/Repairs
+										</li>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i class="bi bi-stars"></i> View
+											into Space
+										</li>
+									</ul>
+								</div>
+
+								<div
+									href="#"
+									class="btn btn-warning viga bg-yellow"
+								>
+									Get Started
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="card booking border-0 col-md fira"
+							style="transition-delay: 125ms"
 						>
-							<thead>
-								<!-- Calendar Days -->
-								<tr class="bg-light-gray">
-									<th class="text-uppercase">Time</th>
-									<th class="text-uppercase">Monday</th>
-									<th class="text-uppercase">Tuesday</th>
-									<th class="text-uppercase">Wednesday</th>
-									<th class="text-uppercase">Thursday</th>
-									<th class="text-uppercase">Friday</th>
-									<th class="text-uppercase">Saturday</th>
-								</tr>
-							</thead>
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								Mimas Package
+							</div>
+							<div class="card-body">
+								<h5
+									class="card-title mt-2"
+									style="font-size: 40px"
+								>
+									$76,990<span
+										class="text-muted"
+										style="font-size: 30px"
+									>
+										/ month</span
+									>
+								</h5>
+								<div class="card-text">
+									<ul
+										class="list-group list-group-flush my-4"
+									>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i class="bi bi-people-fill"></i> Up
+											to 16 Members
+										</li>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i
+												class="bi bi-optical-audio-fill"
+											></i>
+											Access to orbital stations
+										</li>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i class="bi bi-cpu-fill"></i>
+											Quantum Computers
+										</li>
+										<li
+											class="list-group-item card-body card-text"
+										>
+											<i class="bi bi-browser-safari"></i>
+											Interstellar Positioning
+										</li>
+									</ul>
+								</div>
 
-							<!-- 9:00 AM schedule -->
-							<tbody class="bg-light">
-								<tr>
-									<td class="align-middle">09:00 am</td>
-									<td>
-										<span
-											class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>SpaceX</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											9:00-10:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Falcon 9/Enceladus
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ESA</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											9:00-10:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Superheavy 7/Mimas
-										</div>
-									</td>
+								<a
+									href="#"
+									class="btn btn-warning viga bg-yellow"
+									>Get Started</a
+								>
+							</div>
+						</div>
 
-									<td>
-										<span
-											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ISRO</span
+						<div
+							class="card booking border-0 col-md fira"
+							style="transition-delay: 150ms"
+						>
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								Executive Saturn Package
+							</div>
+							<div class="card-body">
+								<h5
+									class="card-title mt-2"
+									style="font-size: 40px"
+								>
+									$999,999<span
+										class="text-muted"
+										style="font-size: 30px"
+									>
+										/ year</span
+									>
+								</h5>
+								<div class="card-text">
+									<ul
+										class="list-group list-group-flush my-4"
+									>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
+											<i class="bi bi-people-fill"></i> Up
+											to 20 Members
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											9:00-10:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
+											<i
+												class="bi bi-airplane-engines-fill"
+											></i>
+											Personal Spacecraft
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											Astrosat/Titan
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>JAXA</span
+											<i class="bi bi-robot"></i> Servant
+											Robots
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											9:00-10:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Hayabusa 2/Rhea
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>NASA</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											9:00-10:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Saturn X/Mimas
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Roscosmos</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											9:00-10:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Orel 12/Mimas
-										</div>
-									</td>
-								</tr>
+											<i class="bi bi-mask"></i> Access to
+											all Moons
+										</li>
+									</ul>
+								</div>
 
-								<!-- 10:00 AM schedule -->
+								<a
+									href="#"
+									class="btn btn-warning viga bg-yellow"
+									>Get Started</a
+								>
+							</div>
+						</div>
+					</div>
 
-								<tr>
-									<td class="align-middle">10:00 am</td>
-									<td>
-										<span
-											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ISRO</span
+					<!-- Second Row of Packages -->
+					<div
+						class="row gap-4 card-deck mb-3 text-center"
+						style="margin-top: 2rem"
+					>
+						<div class="card booking border-0 col-md fira">
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								Titan Package
+							</div>
+							<div class="card-body">
+								<h5
+									class="card-title mt-2"
+									style="font-size: 40px"
+								>
+									$395,474
+									<div
+										class="text-muted mt-4"
+										style="font-size: 20px"
+									>
+										One Time Payment
+									</div>
+								</h5>
+								<div class="card-text">
+									<ul
+										class="list-group list-group-flush my-4"
+									>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
+											<i class="bi bi-people-fill"></i>
+											6 permanent resdients
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											10:00-11:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
+											<i class="bi bi-house-fill"></i>
+											Permanent Residence
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											Astrosat/Rhea
-										</div>
-									</td>
-									<td
-										class="bg-light-gray"
-										style="background-color: #f3f3f3"
-									></td>
-									<td>
-										<span
-											class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>NASA</span
+											<i class="bi bi-lightbulb-fill"></i>
+											Automatic Utilities
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											10:00-11:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Saturn X/Titan
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ESA</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											10:00-11:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Superheavy 7/Enceladus
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Roscosmos</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											10:00-11:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Orel 12/Enceladus
-										</div>
-									</td>
-									<td
-										class="bg-light-gray"
-										style="background-color: #f3f3f3"
-									></td>
-								</tr>
+											<i class="bi bi-pie-chart-fill"></i>
+											~44 Acres of Land
+										</li>
+									</ul>
+								</div>
 
-								<!-- 11:00 AM schedule -->
-								<tr>
-									<td class="align-middle">11:00 am</td>
-									<td>
-										<span
-											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Sat. Tours</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											11:00-12:00
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Sat. Tours</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											11:00-12:00
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Sat. Tours</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											11:00-12:00
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Sat. Tours</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											11:00-12:00
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Sat. Tours</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											11:00-12:00
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Sat. Tours</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											11:00-12:00
-										</div>
-									</td>
-								</tr>
+								<a
+									href="#"
+									class="btn btn-warning viga bg-yellow"
+									>Get Started</a
+								>
+							</div>
+						</div>
 
-								<!-- 12:00 PM schedule -->
-								<tr>
-									<td class="align-middle">12:00 pm</td>
-									<td
-										class="bg-light-gray"
-										style="background-color: #f3f3f3"
-									></td>
-									<td>
-										<span
-											class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>NASA</span
+						<div class="card booking border-0 col-md fira">
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								Iapetus Package
+							</div>
+							<div class="card-body">
+								<h5
+									class="card-title mt-2"
+									style="font-size: 40px"
+								>
+									$537,881
+									<div
+										class="text-muted mt-4"
+										style="font-size: 20px"
+									>
+										One Time Payment
+									</div>
+								</h5>
+								<div class="card-text">
+									<ul
+										class="list-group list-group-flush my-4"
+									>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
+											<i class="bi bi-people-fill"></i>
+											10 permanent resdients
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											12:00-1:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
+											<i
+												class="bi bi-suit-spade-fill"
+											></i>
+											VIP Access to all bases
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											Saturn X/Mimas
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>JAXA</span
+											<i class="bi bi-tools"></i>
+											Free Maintenance/Repairs
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											12:00-1:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Hayabusa 2/Rhea
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ISRO</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											12:00-1:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Astrosat/Titan
-										</div>
-									</td>
-									<td
-										class="bg-light-gray"
-										style="background-color: #f3f3f3"
-									></td>
-									<td>
-										<span
-											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ESA</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											12:00-1:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Superheavy 7/Enceladus
-										</div>
-									</td>
-								</tr>
+											<i class="bi bi-pie-chart-fill"></i>
+											~329 Acres of Land
+										</li>
+									</ul>
+								</div>
 
-								<!-- 1:00 PM schedule -->
-								<tr>
-									<td class="align-middle">01:00 pm</td>
-									<td>
-										<span
-											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Roscosmos</span
+								<a
+									href="#"
+									class="btn btn-warning viga bg-yellow"
+									>Get Started</a
+								>
+							</div>
+						</div>
+
+						<div
+							class="card booking border-0 col-md fira"
+							style="transition-delay: 150ms"
+						>
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								VIP Rhea Package
+							</div>
+							<div class="card-body">
+								<h5
+									class="card-title mt-2"
+									style="font-size: 40px"
+								>
+									$2,232,999
+									<div
+										class="text-muted mt-4"
+										style="font-size: 20px"
+									>
+										One Time Payment
+									</div>
+								</h5>
+								<div class="card-text">
+									<ul
+										class="list-group list-group-flush my-4"
+									>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
+											<i class="bi bi-people-fill"></i>
+											Unlimited Visits
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											1:00-2:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
+											<i class="bi bi-cloud-haze"></i>
+											Near-Breathable Atmosphere
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-											Orel 12/Enceladus
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ISRO</span
+											<i class="bi bi-robot"></i>
+											Permanent Servant Robots
+										</li>
+										<li
+											class="list-group-item card-body card-text"
 										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											1:00-2:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Astrosat/Rhea
-										</div>
-									</td>
-									<td
-										class="bg-light-gray"
-										style="background-color: #f3f3f3"
-									></td>
-									<td>
-										<span
-											class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>Roscosmos</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											1:00-2:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Orel 12/Enceladus
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ESA</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											1:00-2:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Superheavy 7/Mimas
-										</div>
-									</td>
-									<td>
-										<span
-											class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-											>ISRO</span
-										>
-										<div
-											class="margin-10px-top font-size14"
-										>
-											1:00-2:00
-										</div>
-										<div
-											class="font-size13 text-light-gray"
-										>
-											Astrosat/Rhea
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+											<i class="bi bi-mask"></i>
+											Unlimited Access to all Moons
+										</li>
+									</ul>
+								</div>
+
+								<a
+									href="#"
+									class="btn btn-warning viga bg-yellow"
+									>Get Started</a
+								>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
 		<!-- Footer -->
 
 		<!-- Border Arc -->
