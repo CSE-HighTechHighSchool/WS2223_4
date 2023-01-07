@@ -39,6 +39,9 @@
 		<script src="../js/confetti.js" defer></script>
 		<script type="module" src="../js/userController.js" defer></script>
 		<script type="module" src="../js/purchase.js" defer></script>
+		<script type="module" src="../js/chart.js" defer></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 		<!-- Bootstrap Font Icon CSS -->
 		<link
@@ -870,6 +873,46 @@
 										Delete
 									</button>
 								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Chart -->
+			<div class="container mt-4">
+				<div
+					class="card border-curved border-0 fira p-0 overflow-hidden"
+				>
+					<div
+						class="card-header card-title text-uppercase fw-bold"
+						style="font-size: 20px"
+					>
+						Order History
+					</div>
+					<div class="bg-darkmode overflow-hidden">
+						<div class="bg-darkmode">
+							<ol class="mt-4 container">
+								<li class="list-group-item border-0 light-text">
+									How many times have you ordered certain
+									packages?
+								</li>
+							</ol>
+							<br />
+
+							<div class="container dataForm mb-5">
+								<div
+									id="chart-container"
+									class="container viga light-text"
+									width="400"
+									height="400"
+								>
+									<canvas
+										id="myChart"
+										width="400"
+										height="200"
+									></canvas>
+								</div>
 							</div>
 						</div>
 					</div>

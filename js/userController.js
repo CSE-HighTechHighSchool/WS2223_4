@@ -1,4 +1,5 @@
-// ----------------- Page Loaded After User Sign-in -------------------------//
+// ----------------- User Sign in, Registration, and Storage Code-------------------------//
+//Provides functionality for signin/registration modals.
 //All non-sign-in/registration pages will use this code to access user state
 
 // ----------------- Firebase Setup & Initialization ------------------------//
@@ -52,6 +53,7 @@ const greetingMedium = document.getElementById("greetingMedium");
 const signOutMedium = document.getElementById("signOutMedium");
 const loginMedium = document.getElementById("loginMedium");
 
+// ----------------- User Sign in, Registration, and Storage Code-------------------------//
 function updateSignedIn(user) {
 	try {
 		if (user) {
@@ -230,5 +232,6 @@ function signOutUser(e) {
 		.catch(handleError);
 }
 
+// Listen for sign out user
 signOutMedium.addEventListener("click", signOutUser);
 signOutLarge.addEventListener("click", signOutUser);
