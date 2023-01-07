@@ -38,6 +38,7 @@
 		<script src="../js/script.js" defer></script>
 		<script src="../js/confetti.js" defer></script>
 		<script type="module" src="../js/userController.js" defer></script>
+		<script type="module" src="../js/purchase.js" defer></script>
 
 		<!-- Bootstrap Font Icon CSS -->
 		<link
@@ -62,7 +63,9 @@
 	<body>
 		<header
 			class="pt-md-2"
-			style="background-image: url('../img/titan-crater.jpg')"
+			style="
+				background-image: url('https://images7.alphacoders.com/349/349947.jpg');
+			"
 		>
 			<!-- Navbar -->
 			<nav class="navbar navbar-expand-md shadow m-md-4 my-0">
@@ -192,7 +195,7 @@
 					</a>
 					<button
 						id="signOutLarge"
-						class="btn header-button btn-warning m-2 d-none"
+						class="btn header-button btn-warning m-2 d-none d-md-inline-block"
 					>
 						Sign out
 					</button>
@@ -462,10 +465,14 @@
 			<!-- Hero -->
 			<div class="jumbotron container hero text-light">
 				<h1 class="display-4 viga">Your Packages</h1>
-				<p class="lead viga">View your purchase history here.</p>
+				<p class="lead viga">View the packages you have selected.</p>
+
 				<hr class="my-4" />
 				<p class="fira">
-					Saturn Tourism offers various packages. View them here:
+					<em>
+						Saturn Tourism is a FICTIONAL CONCEPT and does not offer
+						real orders.</em
+					>
 				</p>
 				<a
 					class="header-button btn btn-warning btn-lg viga"
@@ -479,397 +486,397 @@
 		<!-- Border Arc -->
 		<div class="border-curvy position-relative" style="z-index: 10"></div>
 
-		<!-- All Packages -->
-		<section id="tickets" class="text-dark">
-			<div
-				class="container mt-4 mt-md-0 pb-3 pb-md-0"
-				style="border-radius: 12px"
-			>
-				<h1 class="viga light-text">Our Packages</h1>
+		<!--Firebase Data Operations -->
 
-				<div class="container text-center">
-					<!-- First Row of Packages -->
+		<!--Set and Update Data-->
+		<section class="footer-bottom">
+			<div class="container">
+				<div
+					class="card border-curved border-0 fira p-0 overflow-hidden"
+				>
 					<div
-						class="row gap-4 card-deck mb-3 text-center"
-						style="margin-top: 2rem"
+						class="card-header card-title text-uppercase fw-bold"
+						style="font-size: 20px"
 					>
-						<div class="card booking border-0 col-md fira">
-							<div
-								class="card-header card-title text-uppercase fw-bold"
-								style="font-size: 20px"
-							>
-								Enceladus Package
-							</div>
-							<div class="card-body">
-								<h5
-									class="card-title mt-2"
-									style="font-size: 40px"
-								>
-									$5,550<span
-										class="text-muted"
-										style="font-size: 30px"
-									>
-										/ week</span
-									>
-								</h5>
-								<div class="card-text">
-									<ul
-										class="list-group list-group-flush my-4"
-									>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-people-fill"></i> Up
-											to 4 Members
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i
-												class="bi bi-binoculars-fill"
-											></i>
-											Free Spacesuits and Tours
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-tools"></i> Free
-											Maintenance/Repairs
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-stars"></i> View
-											into Space
-										</li>
-									</ul>
-								</div>
-
-								<div
-									href="#"
-									class="btn btn-warning viga bg-yellow"
-								>
-									Get Started
-								</div>
-							</div>
-						</div>
-
-						<div
-							class="card booking border-0 col-md fira"
-							style="transition-delay: 125ms"
-						>
-							<div
-								class="card-header card-title text-uppercase fw-bold"
-								style="font-size: 20px"
-							>
-								Mimas Package
-							</div>
-							<div class="card-body">
-								<h5
-									class="card-title mt-2"
-									style="font-size: 40px"
-								>
-									$76,990<span
-										class="text-muted"
-										style="font-size: 30px"
-									>
-										/ month</span
-									>
-								</h5>
-								<div class="card-text">
-									<ul
-										class="list-group list-group-flush my-4"
-									>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-people-fill"></i> Up
-											to 16 Members
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i
-												class="bi bi-optical-audio-fill"
-											></i>
-											Access to orbital stations
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-cpu-fill"></i>
-											Quantum Computers
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-browser-safari"></i>
-											Interstellar Positioning
-										</li>
-									</ul>
-								</div>
-
-								<a
-									href="#"
-									class="btn btn-warning viga bg-yellow"
-									>Get Started</a
-								>
-							</div>
-						</div>
-
-						<div
-							class="card booking border-0 col-md fira"
-							style="transition-delay: 150ms"
-						>
-							<div
-								class="card-header card-title text-uppercase fw-bold"
-								style="font-size: 20px"
-							>
-								Executive Saturn Package
-							</div>
-							<div class="card-body">
-								<h5
-									class="card-title mt-2"
-									style="font-size: 40px"
-								>
-									$999,999<span
-										class="text-muted"
-										style="font-size: 30px"
-									>
-										/ year</span
-									>
-								</h5>
-								<div class="card-text">
-									<ul
-										class="list-group list-group-flush my-4"
-									>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-people-fill"></i> Up
-											to 20 Members
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i
-												class="bi bi-airplane-engines-fill"
-											></i>
-											Personal Spacecraft
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-robot"></i> Servant
-											Robots
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-mask"></i> Access to
-											all Moons
-										</li>
-									</ul>
-								</div>
-
-								<a
-									href="#"
-									class="btn btn-warning viga bg-yellow"
-									>Get Started</a
-								>
-							</div>
-						</div>
+						Order a Package (Update)
 					</div>
-
-					<!-- Second Row of Packages -->
-					<div
-						class="row gap-4 card-deck mb-3 text-center"
-						style="margin-top: 2rem"
-					>
-						<div class="card booking border-0 col-md fira">
-							<div
-								class="card-header card-title text-uppercase fw-bold"
-								style="font-size: 20px"
-							>
-								Titan Package
-							</div>
-							<div class="card-body">
-								<h5
-									class="card-title mt-2"
-									style="font-size: 40px"
-								>
-									$395,474
-									<div
-										class="text-muted mt-4"
-										style="font-size: 20px"
-									>
-										One Time Payment
-									</div>
-								</h5>
-								<div class="card-text">
-									<ul
-										class="list-group list-group-flush my-4"
-									>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-people-fill"></i>
-											6 permanent resdients
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-house-fill"></i>
-											Permanent Residence
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-lightbulb-fill"></i>
-											Automatic Utilities
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-pie-chart-fill"></i>
-											~44 Acres of Land
-										</li>
-									</ul>
-								</div>
-
-								<a
-									href="#"
-									class="btn btn-warning viga bg-yellow"
-									>Get Started</a
-								>
-							</div>
-						</div>
-
-						<div class="card booking border-0 col-md fira">
-							<div
-								class="card-header card-title text-uppercase fw-bold"
-								style="font-size: 20px"
-							>
-								Iapetus Package
-							</div>
-							<div class="card-body">
-								<h5
-									class="card-title mt-2"
-									style="font-size: 40px"
-								>
-									$537,881
-									<div
-										class="text-muted mt-4"
-										style="font-size: 20px"
-									>
-										One Time Payment
-									</div>
-								</h5>
-								<div class="card-text">
-									<ul
-										class="list-group list-group-flush my-4"
-									>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-people-fill"></i>
-											10 permanent resdients
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i
-												class="bi bi-suit-spade-fill"
-											></i>
-											VIP Access to all bases
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-tools"></i>
-											Free Maintenance/Repairs
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-pie-chart-fill"></i>
-											~329 Acres of Land
-										</li>
-									</ul>
-								</div>
-
-								<a
-									href="#"
-									class="btn btn-warning viga bg-yellow"
-									>Get Started</a
-								>
-							</div>
-						</div>
-
+					<div class="row bg-darkmode overflow-hidden">
+						<img
+							class="col-md-3"
+							src="../img/saturn-station.jpg"
+							style="object-fit: cover"
+						/>
 						<div
-							class="card booking border-0 col-md fira"
-							style="transition-delay: 150ms"
+							class="position-absolute text-light viga m-2 bottom-0 left-0"
+							style="z-index: 50"
 						>
-							<div
-								class="card-header card-title text-uppercase fw-bold"
-								style="font-size: 20px"
-							>
-								VIP Rhea Package
-							</div>
-							<div class="card-body">
-								<h5
-									class="card-title mt-2"
-									style="font-size: 40px"
+							<span class="blinking">🔴 Facility 12</span>
+						</div>
+						<div class="col-md-9 bg-darkmode">
+							<ol class="mt-4 container">
+								<li
+									class="list-group-item border-0 card light-text"
 								>
-									$2,232,999
-									<div
-										class="text-muted mt-4"
-										style="font-size: 20px"
-									>
-										One Time Payment
-									</div>
-								</h5>
-								<div class="card-text">
-									<ul
-										class="list-group list-group-flush my-4"
-									>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-people-fill"></i>
-											Unlimited Visits
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-cloud-haze"></i>
-											Near-Breathable Atmosphere
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-robot"></i>
-											Permanent Servant Robots
-										</li>
-										<li
-											class="list-group-item card-body card-text"
-										>
-											<i class="bi bi-mask"></i>
-											Unlimited Access to all Moons
-										</li>
-									</ul>
-								</div>
+									<strong>Selecting a Package</strong>
+									will add this package to your account. You
+									will be able to retreive it in your
+									<a
+										href="#history"
+										class="text-decoration-none"
+										>order history</a
+									>.
+								</li>
+								<li class="list-group-item border-0 light-text">
+									You are able to
+									<strong>Delete</strong> an order in case you
+									wish to undo your order.
+								</li>
+							</ol>
+							<br />
 
-								<a
-									href="#"
-									class="btn btn-warning viga bg-yellow"
-									>Get Started</a
-								>
+							<div class="container dataForm mb-5">
+								<form>
+									<select
+										class="form-select mb-3"
+										aria-label="Default select example"
+										id="PackageName"
+									>
+										<option selected>Package Name</option>
+										<option value="Enceladus, 5550-week">
+											Enceladus Package
+										</option>
+										<option value="Mimas, 76990-month">
+											Mimas Package
+										</option>
+										<option
+											value="Executive Saturn Package, 999999-month"
+										>
+											Executive Saturn Package
+										</option>
+										<option value="Titan Package, 395474">
+											Titan Package
+										</option>
+										<option value="Iapetus Package, 537881">
+											Iapetus Package
+										</option>
+										<option
+											value="VIP Rhea Package, 2232999"
+										>
+											VIP Rhea Package
+										</option>
+									</select>
+									<select
+										class="form-select mb-3"
+										aria-label="Default select example"
+										id="PackageQuantity"
+									>
+										<option selected>Quantity</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+
+									<input
+										type="text"
+										class="form-control mb-3"
+										placeholder="Notes about your order"
+										id="PackageNotes"
+									/>
+
+									<button
+										type="button"
+										id="update"
+										name="update"
+										class="btn btn-outline-warning header-button"
+									>
+										Order
+									</button>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<br />
+
+			<div class="container">
+				<div class="row">
+					<!--Get a single datum -->
+					<div class="col">
+						<div
+							class="card border-curved border-0 fira p-0 container overflow-hidden bg-darkmode"
+						>
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								Find a Package (Get a Datum)
+							</div>
+
+							<ol class="mt-4 container">
+								<li class="list-group-item border-0 light-text">
+									Retreive a
+									<strong>single package</strong> as a datum.
+								</li>
+							</ol>
+							<br />
+
+							<div class="container dataForm mb-5">
+								<form class="container row">
+									<select
+										class="form-select mb-3 col-sm"
+										aria-label="Default select example"
+										id="getPackage"
+									>
+										<option selected>Package Name</option>
+										<option value="Enceladus, 5550-week">
+											Enceladus Package
+										</option>
+										<option value="Mimas, 76990-month">
+											Mimas Package
+										</option>
+										<option
+											value="Executive Saturn Package, 999999-month"
+										>
+											Executive Saturn Package
+										</option>
+										<option value="Titan Package, 395474">
+											Titan Package
+										</option>
+										<option value="Iapetus Package, 537881">
+											Iapetus Package
+										</option>
+										<option
+											value="VIP Rhea Package, 2232999"
+										>
+											VIP Rhea Package
+										</option>
+									</select>
+									<select
+										class="form-select mb-3 col-sm mx-md-2"
+										aria-label="Default select example"
+										id="getQuantity"
+									>
+										<option selected>Quantity</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+									<button
+										type="button"
+										id="get"
+										name="get"
+										class="btn btn-outline-warning mb-3 w-100"
+									>
+										Find your Package
+									</button>
+								</form>
+							</div>
+
+							<!-- Table for displaying selected data -->
+							<div class="container">
+								<table class="table light-text">
+									<thead>
+										<tr>
+											<th scope="col">Package Name</th>
+											<th scope="col">Cost</th>
+											<th scope="col">Quantity</th>
+											<th scope="col">Notes</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td id="nameVal"></td>
+											<td id="costVal"></td>
+											<td id="quantityVal"></td>
+											<td id="notesVal"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<!--Get a data set -->
+					<div id="history" class="col-md">
+						<div
+							class="card border-curved border-0 fira p-0 container overflow-hidden bg-darkmode"
+						>
+							<div
+								class="card-header card-title text-uppercase fw-bold"
+								style="font-size: 20px"
+							>
+								Purchased Packages (Get a Dataset)
+							</div>
+
+							<ol class="mt-4 container">
+								<li class="list-group-item border-0 light-text">
+									Retreive multiple
+									<strong> packages</strong> as a dataset.
+								</li>
+							</ol>
+							<br />
+
+							<div class="container dataForm mb-5">
+								<form>
+									<select
+										class="form-select mb-3"
+										aria-label="Default select example"
+										id="getDatasetPackage"
+									>
+										<option selected>Package Name</option>
+										<option value="Enceladus, 5550-week">
+											Enceladus Package
+										</option>
+										<option value="Mimas, 76990-month">
+											Mimas Package
+										</option>
+										<option
+											value="Executive Saturn Package, 999999-month"
+										>
+											Executive Saturn Package
+										</option>
+										<option value="Titan Package, 395474">
+											Titan Package
+										</option>
+										<option value="Iapetus Package, 537881">
+											Iapetus Package
+										</option>
+										<option
+											value="VIP Rhea Package, 2232999"
+										>
+											VIP Rhea Package
+										</option>
+									</select>
+									<button
+										type="button"
+										id="getDataSet"
+										name="getDataSet"
+										class="btn btn-outline-warning mb-3 w-100"
+									>
+										Get Dataset
+									</button>
+								</form>
+							</div>
+
+							<!-- Table for displaying data set -->
+							<div class="container">
+								<table class="table light-text">
+									<thead>
+										<tr>
+											<th scope="col">Package</th>
+											<th scope="col ">Cost</th>
+											<th scope="col">Quantity</th>
+											<th scope="col">Notes</th>
+										</tr>
+									</thead>
+									<tbody id="tbody-2">
+										<tr>
+											<td id=""></td>
+											<td id=""></td>
+											<td id=""></td>
+											<td id=""></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Delete Data-->
+			<div class="container mt-4">
+				<div
+					class="card border-curved border-0 fira p-0 overflow-hidden"
+				>
+					<div
+						class="card-header card-title text-uppercase fw-bold"
+						style="font-size: 20px"
+					>
+						Remove a Package (Delete)
+					</div>
+					<div class="row bg-darkmode overflow-hidden">
+						<img
+							class="col-md-3"
+							src="../img/saturn-station2.jpg"
+							style="object-fit: cover"
+						/>
+						<div
+							class="position-absolute text-light viga m-2 bottom-0 left-0"
+							style="z-index: 50"
+						>
+							<span class="blinking">🔴 Facility 4</span>
+						</div>
+						<div class="col-md-9 bg-darkmode">
+							<ol class="mt-4 container">
+								<li class="list-group-item border-0 light-text">
+									<strong> Remove</strong> any packages you no
+									longer want.
+								</li>
+							</ol>
+							<br />
+
+							<div class="container dataForm mb-5">
+								<form>
+									<select
+										class="form-select mb-3"
+										aria-label="Default select example"
+										id="delName"
+									>
+										<option selected>Package Name</option>
+										<option value="Enceladus, 5550-week">
+											Enceladus Package
+										</option>
+										<option value="Mimas, 76990-month">
+											Mimas Package
+										</option>
+										<option
+											value="Executive Saturn Package, 999999-month"
+										>
+											Executive Saturn Package
+										</option>
+										<option value="Titan Package, 395474">
+											Titan Package
+										</option>
+										<option value="Iapetus Package, 537881">
+											Iapetus Package
+										</option>
+										<option
+											value="VIP Rhea Package, 2232999"
+										>
+											VIP Rhea Package
+										</option>
+									</select>
+									<select
+										class="form-select mb-3"
+										aria-label="Default select example"
+										id="delQuantity"
+									>
+										<option selected>
+											Quantity of Packages
+										</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+
+									<button
+										type="button"
+										id="delete"
+										name="delete"
+										class="btn btn-outline-warning header-button"
+									>
+										Delete
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br />
 		</section>
 		<!-- Footer -->
 
