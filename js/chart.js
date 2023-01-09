@@ -64,8 +64,8 @@ async function getData() {
 					snapshot.forEach((child) => {
 						// console.log("THE SNAPSHOT" + child, child.key, child.val());
 						returnDataKeys.push(child.key);
-						console.log(child.val());
-						returnDataValues.push(Object.values(child.val()));
+						console.log("RETURNED:"+Object.keys(child.val()));
+						returnDataValues.push(Object.keys(child.val()));
 					});
 				} else {
 					alert("No Packages were Found!");
@@ -82,7 +82,6 @@ async function getData() {
 	}
 
 	const data = await getDataSet(currentUser.accountInfo.uid);
-	console.log(JSON.stringify(data));
 
 	//Quantities of each package
 	let encel = 0;
@@ -92,15 +91,26 @@ async function getData() {
 	let iapetus = 0;
 	let vip = 0;
 
-	//Use length of each array to determine the amount of each package
-	encel = Object.values(data)[0].length;
-	mimas = Object.values(data)[1].length;
-	exec = Object.values(data)[2].length;
-	titan = Object.values(data)[3].length;
-	iapetus = Object.values(data)[4].length;
-	vip = Object.values(data)[5].length;
+	// //Use length of each array to determine the amount of each package
+	// encel = Object.values(data)[0].length!==undefined?Object.values(data)[0].length:0;
+	// mimas = Object.values(data)[1].length!==undefined?Object.values(data)[1].length:0;
+	// exec = Object.values(data)[2].length!==undefined?Object.values(data)[2].length:0;
+	// titan = Object.values(data)[3].length!==undefined?Object.values(data)[3].length:0;
+	// iapetus = Object.values(data)[4].length!==undefined?Object.values(data)[4].length:0;
+	// vip = Object.values(data)[5].length!==undefined?Object.values(data)[5].length:0;
 
-	return [encel, mimas, exec, titan, iapetus, vip];
+	return returnDataSet(data);
+}
+
+function returnDataSet(data){
+	let valueArray=[]
+	let nameArray=[]
+	for (const [key,value] of Object.entries(data)){
+		valueArray.push(value)
+		nameArray.push(key)
+	}
+
+	return [valueArray, nameArray]
 }
 
 //Actual chart creation
@@ -112,24 +122,13 @@ async function createChart() {
 	const myChart = new Chart(ctx, {
 		type: "bar",
 		data: {
-			labels: [
-				"Enceladus Package",
-				"Executive Saturn Package",
-				"Iapetus Package",
-				"Mimas Package",
-				"Titan Package",
-				"VIP Rhea Package",
-			],
+			labels:
+				data[1]
+			,
 			datasets: [
 				{
-					data: [
+					data:
 						data[0],
-						data[1],
-						data[2],
-						data[3],
-						data[4],
-						data[5],
-					],
 					backgroundColor: [
 						"rgba(255, 99, 132, 0.2)",
 						"rgba(255, 159, 64, 0.2)",

@@ -142,7 +142,6 @@ a {
 }
 
 .navbar-nav {
-	margin-right: 5%;
 	font-size: 1.2em;
 }
 
@@ -212,6 +211,7 @@ a {
 .switch {
 	border: none;
 	background-color: var(--switch-bg);
+	margin-left: 1%;
 }
 
 .switch:hover {
