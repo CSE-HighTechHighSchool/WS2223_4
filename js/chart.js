@@ -8,22 +8,11 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-
-import {
-	getAuth,
-	signOut,
-	signInWithEmailAndPassword,
-	createUserWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
-
 import {
 	getDatabase,
 	ref,
-	set,
-	update,
 	child,
 	get,
-	remove,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // Your web app's Firebase configuration
@@ -40,8 +29,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth(app);
-const database = getDatabase(app);
 const db = getDatabase(app);
 
 const inLocalStorage = localStorage.getItem("user");
