@@ -22,9 +22,7 @@ import {
 	ref,
 	set,
 	update,
-	child,
 	get,
-	remove,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // Your web app's Firebase configuration
