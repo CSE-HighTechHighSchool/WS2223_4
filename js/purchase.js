@@ -6,15 +6,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import {
-	getAuth,
-	signOut,
-} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
 import {
 	getDatabase,
 	ref,
-	set,
 	update,
 	child,
 	get,
@@ -35,9 +30,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-//Initialize authentication
-const auth = getAuth();
 
 //Return instance of app's FRD
 const db = getDatabase(app);
