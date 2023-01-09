@@ -75,6 +75,7 @@ function updateSignedIn(user) {
 
 		greetingLarge.classList.remove("d-md-inline-block");
 		signOutLarge.classList.remove("d-md-inline-block");
+		signOutLarge.classList.add("d-none");
 		loginLarge.classList.add("d-md-inline-block");
 
 		greetingMedium.classList.remove("d-inline-block");
