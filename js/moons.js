@@ -31,14 +31,13 @@ titan.addEventListener("click", () => {
 		titan.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
 		titan_text.style.opacity = "1";
 		titan_text.style.transform = "translateX(55%) scale(1.2, 1.2)";
-	}
-	else {
+	} else {
 		titan.style.transform = "";
 		titan_text.style.opacity = "0";
 		titan_text.style.transform = "";
 	}
 	counter_t++;
-})
+});
 
 titan_alt.addEventListener("click", () => {
 	if (counter_t % 2 === 0) {
@@ -47,16 +46,16 @@ titan_alt.addEventListener("click", () => {
 		titan_alt_p.style.borderRadius = "50px";
 		titan_alt_p.style.opacity = "1";
 		titan_alt_p.style.backdropFilter = "blur(10px)";
-	}
-	else {
+	} else {
 		titan_alt.style.borderRadius = "50%";
-		titan_alt.style.boxShadow = "inset -10px -5px 10px black, inset 10px 5px 20px white";
+		titan_alt.style.boxShadow =
+			"inset -10px -5px 10px black, inset 10px 5px 20px white";
 		titan_alt_p.style.borderRadius = "50%";
 		titan_alt_p.style.opacity = "0";
 		titan_alt_p.style.backdropFilter = "none";
 	}
 	counter_t++;
-})
+});
 
 //click effect for Enceladus
 let counter_e = 0;
@@ -65,14 +64,13 @@ enc.addEventListener("click", () => {
 		enc.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
 		enc_text.style.opacity = "1";
 		enc_text.style.transform = "translateX(-55%) scale(1.2, 1.2)";
-	}
-	else {
+	} else {
 		enc.style.transform = "";
 		enc_text.style.opacity = "0";
 		enc_text.style.transform = "";
 	}
 	counter_e++;
-})
+});
 
 enc_alt.addEventListener("click", () => {
 	if (counter_e % 2 === 0) {
@@ -81,16 +79,16 @@ enc_alt.addEventListener("click", () => {
 		enc_alt_p.style.borderRadius = "50px";
 		enc_alt_p.style.opacity = "1";
 		enc_alt_p.style.backdropFilter = "blur(10px)";
-	}
-	else {
+	} else {
 		enc_alt.style.borderRadius = "50%";
-		enc_alt.style.boxShadow = "inset -10px -5px 10px black, inset 10px 5px 20px white";
+		enc_alt.style.boxShadow =
+			"inset -10px -5px 10px black, inset 10px 5px 20px white";
 		enc_alt_p.style.borderRadius = "50%";
 		enc_alt_p.style.opacity = "0";
 		enc_alt_p.style.backdropFilter = "none";
 	}
 	counter_e++;
-})
+});
 
 //click effect for Iapetus
 let counter_i = 0;
@@ -99,14 +97,13 @@ iap.addEventListener("click", () => {
 		iap.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
 		iap_text.style.opacity = "1";
 		iap_text.style.transform = "translateX(55%) scale(1.2, 1.2)";
-	}
-	else {
+	} else {
 		iap.style.transform = "";
 		iap_text.style.opacity = "0";
 		iap_text.style.transform = "";
 	}
 	counter_i++;
-})
+});
 
 iap_alt.addEventListener("click", () => {
 	if (counter_i % 2 === 0) {
@@ -115,16 +112,16 @@ iap_alt.addEventListener("click", () => {
 		iap_alt_p.style.borderRadius = "50px";
 		iap_alt_p.style.opacity = "1";
 		iap_alt_p.style.backdropFilter = "blur(10px)";
-	}
-	else {
+	} else {
 		iap_alt.style.borderRadius = "50%";
-		iap_alt.style.boxShadow = "inset -10px -5px 10px black, inset 10px 5px 20px white";
+		iap_alt.style.boxShadow =
+			"inset -10px -5px 10px black, inset 10px 5px 20px white";
 		iap_alt_p.style.borderRadius = "50%";
 		iap_alt_p.style.opacity = "0";
 		iap_alt_p.style.backdropFilter = "none";
 	}
 	counter_i++;
-})
+});
 
 //click effect for Rhea
 let counter_r = 0;
@@ -133,14 +130,13 @@ rhea.addEventListener("click", () => {
 		rhea.style.transform = "translate(22.5vw) scale(0.7, 0.7)";
 		rhea_text.style.opacity = "1";
 		rhea_text.style.transform = "translateX(-55%) scale(1.2, 1.2)";
-	}
-	else {
+	} else {
 		rhea.style.transform = "";
 		rhea_text.style.opacity = "0";
 		rhea_text.style.transform = "";
 	}
 	counter_r++;
-})
+});
 
 rhea_alt.addEventListener("click", () => {
 	if (counter_r % 2 === 0) {
@@ -149,16 +145,16 @@ rhea_alt.addEventListener("click", () => {
 		rhea_alt_p.style.borderRadius = "50px";
 		rhea_alt_p.style.opacity = "1";
 		rhea_alt_p.style.backdropFilter = "blur(10px)";
-	}
-	else {
+	} else {
 		rhea_alt.style.borderRadius = "50%";
-		rhea_alt.style.boxShadow = "inset -10px -5px 10px black, inset 10px 5px 20px white";
+		rhea_alt.style.boxShadow =
+			"inset -10px -5px 10px black, inset 10px 5px 20px white";
 		rhea_alt_p.style.borderRadius = "50%";
 		rhea_alt_p.style.opacity = "0";
 		rhea_alt_p.style.backdropFilter = "none";
 	}
 	counter_r++;
-})
+});
 
 //Mimas click effect
 let counter_m = 0;
@@ -167,14 +163,13 @@ mimas.addEventListener("click", () => {
 		mimas.style.transform = "translate(-22.5vw) scale(0.7, 0.7)";
 		mimas_text.style.opacity = "1";
 		mimas_text.style.transform = "translateX(55%) scale(1.2, 1.2)";
-	}
-	else {
+	} else {
 		mimas.style.transform = "";
 		mimas_text.style.opacity = "0";
 		mimas_text.style.transform = "";
 	}
 	counter_m++;
-})
+});
 
 mimas_alt.addEventListener("click", () => {
 	if (counter_m % 2 === 0) {
@@ -183,13 +178,13 @@ mimas_alt.addEventListener("click", () => {
 		mimas_alt_p.style.borderRadius = "50px";
 		mimas_alt_p.style.opacity = "1";
 		mimas_alt_p.style.backdropFilter = "blur(10px)";
-	}
-	else {
+	} else {
 		mimas_alt.style.borderRadius = "50%";
-		mimas_alt.style.boxShadow = "inset -10px -5px 10px black, inset 10px 5px 20px white";
+		mimas_alt.style.boxShadow =
+			"inset -10px -5px 10px black, inset 10px 5px 20px white";
 		mimas_alt_p.style.borderRadius = "50%";
 		mimas_alt_p.style.opacity = "0";
 		mimas_alt_p.style.backdropFilter = "none";
 	}
 	counter_m++;
-})
+});
