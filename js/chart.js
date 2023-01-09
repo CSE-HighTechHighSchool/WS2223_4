@@ -64,7 +64,7 @@ async function getData() {
 					snapshot.forEach((child) => {
 						// console.log("THE SNAPSHOT" + child, child.key, child.val());
 						returnDataKeys.push(child.key);
-						console.log("RETURNED:"+Object.keys(child.val()));
+						console.log("RETURNED:" + Object.keys(child.val()));
 						returnDataValues.push(Object.keys(child.val()));
 					});
 				} else {
@@ -83,34 +83,22 @@ async function getData() {
 
 	const data = await getDataSet(currentUser.accountInfo.uid);
 
-	//Quantities of each package
-	let encel = 0;
-	let mimas = 0;
-	let exec = 0;
-	let titan = 0;
-	let iapetus = 0;
-	let vip = 0;
-
-	// //Use length of each array to determine the amount of each package
-	// encel = Object.values(data)[0].length!==undefined?Object.values(data)[0].length:0;
-	// mimas = Object.values(data)[1].length!==undefined?Object.values(data)[1].length:0;
-	// exec = Object.values(data)[2].length!==undefined?Object.values(data)[2].length:0;
-	// titan = Object.values(data)[3].length!==undefined?Object.values(data)[3].length:0;
-	// iapetus = Object.values(data)[4].length!==undefined?Object.values(data)[4].length:0;
-	// vip = Object.values(data)[5].length!==undefined?Object.values(data)[5].length:0;
-
 	return returnDataSet(data);
 }
 
-function returnDataSet(data){
-	let valueArray=[]
-	let nameArray=[]
-	for (const [key,value] of Object.entries(data)){
-		valueArray.push(value)
-		nameArray.push(key)
+function returnDataSet(data) {
+	let valueArray = [];
+	let nameArray = [];
+	for (const [key, value] of Object.entries(data)) {
+		let sum = 0;
+		for (let i = 0; i < value.length; i++) {
+			sum += value[i];
+		}
+		valueArray.push(sum);
+		nameArray.push(key);
 	}
 
-	return [valueArray, nameArray]
+	return [valueArray, nameArray];
 }
 
 //Actual chart creation
@@ -122,13 +110,10 @@ async function createChart() {
 	const myChart = new Chart(ctx, {
 		type: "bar",
 		data: {
-			labels:
-				data[1]
-			,
+			labels: data[1],
 			datasets: [
 				{
-					data:
-						data[0],
+					data: data[0],
 					backgroundColor: [
 						"rgba(255, 99, 132, 0.2)",
 						"rgba(255, 159, 64, 0.2)",
