@@ -89,16 +89,18 @@ async function getData() {
 function returnDataSet(data) {
 	let valueArray = [];
 	let nameArray = [];
+	let greatest = 0;
 	for (const [key, value] of Object.entries(data)) {
 		let sum = 0;
 		for (let i = 0; i < value.length; i++) {
-			sum += value[i];
+			sum += parseInt(value[i]);
 		}
 		valueArray.push(sum);
 		nameArray.push(key);
+		greatest = Math.max(...valueArray);
 	}
 
-	return [valueArray, nameArray];
+	return [valueArray, nameArray, greatest];
 }
 
 //Actual chart creation
@@ -151,7 +153,7 @@ async function createChart() {
 					},
 				},
 				y: {
-					max: 5,
+					max: data[2],
 					min: 0,
 					ticks: {
 						stepSize: 1,
