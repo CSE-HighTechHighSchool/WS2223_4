@@ -65,6 +65,14 @@
 	</head>
 
 	<body>
+		<div id="errorContainer" class="alert sticky-top viga d-none">
+			<span
+				class="closebtn"
+				onclick="this.parentElement.classList.add('d-none');"
+				>&times;</span
+			>
+			<span id="errorMessage">Error!</span>
+		</div>
 		<header
 			class="pt-md-2"
 			style="
@@ -468,11 +476,11 @@
 
 			<!-- Hero -->
 			<div class="jumbotron container hero text-light">
-				<h1 class="display-4 viga">Your Packages</h1>
+				<h1 id="packageHeader" class="display-4 viga">Your Packages</h1>
 				<p class="lead viga">View the packages you have selected.</p>
 
 				<hr class="my-4" />
-				<p class="fira">
+				<p class="fira" style="font-style: italic; font-size: 14px">
 					<em>
 						Saturn Tourism is a FICTIONAL CONCEPT and does not offer
 						real orders.</em
@@ -910,6 +918,7 @@
 								>
 									<canvas
 										id="myChart"
+										class="container viga light-text"
 										width="400"
 										height="200"
 									></canvas>

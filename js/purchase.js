@@ -46,11 +46,17 @@ const inSessionStorage = sessionStorage.getItem("user");
 
 let currentUser;
 
+// Check if user is in local or session storage
 if (inLocalStorage) {
 	currentUser = JSON.parse(inLocalStorage);
 } else if (inSessionStorage) {
 	currentUser = JSON.parse(inSessionStorage);
 }
+
+//Update welcome message with User's name
+let header = document.getElementById("packageHeader");
+
+header.innerHTML = `${currentUser.accountInfo.fullName}'s Packages`;
 
 // -------------------------Update data/packages in database --------------------------
 function updateData(packageName, packageQuantity, packageNotes, userID) {
@@ -59,10 +65,10 @@ function updateData(packageName, packageQuantity, packageNotes, userID) {
 		["Notes"]: packageNotes,
 	})
 		.then(() => {
-			alert("Packages Updated Successfully");
+			successHandler("Packages Updated Successfully");
 		})
 		.catch((error) => {
-			alert(`Error: ${error.code} - ${error.message}`);
+			alertHandler(`Error: ${error.code} - ${error.message}`);
 		});
 }
 
@@ -103,7 +109,9 @@ async function getDataSet(packageName, userID) {
 					packageNotes.push(Object.values(child.val())[0]);
 				});
 			} else {
-				alert("No Packages were Found!");
+				alertHandler(
+					`No "${packageName.split(",")[0]}" Package Sets Were Found!`
+				);
 			}
 		})
 		.catch((error) => {
@@ -160,10 +168,10 @@ document.getElementById("getDataSet").onclick = function () {
 function deleteData(packageName, quantity, userID) {
 	remove(ref(db, `users/${userID}/data/${packageName}/${quantity}`))
 		.then(() => {
-			alert("Package Removed Successfully");
+			successHandler("Package Removed Successfully");
 		})
 		.catch((error) => {
-			alert(`Error: ${error}`);
+			alertHandler(`Error: ${error}`);
 		});
 }
 
@@ -196,11 +204,13 @@ function getDatum(userID, packageName, quantity) {
 				quantityVal.textContent = quantity;
 				notesVal.textContent = Object.values(snapshot.val())[0];
 			} else {
-				alert("No Packages were Found!");
+				alertHandler(
+					`No "${packageName.split(",")[0]}" packages were Found!`
+				);
 			}
 		})
 		.catch((error) => {
-			alert(`Error: ${error.code} - ${error.message}`);
+			alertHandler(`Error: ${error.code} - ${error.message}`);
 		});
 }
 
@@ -211,3 +221,35 @@ document.getElementById("get").onclick = function () {
 
 	getDatum(currentUser.accountInfo.uid, name, quantity);
 };
+
+function alertHandler(message) {
+	let errMessage = document.getElementById("errorMessage");
+	let returnMessage = message;
+
+	errMessage.innerHTML = returnMessage;
+
+	let errContainer = document.getElementById("errorContainer");
+	errContainer.classList.remove("bg-danger");
+	errContainer.classList.remove("bg-success");
+	errContainer.classList.add("bg-danger");
+	errContainer.classList.remove("d-none");
+	setTimeout(function () {
+		errContainer.classList.add("d-none");
+	}, 3000);
+}
+
+function successHandler(message) {
+	let errMessage = document.getElementById("errorMessage");
+	errMessage.innerHTML = message;
+
+	let errContainer = document.getElementById("errorContainer");
+	errContainer.classList.remove("bg-danger");
+	errContainer.classList.remove("bg-success");
+
+	errContainer.classList.add("bg-success");
+	errContainer.classList.remove("d-none");
+
+	setTimeout(function () {
+		errContainer.classList.add("d-none");
+	}, 3000);
+}

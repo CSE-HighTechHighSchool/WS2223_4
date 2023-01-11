@@ -67,8 +67,6 @@ async function getData() {
 						console.log("RETURNED:" + Object.keys(child.val()));
 						returnDataValues.push(Object.keys(child.val()));
 					});
-				} else {
-					alert("No Packages were Found!");
 				}
 			})
 			.catch((error) => {
@@ -109,6 +107,7 @@ async function createChart() {
 	// Configured for chart.JS 3.x and above
 
 	const ctx = document.getElementById("myChart");
+
 	const myChart = new Chart(ctx, {
 		type: "bar",
 		data: {
@@ -185,6 +184,7 @@ async function createChart() {
 			},
 		},
 	});
+	// myChart.resize(500, 500);
 }
 
 createChart();
