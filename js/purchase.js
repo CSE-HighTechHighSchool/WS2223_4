@@ -65,7 +65,7 @@ function updateData(packageName, packageQuantity, packageNotes, userID) {
 		["Notes"]: packageNotes,
 	})
 		.then(() => {
-			successHandler("Packages Updated Successfully");
+			successHandler('Package Updated Successfully!');
 		})
 		.catch((error) => {
 			alertHandler(`Error: ${error.code} - ${error.message}`);
@@ -78,7 +78,11 @@ document.getElementById("update").onclick = function () {
 	const packageNotes = document.getElementById("PackageNotes").value;
 	const userID = currentUser.accountInfo.uid;
 
-	updateData(packageName, packageQuantity, packageNotes, userID);
+	if(packageName && packageQuantity && packageNotes && userID){
+		updateData(packageName, packageQuantity, packageNotes, userID);
+	}else{
+		alertHandler("Please fill out all fields!");
+	}
 };
 
 // ---------------------------Get a data set/set of packages --------------------------
@@ -235,7 +239,7 @@ function alertHandler(message) {
 	errContainer.classList.remove("d-none");
 	setTimeout(function () {
 		errContainer.classList.add("d-none");
-	}, 3000);
+	}, 2000);
 }
 
 function successHandler(message) {
@@ -251,5 +255,6 @@ function successHandler(message) {
 
 	setTimeout(function () {
 		errContainer.classList.add("d-none");
-	}, 3000);
+		location.reload();
+	}, 2000);
 }
