@@ -58,10 +58,12 @@ function updateSignedIn(user) {
 			greetingLarge.innerHTML = `Hello, ${user.accountInfo.fullName}!`;
 			greetingMedium.innerHTML = `Hello, ${user.accountInfo.fullName}!`;
 
+			// Show sign out button
 			greetingLarge.classList.add("d-md-inline-block");
 			signOutLarge.classList.add("d-md-inline-block");
 			loginLarge.classList.remove("d-md-inline-block");
 
+			// Show sign out button on medium screens
 			greetingMedium.classList.add("d-inline-block");
 			signOutMedium.classList.add("d-inline-block");
 			loginMedium.classList.add("d-none");
@@ -73,11 +75,13 @@ function updateSignedIn(user) {
 		greetingLarge.innerHTML = "Hello, Guest!";
 		greetingMedium.innerHTML = "Hello, Guest!";
 
+		//Show sign out button
 		greetingLarge.classList.remove("d-md-inline-block");
 		signOutLarge.classList.remove("d-md-inline-block");
 		signOutLarge.classList.add("d-none");
 		loginLarge.classList.add("d-md-inline-block");
 
+		//Show sign out button on medium screens
 		greetingMedium.classList.remove("d-inline-block");
 		signOutMedium.classList.remove("d-inline-block");
 		loginMedium.classList.remove("d-none");
@@ -90,6 +94,7 @@ const inSessionStorage = sessionStorage.getItem("user");
 
 const page = window.location.pathname.split("/").pop();
 
+// If user is signed in, update the menu
 if (inLocalStorage) {
 	updateSignedIn(JSON.parse(inLocalStorage));
 } else if (inSessionStorage) {

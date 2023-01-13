@@ -72,6 +72,7 @@ function updateData(packageName, packageQuantity, packageNotes, userID) {
 		});
 }
 
+// Update the HTML
 document.getElementById("update").onclick = function () {
 	const packageName = document.getElementById("PackageName").value;
 	const packageQuantity = document.getElementById("PackageQuantity").value;

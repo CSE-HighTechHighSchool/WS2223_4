@@ -79,15 +79,19 @@ async function getData() {
 		return result;
 	}
 
+	// Process the data set
 	const data = await getDataSet(currentUser.accountInfo.uid);
 
 	return returnDataSet(data);
 }
 
 function returnDataSet(data) {
+	//initialize return arrays
 	let valueArray = [];
 	let nameArray = [];
 	let greatest = 0;
+
+	// iterate through the data set and add the values to the return arrays
 	for (const [key, value] of Object.entries(data)) {
 		let sum = 0;
 		for (let i = 0; i < value.length; i++) {
@@ -98,6 +102,7 @@ function returnDataSet(data) {
 		greatest = Math.max(...valueArray);
 	}
 
+	//return the arrays
 	return [valueArray, nameArray, greatest];
 }
 
