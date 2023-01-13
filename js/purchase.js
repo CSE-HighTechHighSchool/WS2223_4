@@ -65,7 +65,7 @@ function updateData(packageName, packageQuantity, packageNotes, userID) {
 		["Notes"]: packageNotes,
 	})
 		.then(() => {
-			successHandler('Package Updated Successfully!');
+			successHandler("Package Updated Successfully!");
 		})
 		.catch((error) => {
 			alertHandler(`Error: ${error.code} - ${error.message}`);
@@ -78,9 +78,9 @@ document.getElementById("update").onclick = function () {
 	const packageNotes = document.getElementById("PackageNotes").value;
 	const userID = currentUser.accountInfo.uid;
 
-	if(packageName && packageQuantity && packageNotes && userID){
+	if (packageName && packageQuantity && packageNotes && userID) {
 		updateData(packageName, packageQuantity, packageNotes, userID);
-	}else{
+	} else {
 		alertHandler("Please fill out all fields!");
 	}
 };
@@ -226,6 +226,7 @@ document.getElementById("get").onclick = function () {
 	getDatum(currentUser.accountInfo.uid, name, quantity);
 };
 
+//Error handling
 function alertHandler(message) {
 	let errMessage = document.getElementById("errorMessage");
 	let returnMessage = message;
@@ -237,11 +238,14 @@ function alertHandler(message) {
 	errContainer.classList.remove("bg-success");
 	errContainer.classList.add("bg-danger");
 	errContainer.classList.remove("d-none");
+
+	//Make the error container disappear after 2 seconds
 	setTimeout(function () {
 		errContainer.classList.add("d-none");
 	}, 2000);
 }
 
+//Success handling
 function successHandler(message) {
 	let errMessage = document.getElementById("errorMessage");
 	errMessage.innerHTML = message;
@@ -253,6 +257,7 @@ function successHandler(message) {
 	errContainer.classList.add("bg-success");
 	errContainer.classList.remove("d-none");
 
+	//Make the success container disappear after 2 seconds
 	setTimeout(function () {
 		errContainer.classList.add("d-none");
 		location.reload();
